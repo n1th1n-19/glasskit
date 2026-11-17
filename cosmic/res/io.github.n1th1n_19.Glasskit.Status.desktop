@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Glasskit Status
+Comment=Volume, network, Bluetooth and battery pill
+Type=Application
+Exec=glasskit-applets status
+Terminal=false
+Categories=COSMIC;
+Icon=audio-volume-high-symbolic
+StartupNotify=true
+NoDisplay=true
+X-CosmicApplet=true
+X-CosmicHoverPopup=Auto
+X-OverflowPriority=6

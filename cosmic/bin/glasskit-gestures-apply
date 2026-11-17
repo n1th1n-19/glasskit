@@ -1,0 +1,64 @@
+#!/usr/bin/env bash
+# Windows-style touchpad gestures on COSMIC through libinput-gestures + ydotool (0.1.8 key names):
+#   3 fingers up    = Workspaces overview (Super+W)      3 fingers left  = next window (Alt+Tab)
+#   3 fingers down  = Launcher/applications (Super+A)    3 fingers right = previous window (Alt+Shift+Tab)
+# Writes ~/.config/libinput-gestures.conf and an autostart entry. It never runs sudo: if a package
+# or permission is missing it prints the command for you to run.
+#
+#   glasskit-gestures-apply [--dry-run]
+set -euo pipefail
+
+CONF="${XDG_CONFIG_HOME:-$HOME/.config}/libinput-gestures.conf"
+AUTO="${XDG_CONFIG_HOME:-$HOME/.config}/autostart/libinput-gestures.desktop"
+BAK="${XDG_STATE_HOME:-$HOME/.local/state}/glasskit/backups"
+MARK='# glasskit-cosmic gestures'
+DRY=0
+for a in "$@"; do
+  case "$a" in
+    --dry-run|-n) DRY=1 ;;
+    -h|--help) sed -n '2,8p' "$0" | sed 's/^# \{0,1\}//'; exit 0 ;;
+    *) echo "unknown option $a" >&2; exit 2 ;;
+  esac
+done
+
+missing=()
+command -v libinput >/dev/null || missing+=(libinput-tools)
+command -v ydotool >/dev/null || missing+=(ydotool)
+command -v libinput-gestures >/dev/null || missing+=(libinput-gestures)
+if [ "${#missing[@]}" -gt 0 ]; then
+  echo "missing: ${missing[*]}. Install them yourself (glasskit never runs sudo):"
+  echo "  sudo apt install libinput-tools ydotool"
+  case " ${missing[*]} " in *" libinput-gestures "*) echo "  sudo apt install libinput-gestures   # or https://github.com/bulletmark/libinput-gestures" ;; *) ;; esac
+fi
+id -nG | tr ' ' '\n' | grep -x input >/dev/null || echo "note: you are not in the 'input' group (needed to read the touchpad): sudo gpasswd -a \"$USER\" input   (then log out and in)"
+[ -w /dev/uinput ] || echo "note: /dev/uinput is not writable by you, ydotool cannot send keys until it is (group 'input' + a udev rule, see your distro's ydotool notes)"
+
+conf="$MARK
+gesture swipe up    3 ydotool key super+w
+gesture swipe down  3 ydotool key super+a
+gesture swipe left  3 ydotool key alt+tab
+gesture swipe right 3 ydotool key alt+shift+tab"
+exe=$(command -v libinput-gestures || echo /usr/bin/libinput-gestures)
+desk="[Desktop Entry]
+Type=Application
+Name=Libinput Gestures (glasskit)
+Exec=$exe
+NoDisplay=true
+Terminal=false
+X-GNOME-Autostart-enabled=true
+Comment=Touchpad gestures for glasskit COSMIC"
+
+if [ "$DRY" = 1 ]; then
+  echo "would write $CONF:"; printf '  %s\n' "${conf//$'\n'/$'\n'  }"
+  echo "would write $AUTO (Exec=$exe)"
+  [ -f "$CONF" ] && ! grep -qF "$MARK" "$CONF" && echo "would back up your existing $CONF to $BAK/libinput-gestures.conf.orig"
+  exit 0
+fi
+if [ -f "$CONF" ] && ! grep -qF "$MARK" "$CONF"; then
+  mkdir -p "$BAK"; cp -n "$CONF" "$BAK/libinput-gestures.conf.orig"
+  echo "backup: your old $CONF -> $BAK/libinput-gestures.conf.orig"
+fi
+mkdir -p "$(dirname "$AUTO")"
+printf '%s\n' "$conf" > "$CONF"
+printf '%s\n' "$desk" > "$AUTO"
+echo "applied: gestures start at next login (or now: libinput-gestures &)"

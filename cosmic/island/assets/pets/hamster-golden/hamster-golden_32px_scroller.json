@@ -1,0 +1,4798 @@
+{
+  "frames": [
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Happy_South_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 0.0,
+        "id": "e0a68bd51bf0c6b1",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Happy_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Happy_South_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 0.0,
+        "id": "9a9481046c993b80",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Happy_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Happy_South_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 0.0,
+        "id": "951e5f7370164144",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Happy_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Happy_South_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 0.0,
+        "id": "5c69347c54943943",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Happy_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Happy_South_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 0.0,
+        "id": "d518b94fbb6aa37f",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Happy_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Happy_South_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 0.0,
+        "id": "2f574e235daaa403",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Happy_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Happy_South_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 0.0,
+        "id": "2d75ab4e4a99b2f8",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Happy_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Happy_South_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 0.0,
+        "id": "28fe359c68bd23d2",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Happy_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Happy_East_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 32
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 90.0,
+        "id": "7592a7711e9af4b8",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Happy_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Happy_East_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 32
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 90.0,
+        "id": "586405cb3c554b29",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Happy_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Happy_East_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 32
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 90.0,
+        "id": "3fdfd7b43a77d7bd",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Happy_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Happy_East_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 32
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 90.0,
+        "id": "861351488c326d06",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Happy_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Happy_East_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 32
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 90.0,
+        "id": "b3c4d934a5585f72",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Happy_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Happy_East_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 32
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 90.0,
+        "id": "7c23dccca724bcc6",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Happy_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Happy_East_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 32
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 90.0,
+        "id": "a8dcf1b597660389",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Happy_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Happy_East_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 32
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 90.0,
+        "id": "23ab62566a45254b",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Happy_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Happy_North_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 64
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 180.0,
+        "id": "9fc8af8abc06169f",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Happy_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Happy_North_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 64
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 180.0,
+        "id": "9a46c9921d7b1fda",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Happy_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Happy_North_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 64
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 180.0,
+        "id": "a67a92f22980a086",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Happy_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Happy_North_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 64
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 180.0,
+        "id": "6047195dd7c60b3d",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Happy_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Happy_North_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 64
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 180.0,
+        "id": "b5c6802ddcc19c35",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Happy_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Happy_North_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 64
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 180.0,
+        "id": "d56c1c20337af071",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Happy_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Happy_North_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 64
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 180.0,
+        "id": "82e30842088080ce",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Happy_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Happy_North_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 64
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 180.0,
+        "id": "f16d6a9fa82e10c8",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Happy_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Happy_West_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 96
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 270.0,
+        "id": "b5f3814107c11f76",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Happy_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Happy_West_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 96
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 270.0,
+        "id": "adf9885ae1f8bb7b",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Happy_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Happy_West_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 96
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 270.0,
+        "id": "c8f1109b4c8bf78f",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Happy_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Happy_West_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 96
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 270.0,
+        "id": "b54486e1d14afa08",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Happy_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Happy_West_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 96
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 270.0,
+        "id": "7f07ff2cd7fe6b90",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Happy_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Happy_West_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 96
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 270.0,
+        "id": "46ed80a5fda15af4",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Happy_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Happy_West_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 96
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 270.0,
+        "id": "3c286982ae63b4c7",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Happy_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Happy_West_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 96
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 270.0,
+        "id": "d0a5ed5ff7d35771",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Happy_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Idle_South_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 128
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 0.0,
+        "id": "8c13bb5ff9092958",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Idle_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Idle_South_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 128
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 0.0,
+        "id": "0183bee537e91149",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Idle_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Idle_South_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 128
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 0.0,
+        "id": "f80ca1fb1fc9359d",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Idle_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Idle_South_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 128
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 0.0,
+        "id": "d0cec0ba92a7a966",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Idle_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Idle_South_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 128
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 0.0,
+        "id": "5ce4924ea0ec2592",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Idle_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Idle_South_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 128
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 0.0,
+        "id": "6640a70ea19446a6",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Idle_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Idle_South_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 128
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 0.0,
+        "id": "f3a861279ddcf2e9",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Idle_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Idle_South_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 128
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 0.0,
+        "id": "9aeb1b7550bc726b",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Idle_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Idle_East_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 160
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 90.0,
+        "id": "4581b9dc9295365b",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Idle_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Idle_East_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 160
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 90.0,
+        "id": "101d0541617b77d6",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Idle_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Idle_East_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 160
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 90.0,
+        "id": "a4b47f8592ea608a",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Idle_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Idle_East_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 160
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 90.0,
+        "id": "12dd7e83ef7809b9",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Idle_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Idle_East_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 160
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 90.0,
+        "id": "aa26d31d5a884129",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Idle_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Idle_East_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 160
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 90.0,
+        "id": "b6dfef5c9af5f0bd",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Idle_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Idle_East_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 160
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 90.0,
+        "id": "5c6e7917f231d5d2",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Idle_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Idle_East_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 160
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 90.0,
+        "id": "ce3cb074b5605c5c",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Idle_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Idle_North_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 192
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 180.0,
+        "id": "cb837683b61a730e",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Idle_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Idle_North_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 192
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 180.0,
+        "id": "5f65f73ec2e539f3",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Idle_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Idle_North_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 192
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 180.0,
+        "id": "6b539109cb76b8c7",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Idle_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Idle_North_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 192
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 180.0,
+        "id": "f9f7a773a6535af0",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Idle_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Idle_North_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 192
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 180.0,
+        "id": "43e640a3039ebd98",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Idle_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Idle_North_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 192
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 180.0,
+        "id": "bc60022118d23d0c",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Idle_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Idle_North_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 192
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 180.0,
+        "id": "3197baa63a248b5f",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Idle_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Idle_North_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 192
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 180.0,
+        "id": "1d465d4fd9755fc9",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Idle_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Idle_West_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 224
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 270.0,
+        "id": "67aeaa4d13641701",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Idle_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Idle_West_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 224
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 270.0,
+        "id": "800f994730eabc70",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Idle_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Idle_West_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 224
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 270.0,
+        "id": "be6ac79360418214",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Idle_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Idle_West_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 224
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 270.0,
+        "id": "c0409ebc0b317873",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Idle_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Idle_West_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 224
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 270.0,
+        "id": "5a93854a45307c0f",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Idle_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Idle_West_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 224
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 270.0,
+        "id": "a3582fd18767c253",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Idle_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Idle_West_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 224
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 270.0,
+        "id": "e30117a6041693a8",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Idle_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Idle_West_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 224
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 270.0,
+        "id": "d13d72cdbe81b6a2",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Idle_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Sleep_South_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "f7b3eafba945a414",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Sleep_South_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "cdd3f5482dcf4615",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Sleep_South_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "a0f7cdb55c683901",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Sleep_South_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "230f1e4d0a44f402",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Sleep_South_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "3f0fe3219b6e1cc6",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Sleep_South_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "76b0df8999a1bf72",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Sleep_South_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "be80804b91d03d5d",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Sleep_South_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "4c89d86115178cdf",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Sleep_South_08.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 256,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "f9b373476d4402fb",
+        "index": 8,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Sleep_South_09.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 288,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "dcf9615b28f4bf70",
+        "index": 9,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Sleep_South_10.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 320,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "ccd54ab2633ffea4",
+        "index": 10,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Sleep_South_11.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 352,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "c196e9683c533be0",
+        "index": 11,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Sleep_East_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "3ed8702dd1b65ff7",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Sleep_East_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "5763e6108dc010d2",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Sleep_East_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "1156b73b4b9b03fe",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Sleep_East_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "a3d47363bc2d8c25",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Sleep_East_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "77057581b294b4fd",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Sleep_East_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "589848c3d87c95e9",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Sleep_East_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "cb308eaadc33e9a6",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Sleep_East_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "efd214defa738ee0",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Sleep_East_08.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 256,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "1613b1955cbcdcac",
+        "index": 8,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Sleep_East_09.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 288,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "d8580d52a4e42f4f",
+        "index": 9,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Sleep_East_10.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 320,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "2a37107c01e5e8a7",
+        "index": 10,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Sleep_East_11.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 352,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "9aa7e2b2c1eabd13",
+        "index": 11,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Sleep_North_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "b9503847e538da1a",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Sleep_North_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "2baee597a6942c5f",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Sleep_North_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "eaa706a0cbbcab2b",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Sleep_North_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "ab542d3f516055fc",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Sleep_North_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "895546b98e5695cc",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Sleep_North_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "590f95ba15b414d8",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Sleep_North_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "ced30e16be7471e3",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Sleep_North_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "1cd73aacd9aa3bdd",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Sleep_North_08.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 256,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "997f82e61c176e39",
+        "index": 8,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Sleep_North_09.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 288,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "97f48a6233380276",
+        "index": 9,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Sleep_North_10.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 320,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "cc89c8fa0f905816",
+        "index": 10,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Sleep_North_11.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 352,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "e95759128ac779f2",
+        "index": 11,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Sleep_West_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "3b58d1d4ee2f43e5",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Sleep_West_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "3eaaf1a986e85e84",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Sleep_West_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "fbfd02bbe6dc0d40",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Sleep_West_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "be4b6b73ef22cb37",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Sleep_West_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "e637d0685645af4b",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Sleep_West_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "65e1a1afa19b1f97",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Sleep_West_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "d7f1cc95d34867e4",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Sleep_West_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "1065bded0a4f5ede",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Sleep_West_08.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 256,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "c6b31dfffe5d5b2a",
+        "index": 8,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Sleep_West_09.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 288,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "ee51c087e6c6f855",
+        "index": 9,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Sleep_West_10.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 320,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "95104cada6a07259",
+        "index": 10,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Sleep_West_11.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 352,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "2197ee6d666797b5",
+        "index": 11,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Walk_South_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 384
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 0.0,
+        "id": "7a596f290b38cbe3",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Walk_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Walk_South_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 384
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 0.0,
+        "id": "600340f95600801e",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Walk_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Walk_South_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 384
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 0.0,
+        "id": "3c2d78a0614159b2",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Walk_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Walk_South_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 384
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 0.0,
+        "id": "c4d67ca723acd811",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Walk_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Walk_South_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 384
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 0.0,
+        "id": "1c4c8bb7060b29e1",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Walk_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Walk_South_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 384
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 0.0,
+        "id": "d916f1ddeabf8d65",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Walk_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Walk_East_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 416
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 90.0,
+        "id": "654c2badbba5ddda",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Walk_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Walk_East_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 416
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 90.0,
+        "id": "6ace11a65a30d49f",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Walk_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Walk_East_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 416
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 90.0,
+        "id": "79522235cac8b2eb",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Walk_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Walk_East_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 416
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 90.0,
+        "id": "94bece267eb12f3c",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Walk_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Walk_East_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 416
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 90.0,
+        "id": "7f046a76f1522f0c",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Walk_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Walk_East_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 416
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 90.0,
+        "id": "068aa8f8dc1eaf98",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Walk_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Walk_North_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 448
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 180.0,
+        "id": "f2b66cc8cb61ac5d",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Walk_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Walk_North_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 448
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 180.0,
+        "id": "2c5a8c9d66fc735c",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Walk_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Walk_North_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 448
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 180.0,
+        "id": "13dc9db061c5cf18",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Walk_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Walk_North_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 448
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 180.0,
+        "id": "66a6d8f3f67b6c7f",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Walk_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Walk_North_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 448
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 180.0,
+        "id": "9cbdaf20ffe6b9f3",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Walk_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Walk_North_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 448
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 180.0,
+        "id": "a5aa989cdffaf46f",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Walk_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Walk_West_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 480
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 270.0,
+        "id": "3e6fb474a3e9e1d4",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Walk_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Walk_West_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 480
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 270.0,
+        "id": "a5af4413599b7e55",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Walk_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Walk_West_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 480
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 270.0,
+        "id": "a3b46efa4951f0c1",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Walk_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Walk_West_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 480
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 270.0,
+        "id": "6f6eefe983bb8e42",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Walk_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hamster-golden_Walk_West_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 480
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 270.0,
+        "id": "48db31e7dc588106",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Walk_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hamster-golden_Walk_West_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 480
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 270.0,
+        "id": "796d80ce868b7732",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Walk_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    }
+  ],
+  "meta": {
+    "app": "Pixor",
+    "format": "I8",
+    "frameTags": [
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 0,
+        "name": "Happy_South",
+        "to": 7
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 8,
+        "name": "Happy_East",
+        "to": 15
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 16,
+        "name": "Happy_North",
+        "to": 23
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 24,
+        "name": "Happy_West",
+        "to": 31
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 32,
+        "name": "Idle_South",
+        "to": 39
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 40,
+        "name": "Idle_East",
+        "to": 47
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 48,
+        "name": "Idle_North",
+        "to": 55
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 56,
+        "name": "Idle_West",
+        "to": 63
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 64,
+        "name": "Sleep_South",
+        "to": 75
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 76,
+        "name": "Sleep_East",
+        "to": 87
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 88,
+        "name": "Sleep_North",
+        "to": 99
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 100,
+        "name": "Sleep_West",
+        "to": 111
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 112,
+        "name": "Walk_South",
+        "to": 117
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 118,
+        "name": "Walk_East",
+        "to": 123
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 124,
+        "name": "Walk_North",
+        "to": 129
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 130,
+        "name": "Walk_West",
+        "to": 135
+      }
+    ],
+    "image": "hamster-golden_32px_scroller_outline_lit.png",
+    "layers": [
+      {
+        "blendMode": "normal",
+        "name": "final",
+        "opacity": 255
+      }
+    ],
+    "pixor": {
+      "cell": {
+        "h": 32,
+        "w": 32
+      },
+      "emission": "s_emission.png",
+      "pivot": {
+        "x": 16,
+        "y": 27
+      },
+      "sides": {
+        "East": 90.0,
+        "North": 180.0,
+        "South": 0.0,
+        "West": 270.0
+      }
+    },
+    "scale": "1",
+    "size": {
+      "h": 512,
+      "w": 384
+    },
+    "slices": [
+      {
+        "color": "#0000ffff",
+        "keys": [
+          {
+            "bounds": {
+              "h": 32,
+              "w": 32,
+              "x": 0,
+              "y": 0
+            },
+            "frame": 0,
+            "pivot": {
+              "x": 16,
+              "y": 27
+            }
+          }
+        ],
+        "name": "pivot"
+      }
+    ],
+    "version": "2.1.0"
+  }
+}

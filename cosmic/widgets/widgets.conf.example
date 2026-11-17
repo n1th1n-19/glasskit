@@ -1,0 +1,33 @@
+## Glasskit widget layout  (~/.config/glasskit/widgets.conf)
+##
+## Written by edit mode (`glasskit-widgets --edit`, then drag the cards), and safe to edit by
+## hand: comments, blank lines and keys this version does not know are kept.
+## With no file, or no [card] section, a card sits where it always did.
+## `glasskit-widgets --reset` backs this file up to widgets.conf.bak and deletes it.
+##
+## Cards: clock  calendar  system  pet  media  toggles  storage  focus
+##
+## Sections: a [card] header, then the keys below. `card.key = value` on one line works too.
+##
+##   anchor = left | right
+##       Which screen edge x is measured from. Default: left for clock, calendar,
+##       system and pet; right for media, toggles, storage and focus.
+##   x = 48
+##       Distance from that edge, in reference pixels (a 1920x1080 screen at scale 1.0).
+##       It is multiplied by the output's scale, so one layout fits every display.
+##       Default 48. Clamped to 0..8192, and the card is kept fully on screen.
+##   y = 48
+##       Distance from the top edge, same units. 48 clears the top panel.
+##       Defaults: clock 48, calendar 256, system 576, pet 832;
+##                 media 48, toggles 224, storage 444, focus 684.
+##   visible = true | false
+##       false hides the card (its process exits). Bring it back with
+##       `glasskit-widgets --show <card|all>`. Default true.
+##
+## Example: park the clock in the right column, under the media card.
+##
+## [clock]
+## anchor = right
+## x = 48
+## y = 240
+## visible = true

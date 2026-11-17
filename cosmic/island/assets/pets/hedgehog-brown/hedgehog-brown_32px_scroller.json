@@ -1,0 +1,4798 @@
+{
+  "frames": [
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Happy_South_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 0.0,
+        "id": "da9b1073545f83b7",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Happy_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Happy_South_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 0.0,
+        "id": "0cb7095a14fc1812",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Happy_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Happy_South_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 0.0,
+        "id": "6a7b3559b49655be",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Happy_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Happy_South_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 0.0,
+        "id": "7ce5c12a95b71f65",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Happy_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Happy_South_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 0.0,
+        "id": "205890701efa5c3d",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Happy_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Happy_South_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 0.0,
+        "id": "38dcbe8720d7cfa9",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Happy_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Happy_South_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 0.0,
+        "id": "a441dc71b5bd7ce6",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Happy_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Happy_South_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 0.0,
+        "id": "30d52fd24ed7e120",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Happy_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Happy_East_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 32
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 90.0,
+        "id": "f507db735a6ec5fe",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Happy_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Happy_East_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 32
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 90.0,
+        "id": "4adf647cd9650743",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Happy_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Happy_East_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 32
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 90.0,
+        "id": "22899465e08a21f7",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Happy_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Happy_East_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 32
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 90.0,
+        "id": "890ab104f16a0980",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Happy_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Happy_East_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 32
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 90.0,
+        "id": "5a2c0ad487961888",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Happy_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Happy_East_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 32
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 90.0,
+        "id": "4a9a03652d2eb07c",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Happy_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Happy_East_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 32
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 90.0,
+        "id": "3012c220bdccd7af",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Happy_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Happy_East_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 32
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 90.0,
+        "id": "b993abe1418869b9",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Happy_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Happy_North_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 64
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 180.0,
+        "id": "0ea344eb99366e41",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Happy_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Happy_North_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 64
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 180.0,
+        "id": "1b676c9379068730",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Happy_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Happy_North_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 64
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 180.0,
+        "id": "8421400fb1833c54",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Happy_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Happy_North_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 64
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 180.0,
+        "id": "17069c8a8d997a33",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Happy_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Happy_North_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 64
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 180.0,
+        "id": "4b3b5040579168cf",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Happy_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Happy_North_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 64
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 180.0,
+        "id": "8cbcd2cb2af55593",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Happy_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Happy_North_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 64
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 180.0,
+        "id": "c1070d1965e1e368",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Happy_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Happy_North_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 64
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 180.0,
+        "id": "6c95461a069d8162",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Happy_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Happy_West_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 96
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 270.0,
+        "id": "eccf86e203c67dc0",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Happy_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Happy_West_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 96
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 270.0,
+        "id": "8da11704e162da71",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Happy_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Happy_West_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 96
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 270.0,
+        "id": "5168a0514d64d765",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Happy_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Happy_West_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 96
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 270.0,
+        "id": "3efe14806c440dbe",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Happy_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Happy_West_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 96
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 270.0,
+        "id": "657010912cf1d14a",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Happy_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Happy_West_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 96
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 270.0,
+        "id": "957ca564345bee6e",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Happy_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Happy_West_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 96
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 270.0,
+        "id": "1987866ed74c4111",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Happy_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Happy_West_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 96
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 270.0,
+        "id": "ceb0e4c77852c0d3",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Happy_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Idle_South_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 128
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 0.0,
+        "id": "f58fc7288f6db2ea",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Idle_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Idle_South_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 128
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 0.0,
+        "id": "775626194ecefa8f",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Idle_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Idle_South_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 128
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 0.0,
+        "id": "5c5e9dd8e43bbe7b",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Idle_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Idle_South_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 128
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 0.0,
+        "id": "5ed36fd7bee0012c",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Idle_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Idle_South_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 128
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 0.0,
+        "id": "337cdbde8b3d2e9c",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Idle_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Idle_South_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 128
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 0.0,
+        "id": "5ef3249abd063168",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Idle_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Idle_South_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 128
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 0.0,
+        "id": "2aa8ea4c8219a393",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Idle_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Idle_South_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 128
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 0.0,
+        "id": "4b7ac98d8325ddad",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Idle_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Idle_East_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 160
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 90.0,
+        "id": "a7848dbae62ddc4d",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Idle_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Idle_East_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 160
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 90.0,
+        "id": "f893067266f08b2c",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Idle_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Idle_East_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 160
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 90.0,
+        "id": "fd6932fa7b9e8708",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Idle_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Idle_East_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 160
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 90.0,
+        "id": "1115bcb3f6df848f",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Idle_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Idle_East_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 160
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 90.0,
+        "id": "11560c628e4b3ae3",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Idle_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Idle_East_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 160
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 90.0,
+        "id": "c1232de20ef16b9f",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Idle_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Idle_East_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 160
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 90.0,
+        "id": "cbd845055e2d5ecc",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Idle_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Idle_East_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 160
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 90.0,
+        "id": "7507adcba60d4146",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Idle_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Idle_North_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 192
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 180.0,
+        "id": "8a595f3c18e9598c",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Idle_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Idle_North_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 192
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 180.0,
+        "id": "76999405ef071a2d",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Idle_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Idle_North_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 192
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 180.0,
+        "id": "929eff65f20a0cb9",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Idle_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Idle_North_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 192
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 180.0,
+        "id": "24760067957c638a",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Idle_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Idle_North_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 192
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 180.0,
+        "id": "b2055bb5b8f0aaee",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Idle_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Idle_North_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 192
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 180.0,
+        "id": "a7361138f3d1b0ca",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Idle_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Idle_North_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 192
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 180.0,
+        "id": "01a9877d9c960215",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Idle_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Idle_North_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 192
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 180.0,
+        "id": "cd434b9623e73a37",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Idle_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Idle_West_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 224
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 270.0,
+        "id": "6239ccb8b0fd1777",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Idle_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Idle_West_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 224
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 270.0,
+        "id": "7ac5429b6d06c852",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Idle_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Idle_West_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 224
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 270.0,
+        "id": "0f7ac96fe896987e",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Idle_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Idle_West_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 224
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 270.0,
+        "id": "a1f88598592920a5",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Idle_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Idle_West_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 224
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 270.0,
+        "id": "9a66d20c91db6c7d",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Idle_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Idle_West_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 224
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 270.0,
+        "id": "56bc5af875782a69",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Idle_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Idle_West_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 224
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 270.0,
+        "id": "c954a0df792f7e26",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Idle_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Idle_West_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 224
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 270.0,
+        "id": "13337169d9ba4660",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Idle_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Sleep_South_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "34352c44561a7bee",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Sleep_South_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "357907d441bfb153",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Sleep_South_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "57a6dac8a2e06e67",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Sleep_South_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "fe5c545d92525d10",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Sleep_South_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "19f95138827934f8",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Sleep_South_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "5363543625f6d0ac",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Sleep_South_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "c19c5f39f34a257f",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Sleep_South_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "f3596de5584fd729",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Sleep_South_08.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 256,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "9b9bb66af1942b2d",
+        "index": 8,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Sleep_South_09.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 288,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "a4ca258dea2cc642",
+        "index": 9,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Sleep_South_10.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 320,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "3302dfabc510079a",
+        "index": 10,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Sleep_South_11.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 352,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "4ea659dc14d4f7fe",
+        "index": 11,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Sleep_East_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "06acd2cd188abc81",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Sleep_East_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "1f0dc1c7361161f0",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Sleep_East_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "82a63a69a7b34a94",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Sleep_East_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "847c119252a340f3",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Sleep_East_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "f991adca4a57218f",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Sleep_East_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "6793a2a7ced98ad3",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Sleep_East_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "a73c8a7c4b885c28",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Sleep_East_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "703b9b4dc3a85c22",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Sleep_East_08.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 256,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "bb691ef47c2a5826",
+        "index": 8,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Sleep_East_09.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 288,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "425c77a3693366c9",
+        "index": 9,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Sleep_East_10.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 320,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "c50e13db61a07e65",
+        "index": 10,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Sleep_East_11.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 352,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "257408b8e569b0a9",
+        "index": 11,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Sleep_North_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "93c942ec36d44100",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Sleep_North_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "d9db4dbce62bcc31",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Sleep_North_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "6d06df2cce2062a5",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Sleep_North_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "da8923045d8dda7e",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Sleep_North_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "b1ba474931bc760a",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Sleep_North_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "48bae4449d1471ae",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Sleep_North_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "2df29d4de93625d1",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Sleep_North_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "084945fccc861593",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Sleep_North_08.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 256,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "97d873c60c814127",
+        "index": 8,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Sleep_North_09.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 288,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "8cb67bb0a70c04c4",
+        "index": 9,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Sleep_North_10.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 320,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "8d1ea08606a91950",
+        "index": 10,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Sleep_North_11.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 352,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "5087f9546d68ecf4",
+        "index": 11,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Sleep_West_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "3c3e2fc818ee2963",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Sleep_West_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "21e8019863b5dd9e",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Sleep_West_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "234f8395b141da32",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Sleep_West_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "abf8879c73ad5891",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Sleep_West_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "de314c5613c08761",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Sleep_West_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "c038fcd33ac00de5",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Sleep_West_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "1b933d64936a18fa",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Sleep_West_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "5b3551e98c93efe4",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Sleep_West_08.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 256,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "4539c54a8a0b2ba8",
+        "index": 8,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Sleep_West_09.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 288,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "ed08555f0a9d3ef3",
+        "index": 9,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Sleep_West_10.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 320,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "3d81414965adf753",
+        "index": 10,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Sleep_West_11.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 352,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "84ec5e940919d767",
+        "index": 11,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Walk_South_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 384
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 0.0,
+        "id": "aadbcca356a2f005",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Walk_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Walk_South_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 384
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 0.0,
+        "id": "0ecc91a7fb61bd24",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Walk_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Walk_South_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 384
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 0.0,
+        "id": "e7de698c17e60ca0",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Walk_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Walk_South_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 384
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 0.0,
+        "id": "6eab776a566ed517",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Walk_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Walk_South_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 384
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 0.0,
+        "id": "b6697066cac0c0eb",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Walk_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Walk_South_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 384
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 0.0,
+        "id": "6464de02833abbf7",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Walk_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Walk_East_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 416
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 90.0,
+        "id": "1be94cc368462cec",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Walk_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Walk_East_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 416
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 90.0,
+        "id": "831b570b06fadf8d",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Walk_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Walk_East_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 416
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 90.0,
+        "id": "e51f2e6ccfb0fc59",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Walk_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Walk_East_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 416
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 90.0,
+        "id": "b99451958cd1252a",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Walk_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Walk_East_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 416
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 90.0,
+        "id": "751716698043614e",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Walk_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Walk_East_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 416
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 90.0,
+        "id": "856637e99ea0eb6a",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Walk_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Walk_North_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 448
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 180.0,
+        "id": "587c5e4b9975eb53",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Walk_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Walk_North_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 448
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 180.0,
+        "id": "573882bbadd0b5ee",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Walk_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Walk_North_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 448
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 180.0,
+        "id": "e056041c44a21ba2",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Walk_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Walk_North_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 448
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 180.0,
+        "id": "273d58afbace1b21",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Walk_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Walk_North_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 448
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 180.0,
+        "id": "6982221df0dbff51",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Walk_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Walk_North_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 448
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 180.0,
+        "id": "7d3f7d59ce204f55",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Walk_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Walk_West_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 480
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 270.0,
+        "id": "c49da57e52ce1672",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Walk_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Walk_West_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 480
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 270.0,
+        "id": "570051bdc8738c97",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Walk_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Walk_West_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 480
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 270.0,
+        "id": "e417be293157d8a3",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Walk_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Walk_West_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 480
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 270.0,
+        "id": "1c5eb651afb197a4",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Walk_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "hedgehog-brown_Walk_West_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 480
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 270.0,
+        "id": "8366835da77c3974",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Walk_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "hedgehog-brown_Walk_West_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 480
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 270.0,
+        "id": "e0be4c3ac4246d10",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Walk_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    }
+  ],
+  "meta": {
+    "app": "Pixor",
+    "format": "I8",
+    "frameTags": [
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 0,
+        "name": "Happy_South",
+        "to": 7
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 8,
+        "name": "Happy_East",
+        "to": 15
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 16,
+        "name": "Happy_North",
+        "to": 23
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 24,
+        "name": "Happy_West",
+        "to": 31
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 32,
+        "name": "Idle_South",
+        "to": 39
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 40,
+        "name": "Idle_East",
+        "to": 47
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 48,
+        "name": "Idle_North",
+        "to": 55
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 56,
+        "name": "Idle_West",
+        "to": 63
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 64,
+        "name": "Sleep_South",
+        "to": 75
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 76,
+        "name": "Sleep_East",
+        "to": 87
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 88,
+        "name": "Sleep_North",
+        "to": 99
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 100,
+        "name": "Sleep_West",
+        "to": 111
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 112,
+        "name": "Walk_South",
+        "to": 117
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 118,
+        "name": "Walk_East",
+        "to": 123
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 124,
+        "name": "Walk_North",
+        "to": 129
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 130,
+        "name": "Walk_West",
+        "to": 135
+      }
+    ],
+    "image": "hedgehog-brown_32px_scroller_outline_lit.png",
+    "layers": [
+      {
+        "blendMode": "normal",
+        "name": "final",
+        "opacity": 255
+      }
+    ],
+    "pixor": {
+      "cell": {
+        "h": 32,
+        "w": 32
+      },
+      "emission": "s_emission.png",
+      "pivot": {
+        "x": 16,
+        "y": 25
+      },
+      "sides": {
+        "East": 90.0,
+        "North": 180.0,
+        "South": 0.0,
+        "West": 270.0
+      }
+    },
+    "scale": "1",
+    "size": {
+      "h": 512,
+      "w": 384
+    },
+    "slices": [
+      {
+        "color": "#0000ffff",
+        "keys": [
+          {
+            "bounds": {
+              "h": 32,
+              "w": 32,
+              "x": 0,
+              "y": 0
+            },
+            "frame": 0,
+            "pivot": {
+              "x": 16,
+              "y": 25
+            }
+          }
+        ],
+        "name": "pivot"
+      }
+    ],
+    "version": "2.1.0"
+  }
+}

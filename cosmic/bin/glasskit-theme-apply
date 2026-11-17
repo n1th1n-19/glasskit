@@ -1,0 +1,84 @@
+#!/usr/bin/env bash
+# Apply the glasskit look to COSMIC: accent #3b82f6, background #0c0e12, frosted panels,
+# rounder corners, the Nunito font and (when built) the glasskit-filled icon theme.
+# Run it again any time a theme change in COSMIC Settings resets the look.
+#
+#   glasskit-theme-apply [--colors] [--font] [--icons] [--dry-run] [--no-backup]
+#
+# No flag = everything. It backs up the settings first (see glasskit-restore theme).
+# COSMIC watches its config, so most of it shows at once. If the colours do not change, toggle
+# Dark/Light once in COSMIC Settings > Appearance so CosmicTheme.Dark is regenerated from them.
+# Only the dark theme is edited.
+set -euo pipefail
+
+here=$(dirname "$(readlink -f "$0")")
+C="${XDG_CONFIG_HOME:-$HOME/.config}/cosmic"
+STATE="${XDG_STATE_HOME:-$HOME/.local/state}/glasskit"
+FONTS="$HOME/.local/share/fonts/Nunito"
+FONT_URL='https://raw.githubusercontent.com/google/fonts/main/ofl/nunito/Nunito%5Bwght%5D.ttf'
+FONT_SHA=bb55a5ca5c2042335b3991af27c4d0705d0ef41cac6164ac737fd8f2a1e85207
+DRY=0; BACKUP=1; colors=0; font=0; icons=0
+
+for a in "$@"; do
+  case "$a" in
+    --colors) colors=1 ;; --font) font=1 ;; --icons) icons=1 ;;
+    --dry-run|-n) DRY=1 ;; --no-backup) BACKUP=0 ;;
+    -h|--help) sed -n '2,11p' "$0" | sed 's/^# \{0,1\}//'; exit 0 ;;
+    *) echo "unknown option $a" >&2; exit 2 ;;
+  esac
+done
+[ $((colors + font + icons)) = 0 ] && colors=1 font=1 icons=1
+
+# put <file> <content>: write one cosmic-config key (no trailing newline, like COSMIC itself)
+put() {
+  if [ "$DRY" = 1 ]; then echo "would write ${1#"$HOME/"}: $2"; return 0; fi
+  mkdir -p "$(dirname "$1")"; printf '%s' "$2" > "$1"
+}
+
+# Nunito: use an installed one, else the copy bundled in the repo, else download. Always sha256-checked.
+ensure_font() {
+  local src="$here/../splash/Nunito[wght].ttf" tmp have
+  have=$(fc-list : family 2>/dev/null || true)   # (not piped into grep -q: pipefail + SIGPIPE)
+  case "$have" in *[Nn]unito*) echo "font: Nunito already installed"; return 0 ;; *) ;; esac
+  if [ ! -f "$src" ] || [ "$(sha256sum "$src" | cut -d' ' -f1)" != "$FONT_SHA" ]; then
+    if ! command -v curl >/dev/null; then echo "font: Nunito missing and curl not found, skipping font" >&2; return 1; fi
+    if [ "$DRY" = 1 ]; then echo "would download Nunito (sha256 $FONT_SHA) -> $FONTS"; return 0; fi
+    tmp=$(mktemp); curl -fsSL -o "$tmp" "$FONT_URL"
+    if [ "$(sha256sum "$tmp" | cut -d' ' -f1)" != "$FONT_SHA" ] || [ "$(head -c4 "$tmp" | od -An -tx1 | tr -d ' ')" != 00010000 ]; then
+      rm -f "$tmp"; echo "font: download failed the checksum / file-type check, not installed" >&2; return 1
+    fi
+    src=$tmp
+  fi
+  if [ "$DRY" = 1 ]; then echo "would install Nunito -> $FONTS and run fc-cache"; return 0; fi
+  mkdir -p "$FONTS" "$STATE"; install -m644 "$src" "$FONTS/Nunito[wght].ttf"
+  : > "$STATE/nunito-installed"   # lets `glasskit-cosmic uninstall theme` know the font is ours
+  fc-cache -f "$FONTS" >/dev/null 2>&1 || true
+  echo "font: installed Nunito"
+}
+
+if [ "$BACKUP" = 1 ]; then
+  rargs=(--backup theme); [ "$DRY" = 1 ] && rargs+=(--dry-run)
+  "$here/glasskit-restore" "${rargs[@]}"
+fi
+
+if [ "$colors" = 1 ]; then
+  B="$C/com.system76.CosmicTheme.Dark.Builder/v1"
+  put "$B/accent"       'Some((red:0.231,green:0.510,blue:0.965,alpha:1.0))'
+  put "$B/bg_color"     'Some((red:0.047,green:0.055,blue:0.071,alpha:1.0))'
+  put "$B/neutral_tint" 'Some((red:0.545,green:0.576,blue:0.639,alpha:1.0))'
+  put "$B/is_frosted"   'true'
+  put "$B/corner_radii" '(radius_0:(0.0,0.0,0.0,0.0),radius_xs:(4.0,4.0,4.0,4.0),radius_s:(12.0,12.0,12.0,12.0),radius_m:(18.0,18.0,18.0,18.0),radius_l:(28.0,28.0,28.0,28.0),radius_xl:(160.0,160.0,160.0,160.0))'
+fi
+
+if [ "$font" = 1 ] && ensure_font; then
+  put "$C/com.system76.CosmicTk/v1/interface_font" '(family:"Nunito",weight:Normal,stretch:Normal,style:Normal)'
+fi
+
+if [ "$icons" = 1 ]; then
+  if [ -d "$HOME/.local/share/icons/glasskit-filled" ] || [ "$DRY" = 1 ]; then
+    put "$C/com.system76.CosmicTk/v1/icon_theme" '"glasskit-filled"'
+  else
+    echo "icons: glasskit-filled not built yet (glasskit-cosmic install icons), icon theme unchanged"
+  fi
+fi
+[ "$DRY" = 1 ] || echo "applied"

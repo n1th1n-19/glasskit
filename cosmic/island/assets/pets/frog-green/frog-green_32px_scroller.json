@@ -1,0 +1,5070 @@
+{
+  "frames": [
+    {
+      "duration": 83,
+      "filename": "frog-green_Happy_South_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 0.0,
+        "id": "2481105b0f07e99a",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Happy_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Happy_South_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 0.0,
+        "id": "96dfbdaad0633bdf",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Happy_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Happy_South_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 0.0,
+        "id": "7b15290a37d6ddab",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Happy_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Happy_South_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 0.0,
+        "id": "3bc24fa8bd7a887c",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Happy_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Happy_South_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 0.0,
+        "id": "f4861eccb825a54c",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Happy_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Happy_South_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 0.0,
+        "id": "e97db82381ce4758",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Happy_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Happy_South_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 0.0,
+        "id": "5f4130802a8ea463",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Happy_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Happy_South_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 0.0,
+        "id": "880812c003794b5d",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Happy_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Happy_East_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 32
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 90.0,
+        "id": "05cef6ca8ed53b3d",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Happy_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Happy_East_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 32
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 90.0,
+        "id": "6f4149779795a13c",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Happy_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Happy_East_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 32
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 90.0,
+        "id": "16447c3130ad3538",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Happy_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Happy_East_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 32
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 90.0,
+        "id": "45508cf77315469f",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Happy_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Happy_East_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 32
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 90.0,
+        "id": "dfa46bfb307fe7d3",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Happy_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Happy_East_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 32
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 90.0,
+        "id": "71a2771dabfd7e8f",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Happy_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Happy_East_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 32
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 90.0,
+        "id": "f98b1336fa39c5dc",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Happy_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Happy_East_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 32
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 90.0,
+        "id": "b1219e4443b0bcb6",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Happy_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Happy_North_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 64
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 180.0,
+        "id": "f5f14e512cee989c",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Happy_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Happy_North_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 64
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 180.0,
+        "id": "3040567905ebca1d",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Happy_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Happy_North_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 64
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 180.0,
+        "id": "5ef4bdb96056c8c9",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Happy_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Happy_North_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 64
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 180.0,
+        "id": "bdceed57fb108c7a",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Happy_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Happy_North_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 64
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 180.0,
+        "id": "f2dc72cc26a8f7be",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Happy_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Happy_North_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 64
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 180.0,
+        "id": "dac75c427edbf59a",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Happy_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Happy_North_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 64
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 180.0,
+        "id": "ecce7686050c5905",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Happy_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Happy_North_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 64
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 180.0,
+        "id": "ad01f173525821c7",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Happy_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Happy_West_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 96
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 270.0,
+        "id": "d158c09d1b665087",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Happy_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Happy_West_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 96
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 270.0,
+        "id": "b1f668f72e08b5c2",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Happy_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Happy_West_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 96
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 270.0,
+        "id": "1eed3143745484ce",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Happy_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Happy_West_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 96
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 270.0,
+        "id": "c2f972cac19d82d5",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Happy_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Happy_West_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 96
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 270.0,
+        "id": "bf9017101c31948d",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Happy_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Happy_West_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 96
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 270.0,
+        "id": "3dcec0b051c67cf9",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Happy_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Happy_West_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 96
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 270.0,
+        "id": "ad5d169ba755b116",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Happy_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Happy_West_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 96
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 270.0,
+        "id": "16a0b45b82751230",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Happy_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Idle_South_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 128
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 0.0,
+        "id": "55019062607a0171",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Idle_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Idle_South_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 128
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 0.0,
+        "id": "b430003f82dda4c0",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Idle_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Idle_South_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 128
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 0.0,
+        "id": "1c1b398365351904",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Idle_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Idle_South_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 128
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 0.0,
+        "id": "4482e68af2e2bf83",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Idle_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Idle_South_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 128
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 0.0,
+        "id": "312440e5ef6a48bf",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Idle_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Idle_South_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 128
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 0.0,
+        "id": "4df428383ac673c3",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Idle_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Idle_South_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 128
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 0.0,
+        "id": "158f5d5ce8e83938",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Idle_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Idle_South_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 128
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 0.0,
+        "id": "84f9bd329cbb1612",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Idle_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Idle_East_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 160
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 90.0,
+        "id": "6624e34750000378",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Idle_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Idle_East_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 160
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 90.0,
+        "id": "aa2319a016ebbb69",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Idle_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Idle_East_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 160
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 90.0,
+        "id": "c890465df103da7d",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Idle_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Idle_East_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 160
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 90.0,
+        "id": "3fa43249e1a03646",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Idle_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Idle_East_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 160
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 90.0,
+        "id": "c303e4ae6231e0b2",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Idle_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Idle_East_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 160
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 90.0,
+        "id": "6d344b7175b3c786",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Idle_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Idle_East_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 160
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 90.0,
+        "id": "945dd2b201f1f8c9",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Idle_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Idle_East_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 160
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 90.0,
+        "id": "caaa6dd50f1f048b",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Idle_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Idle_North_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 192
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 180.0,
+        "id": "0e8898a510e4545f",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Idle_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Idle_North_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 192
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 180.0,
+        "id": "9c29eb554f89021a",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Idle_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Idle_North_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 192
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 180.0,
+        "id": "38ff0738ef8c8146",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Idle_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Idle_North_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 192
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 180.0,
+        "id": "c1eb1b4cfef0257d",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Idle_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Idle_North_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 192
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 180.0,
+        "id": "4f49a1f5f6cc7675",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Idle_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Idle_North_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 192
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 180.0,
+        "id": "12b098bd2f436231",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Idle_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Idle_North_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 192
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 180.0,
+        "id": "83370a2c4a8f190e",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Idle_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Idle_North_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 192
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 180.0,
+        "id": "c1608c67c51dc708",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Idle_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Idle_West_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 224
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 270.0,
+        "id": "56cbfe650763d236",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Idle_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Idle_West_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 224
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 270.0,
+        "id": "5c628027cb57f1bb",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Idle_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Idle_West_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 224
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 270.0,
+        "id": "ae5b633d11e2734f",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Idle_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Idle_West_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 224
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 270.0,
+        "id": "1a9ba92c072fb748",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Idle_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Idle_West_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 224
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 270.0,
+        "id": "2d70f6f9c15da1d0",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Idle_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Idle_West_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 224
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 270.0,
+        "id": "6ec7dba2e0b312b4",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Idle_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Idle_West_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 224
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 270.0,
+        "id": "393f8bd1cc48d007",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Idle_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Idle_West_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 224
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 270.0,
+        "id": "c16eed87feec16b1",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Idle_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Sleep_South_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "f5bc76565d6bb0eb",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Sleep_South_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "edea492e5a4e5c86",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Sleep_South_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "e1b67fce4e48dbda",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Sleep_South_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "9afdb35ac82617a9",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Sleep_South_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "e013ba15ae0fff39",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Sleep_South_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "cf366b4a5755854d",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Sleep_South_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "381eabdbb0b74ac2",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Sleep_South_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "94c59983d056e96c",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Sleep_South_08.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 256,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "13c4777b3fc8ca20",
+        "index": 8,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Sleep_South_09.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 288,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "66450fe5f615f1cb",
+        "index": 9,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Sleep_South_10.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 320,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "055789ebfab6891b",
+        "index": 10,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Sleep_South_11.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 352,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "4cb35bd945486fef",
+        "index": 11,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Sleep_East_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "cd9a38765efdc872",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Sleep_East_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "5ffce4b5d4a33e97",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Sleep_East_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "ed1451213d878aa3",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Sleep_East_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "255b4949bbe149a4",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Sleep_East_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "8c631655b3abeb74",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Sleep_East_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "e9badf32d0541f10",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Sleep_East_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "537c4f345e3de5bb",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Sleep_East_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "1bb33173996fb6b5",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Sleep_East_08.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 256,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "1d18a635352b8161",
+        "index": 8,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Sleep_East_09.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 288,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "16644005a3d0d8fe",
+        "index": 9,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Sleep_East_10.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 320,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "d6b5c817a2cb39ee",
+        "index": 10,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Sleep_East_11.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 352,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "0d6e9a2f8cd7e16a",
+        "index": 11,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Sleep_North_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "94dd1c1b2c6c8395",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Sleep_North_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "bebd11cea7e2e194",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Sleep_North_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "5b24992c3640f8f0",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Sleep_North_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "cc8082c25b6456c7",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Sleep_North_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "3fee4745223e9f7b",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Sleep_North_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "55fe941813d9b287",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Sleep_North_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "8b86e3e92843f534",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Sleep_North_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "090fc3909702300e",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Sleep_North_08.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 256,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "b15dc952c579573a",
+        "index": 8,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Sleep_North_09.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 288,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "8b7eb4ffc475ed05",
+        "index": 9,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Sleep_North_10.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 320,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "5672c38939528209",
+        "index": 10,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Sleep_North_11.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 352,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "278e9bd82d7f32c5",
+        "index": 11,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Sleep_West_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "24e5dfbb7475deec",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Sleep_West_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "8c17ea03132a918d",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Sleep_West_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "ee1bc164dbe0ae59",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Sleep_West_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "c290e48d9900d72a",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Sleep_West_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "7e13a9618c73134e",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Sleep_West_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "8e62cae1aad09d6a",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Sleep_West_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "d6346ba3a2ff51b5",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Sleep_West_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "99afcc1094903897",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Sleep_West_08.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 256,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "26c7387bfd7484a3",
+        "index": 8,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Sleep_West_09.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 288,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "b4cb2ee5eee19bb8",
+        "index": 9,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Sleep_West_10.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 320,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "108b3d55438f607c",
+        "index": 10,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Sleep_West_11.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 352,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "33fcdc10a53efab8",
+        "index": 11,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Walk_South_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 384
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 0.0,
+        "id": "60bb356bab4d6cba",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Walk_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Walk_South_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 384
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 0.0,
+        "id": "df2b3d8b6667ab7f",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Walk_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Walk_South_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 384
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 0.0,
+        "id": "76d06fc1726a990b",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Walk_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Walk_South_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 384
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 0.0,
+        "id": "a4def134d6e8b25c",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Walk_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Walk_South_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 384
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 0.0,
+        "id": "9e319eb2334749ec",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Walk_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Walk_South_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 384
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 0.0,
+        "id": "e538fedabc6202b8",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Walk_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Walk_South_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 384
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 0.0,
+        "id": "1d9dc9b60e403d43",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Walk_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Walk_South_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 384
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 0.0,
+        "id": "99f392a0969a91fd",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "South",
+        "tag": "Walk_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Walk_East_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 416
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 90.0,
+        "id": "4e8dd282f42ad75d",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Walk_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Walk_East_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 416
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 90.0,
+        "id": "8831f2578fc59e5c",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Walk_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Walk_East_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 416
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 90.0,
+        "id": "6fb4036a8a8efa18",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Walk_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Walk_East_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 416
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 90.0,
+        "id": "c27e3eae1f44977f",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Walk_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Walk_East_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 416
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 90.0,
+        "id": "f89514db28afe4f3",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Walk_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Walk_East_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 416
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 90.0,
+        "id": "0181fe5708c41f6f",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Walk_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Walk_East_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 416
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 90.0,
+        "id": "2188cd43dc275abc",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Walk_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Walk_East_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 416
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 90.0,
+        "id": "ca1247243be0b9d6",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "East",
+        "tag": "Walk_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Walk_North_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 448
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 180.0,
+        "id": "ed079f029bc916bc",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Walk_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Walk_North_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 448
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 180.0,
+        "id": "83954c559308b0bd",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Walk_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Walk_North_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 448
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 180.0,
+        "id": "9c197a6c94e62429",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Walk_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Walk_North_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 448
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 180.0,
+        "id": "e2d246e01b08e85a",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Walk_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Walk_North_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 448
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 180.0,
+        "id": "463168a8b3c5de5e",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Walk_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Walk_North_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 448
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 180.0,
+        "id": "17dc18f5b3699dfa",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Walk_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Walk_North_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 448
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 180.0,
+        "id": "bc81d8645abf92e5",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Walk_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Walk_North_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 448
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 180.0,
+        "id": "0066e74fdf76bb67",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "North",
+        "tag": "Walk_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Walk_West_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 480
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 270.0,
+        "id": "cb6971d34c3607a7",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Walk_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Walk_West_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 480
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 270.0,
+        "id": "0845bf587d1ad562",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Walk_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Walk_West_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 480
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 270.0,
+        "id": "b43c4625351ad52e",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Walk_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Walk_West_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 480
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 270.0,
+        "id": "a887247c85cfdbb5",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Walk_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Walk_West_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 480
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 270.0,
+        "id": "f02d8f9d6cf0312d",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Walk_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Walk_West_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 480
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 270.0,
+        "id": "9ccdd5920fab5759",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Walk_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "frog-green_Walk_West_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 480
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 270.0,
+        "id": "504ca62651da37f6",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Walk_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "frog-green_Walk_West_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 480
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 270.0,
+        "id": "f8a002669eaf7cd0",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 25
+        },
+        "side": "West",
+        "tag": "Walk_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    }
+  ],
+  "meta": {
+    "app": "Pixor",
+    "format": "I8",
+    "frameTags": [
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 0,
+        "name": "Happy_South",
+        "to": 7
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 8,
+        "name": "Happy_East",
+        "to": 15
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 16,
+        "name": "Happy_North",
+        "to": 23
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 24,
+        "name": "Happy_West",
+        "to": 31
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 32,
+        "name": "Idle_South",
+        "to": 39
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 40,
+        "name": "Idle_East",
+        "to": 47
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 48,
+        "name": "Idle_North",
+        "to": 55
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 56,
+        "name": "Idle_West",
+        "to": 63
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 64,
+        "name": "Sleep_South",
+        "to": 75
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 76,
+        "name": "Sleep_East",
+        "to": 87
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 88,
+        "name": "Sleep_North",
+        "to": 99
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 100,
+        "name": "Sleep_West",
+        "to": 111
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 112,
+        "name": "Walk_South",
+        "to": 119
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 120,
+        "name": "Walk_East",
+        "to": 127
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 128,
+        "name": "Walk_North",
+        "to": 135
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 136,
+        "name": "Walk_West",
+        "to": 143
+      }
+    ],
+    "image": "frog-green_32px_scroller_outline_lit.png",
+    "layers": [
+      {
+        "blendMode": "normal",
+        "name": "final",
+        "opacity": 255
+      }
+    ],
+    "pixor": {
+      "cell": {
+        "h": 32,
+        "w": 32
+      },
+      "emission": "s_emission.png",
+      "pivot": {
+        "x": 16,
+        "y": 25
+      },
+      "sides": {
+        "East": 90.0,
+        "North": 180.0,
+        "South": 0.0,
+        "West": 270.0
+      }
+    },
+    "scale": "1",
+    "size": {
+      "h": 512,
+      "w": 384
+    },
+    "slices": [
+      {
+        "color": "#0000ffff",
+        "keys": [
+          {
+            "bounds": {
+              "h": 32,
+              "w": 32,
+              "x": 0,
+              "y": 0
+            },
+            "frame": 0,
+            "pivot": {
+              "x": 16,
+              "y": 25
+            }
+          }
+        ],
+        "name": "pivot"
+      }
+    ],
+    "version": "2.1.0"
+  }
+}

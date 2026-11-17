@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Glasskit Clock
+Comment=Panel clock with month popup
+Type=Application
+Exec=glasskit-applets clock
+Terminal=false
+Categories=COSMIC;
+Icon=x-office-calendar-symbolic
+StartupNotify=true
+NoDisplay=true
+X-CosmicApplet=true
+X-CosmicHoverPopup=Auto
+X-OverflowPriority=5

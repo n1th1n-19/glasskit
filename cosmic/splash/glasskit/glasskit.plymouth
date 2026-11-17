@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=glasskit
+Description=n1th1n grain splash
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/glasskit
+ScriptFile=/usr/share/plymouth/themes/glasskit/glasskit.script

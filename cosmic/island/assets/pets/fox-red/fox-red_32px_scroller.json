@@ -1,0 +1,4526 @@
+{
+  "frames": [
+    {
+      "duration": 83,
+      "filename": "fox-red_Happy_South_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 0.0,
+        "id": "af1e2ce3dc0410ac",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Happy_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Happy_South_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 0.0,
+        "id": "5e0fb42c5b4161cd",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Happy_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Happy_South_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 0.0,
+        "id": "63c4e66305b36319",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Happy_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Happy_South_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 0.0,
+        "id": "209d39de6a469f6a",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Happy_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Happy_South_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 0.0,
+        "id": "996b7bdc25293f8e",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Happy_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Happy_South_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 0
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 0.0,
+        "id": "786bf836077cba2a",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Happy_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Happy_East_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 32
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 90.0,
+        "id": "58f7f36ebfdff17f",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Happy_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Happy_East_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 32
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 90.0,
+        "id": "da87eb4f04c5b2ba",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Happy_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Happy_East_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 32
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 90.0,
+        "id": "fb6ccdff795b27a6",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Happy_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Happy_East_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 32
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 90.0,
+        "id": "e507874394c6315d",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Happy_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Happy_East_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 32
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 90.0,
+        "id": "f5f7a1eac40a7c15",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Happy_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Happy_East_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 32
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 90.0,
+        "id": "2a5e572d83557791",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Happy_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Happy_North_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 64
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 180.0,
+        "id": "7d08ecf30038ea22",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Happy_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Happy_North_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 64
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 180.0,
+        "id": "175d1a16b62d76e7",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Happy_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Happy_North_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 64
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 180.0,
+        "id": "cff1fccc12c196d3",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Happy_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Happy_North_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 64
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 180.0,
+        "id": "60bacace88f731f4",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Happy_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Happy_North_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 64
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 180.0,
+        "id": "1d53a26e40327124",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Happy_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Happy_North_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 64
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 180.0,
+        "id": "c60013676e232500",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Happy_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Happy_West_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 96
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 270.0,
+        "id": "ac596c0d63f4cf8d",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Happy_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Happy_West_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 96
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 270.0,
+        "id": "452761c5c5401cec",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Happy_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Happy_West_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 96
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 270.0,
+        "id": "0e7c337410302348",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Happy_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Happy_West_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 96
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 270.0,
+        "id": "a23bed851ae2df4f",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Happy_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Happy_West_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 96
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 270.0,
+        "id": "c63a67b1049c21a3",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Happy_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Happy_West_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 96
+      },
+      "pixor": {
+        "action": "Happy",
+        "degrees": 270.0,
+        "id": "69e62e608b81b2df",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Happy_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Idle_South_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 128
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 0.0,
+        "id": "4da399b68af7408f",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Idle_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Idle_South_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 128
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 0.0,
+        "id": "cbdd3ac5cb95f8ea",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Idle_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Idle_South_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 128
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 0.0,
+        "id": "3aa60a5c462c6876",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Idle_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Idle_South_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 128
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 0.0,
+        "id": "e4126abd7a45984d",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Idle_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Idle_South_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 128
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 0.0,
+        "id": "67509cc4532178a5",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Idle_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Idle_South_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 128
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 0.0,
+        "id": "e5f79177382957a1",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Idle_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Idle_South_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 128
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 0.0,
+        "id": "572e5fe11c308c1e",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Idle_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Idle_South_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 128
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 0.0,
+        "id": "1f57852306908c78",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Idle_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Idle_East_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 160
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 90.0,
+        "id": "aa6c0d9c2838b786",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Idle_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Idle_East_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 160
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 90.0,
+        "id": "b23e3ac42b560beb",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Idle_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Idle_East_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 160
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 90.0,
+        "id": "a3ba2a34babe2d9f",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Idle_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Idle_East_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 160
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 90.0,
+        "id": "74ae196e78561c38",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Idle_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Idle_East_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 160
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 90.0,
+        "id": "51148ebe5755c620",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Idle_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Idle_East_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 160
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 90.0,
+        "id": "9eda9a40a3a8dd04",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Idle_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Idle_East_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 160
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 90.0,
+        "id": "fada6f5f5cdd68b7",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Idle_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Idle_East_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 160
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 90.0,
+        "id": "9366833492057301",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Idle_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Idle_North_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 192
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 180.0,
+        "id": "428a3364253444c9",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Idle_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Idle_North_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 192
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 180.0,
+        "id": "cd1a2fdee6545cd8",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Idle_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Idle_North_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 192
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 180.0,
+        "id": "d986c3fbf1cc149c",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Idle_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Idle_North_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 192
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 180.0,
+        "id": "93bb72db34bda8cb",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Idle_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Idle_North_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 192
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 180.0,
+        "id": "29ee420a63975a27",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Idle_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Idle_North_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 192
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 180.0,
+        "id": "1c8db3b7e0cf01db",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Idle_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Idle_North_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 192
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 180.0,
+        "id": "82fe10dde5bf9c30",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Idle_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Idle_North_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 192
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 180.0,
+        "id": "dadfe5869073984a",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Idle_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Idle_West_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 224
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 270.0,
+        "id": "305f29c9f3dd8428",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Idle_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Idle_West_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 224
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 270.0,
+        "id": "72de5bec2a061f39",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Idle_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Idle_West_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 224
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 270.0,
+        "id": "7c163ae2694e4fad",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Idle_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Idle_West_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 224
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 270.0,
+        "id": "955b2cffde54b056",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Idle_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Idle_West_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 224
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 270.0,
+        "id": "409f83f2ca094622",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Idle_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Idle_West_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 224
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 270.0,
+        "id": "5d03a44097daf776",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Idle_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Idle_West_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 224
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 270.0,
+        "id": "a984d3ac55ac16d9",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Idle_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Idle_West_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 224
+      },
+      "pixor": {
+        "action": "Idle",
+        "degrees": 270.0,
+        "id": "8cfa0f2dca64307b",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Idle_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Sleep_South_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "3098b0f42795dec9",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Sleep_South_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "bb28ad6ee8b5f6d8",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Sleep_South_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "c795418bf42dae9c",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Sleep_South_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "81c9f06b371f42cb",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Sleep_South_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "17fcbf9a65f8f427",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Sleep_South_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "0a9c3147e3309bdb",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Sleep_South_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "710c8e6de8213630",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Sleep_South_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "c8ee631692d5324a",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Sleep_South_08.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 256,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "929dd2ac0f572a7e",
+        "index": 8,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Sleep_South_09.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 288,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "995238dba0b1d2e1",
+        "index": 9,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Sleep_South_10.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 320,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "eabb4bcf985ed64d",
+        "index": 10,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Sleep_South_11.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 352,
+        "y": 256
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 0.0,
+        "id": "34c24f3afd585c31",
+        "index": 11,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Sleep_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Sleep_East_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "162aa23a09f995c0",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Sleep_East_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "b6fc325ce795f271",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Sleep_East_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "7ac3bba95397ef65",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Sleep_East_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "68592fd8727725be",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Sleep_East_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "8ecb2be93324e94a",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Sleep_East_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "bed7c0bc3a8f066e",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Sleep_East_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "42e2a1c6dd7f5911",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Sleep_East_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "f80c001f7e85d8d3",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Sleep_East_08.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 256,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "3f771d6a21f1b8e7",
+        "index": 8,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Sleep_East_09.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 288,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "a1b680299b56eb04",
+        "index": 9,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Sleep_East_10.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 320,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "ac9f8d8125ccc890",
+        "index": 10,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Sleep_East_11.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 352,
+        "y": 288
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 90.0,
+        "id": "3a96ab53a094a0b4",
+        "index": 11,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Sleep_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Sleep_North_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "8d692229b0ffb9c7",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Sleep_North_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "85c39a311c327182",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Sleep_North_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "ed9907a39ba3740e",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Sleep_North_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "55c5bb828207e695",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Sleep_North_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "b23d3ff3d1bb964d",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Sleep_North_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "c31a8ebf28761039",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Sleep_North_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "76995f536aa4f0d6",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Sleep_North_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "3faddd3f3ae23cf0",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Sleep_North_08.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 256,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "22e8b830e706e4dc",
+        "index": 8,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Sleep_North_09.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 288,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "d47b9e9b69502d5f",
+        "index": 9,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Sleep_North_10.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 320,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "fdbedaef5a533db7",
+        "index": 10,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Sleep_North_11.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 352,
+        "y": 320
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 180.0,
+        "id": "5466475ac052adc3",
+        "index": 11,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Sleep_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Sleep_West_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "a3b2c4b5212cdf9e",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Sleep_West_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "be08f2e4d6652b63",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Sleep_West_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "4f40234e5bcebbd7",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Sleep_West_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "250fed69d8aef1e0",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Sleep_West_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "229590e64ed9aba8",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Sleep_West_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "22109aa3de2fdb5c",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Sleep_West_06.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 192,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "9a27fe8a8ff3940f",
+        "index": 6,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Sleep_West_07.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 224,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "2cbd3a493e888dd9",
+        "index": 7,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Sleep_West_08.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 256,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "72b6448ea53938fd",
+        "index": 8,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Sleep_West_09.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 288,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "8179a206bfb2fb32",
+        "index": 9,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Sleep_West_10.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 320,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "d34b1f5e796ebc8a",
+        "index": 10,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Sleep_West_11.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 352,
+        "y": 352
+      },
+      "pixor": {
+        "action": "Sleep",
+        "degrees": 270.0,
+        "id": "ecc0ea1692cc6a8e",
+        "index": 11,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Sleep_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Walk_South_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 384
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 0.0,
+        "id": "dd7949acd884edf8",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Walk_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Walk_South_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 384
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 0.0,
+        "id": "217780059f70a5e9",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Walk_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Walk_South_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 384
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 0.0,
+        "id": "6521f719bbd3e7fd",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Walk_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Walk_South_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 384
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 0.0,
+        "id": "dc35e305ac7043c6",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Walk_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Walk_South_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 384
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 0.0,
+        "id": "3a584b13eab6cb32",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Walk_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Walk_South_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 384
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 0.0,
+        "id": "09c5fc2d4083d506",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "South",
+        "tag": "Walk_South"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Walk_East_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 416
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 90.0,
+        "id": "272914121cbca3fb",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Walk_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Walk_East_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 416
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 90.0,
+        "id": "2f230cf8428507f6",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Walk_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Walk_East_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 416
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 90.0,
+        "id": "9b1cf30b85a3756a",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Walk_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Walk_East_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 416
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 90.0,
+        "id": "de449f9021103919",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Walk_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Walk_East_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 416
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 90.0,
+        "id": "1e6cd27e05d54049",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Walk_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Walk_East_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 416
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 90.0,
+        "id": "efb86b3dab6a419d",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "East",
+        "tag": "Walk_East"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Walk_North_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 448
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 180.0,
+        "id": "3ff187ab8ed90aae",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Walk_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Walk_North_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 448
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 180.0,
+        "id": "a2523b3a23adee93",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Walk_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Walk_North_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 448
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 180.0,
+        "id": "31e1690363a91a27",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Walk_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Walk_North_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 448
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 180.0,
+        "id": "3b7754eb071cae50",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Walk_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Walk_North_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 448
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 180.0,
+        "id": "ef3284997c6a7a38",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Walk_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Walk_North_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 448
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 180.0,
+        "id": "82edda1ab1049e6c",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "North",
+        "tag": "Walk_North"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Walk_West_00.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 480
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 270.0,
+        "id": "7fb60482a06eada1",
+        "index": 0,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Walk_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Walk_West_01.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 32,
+        "y": 480
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 270.0,
+        "id": "79d856a7cfa92990",
+        "index": 1,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Walk_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Walk_West_02.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 64,
+        "y": 480
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 270.0,
+        "id": "1c808dcab300f5f4",
+        "index": 2,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Walk_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Walk_West_03.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 96,
+        "y": 480
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 270.0,
+        "id": "8bb7bfc83ccb5ad3",
+        "index": 3,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Walk_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 84,
+      "filename": "fox-red_Walk_West_04.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 128,
+        "y": 480
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 270.0,
+        "id": "a99c3a54ae32582f",
+        "index": 4,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Walk_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    },
+    {
+      "duration": 83,
+      "filename": "fox-red_Walk_West_05.png",
+      "frame": {
+        "h": 32,
+        "w": 32,
+        "x": 160,
+        "y": 480
+      },
+      "pixor": {
+        "action": "Walk",
+        "degrees": 270.0,
+        "id": "015df608da258333",
+        "index": 5,
+        "pivot": {
+          "x": 16,
+          "y": 27
+        },
+        "side": "West",
+        "tag": "Walk_West"
+      },
+      "rotated": false,
+      "sourceSize": {
+        "h": 32,
+        "w": 32
+      },
+      "spriteSourceSize": {
+        "h": 32,
+        "w": 32,
+        "x": 0,
+        "y": 0
+      },
+      "trimmed": false
+    }
+  ],
+  "meta": {
+    "app": "Pixor",
+    "format": "I8",
+    "frameTags": [
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 0,
+        "name": "Happy_South",
+        "to": 5
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 6,
+        "name": "Happy_East",
+        "to": 11
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 12,
+        "name": "Happy_North",
+        "to": 17
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 18,
+        "name": "Happy_West",
+        "to": 23
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 24,
+        "name": "Idle_South",
+        "to": 31
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 32,
+        "name": "Idle_East",
+        "to": 39
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 40,
+        "name": "Idle_North",
+        "to": 47
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 48,
+        "name": "Idle_West",
+        "to": 55
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 56,
+        "name": "Sleep_South",
+        "to": 67
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 68,
+        "name": "Sleep_East",
+        "to": 79
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 80,
+        "name": "Sleep_North",
+        "to": 91
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 92,
+        "name": "Sleep_West",
+        "to": 103
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 104,
+        "name": "Walk_South",
+        "to": 109
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 110,
+        "name": "Walk_East",
+        "to": 115
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 116,
+        "name": "Walk_North",
+        "to": 121
+      },
+      {
+        "color": "#000000ff",
+        "direction": "forward",
+        "from": 122,
+        "name": "Walk_West",
+        "to": 127
+      }
+    ],
+    "image": "fox-red_32px_scroller_outline_lit.png",
+    "layers": [
+      {
+        "blendMode": "normal",
+        "name": "final",
+        "opacity": 255
+      }
+    ],
+    "pixor": {
+      "cell": {
+        "h": 32,
+        "w": 32
+      },
+      "emission": "s_emission.png",
+      "pivot": {
+        "x": 16,
+        "y": 27
+      },
+      "sides": {
+        "East": 90.0,
+        "North": 180.0,
+        "South": 0.0,
+        "West": 270.0
+      }
+    },
+    "scale": "1",
+    "size": {
+      "h": 512,
+      "w": 384
+    },
+    "slices": [
+      {
+        "color": "#0000ffff",
+        "keys": [
+          {
+            "bounds": {
+              "h": 32,
+              "w": 32,
+              "x": 0,
+              "y": 0
+            },
+            "frame": 0,
+            "pivot": {
+              "x": 16,
+              "y": 27
+            }
+          }
+        ],
+        "name": "pivot"
+      }
+    ],
+    "version": "2.1.0"
+  }
+}

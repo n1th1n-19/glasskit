@@ -1,0 +1,91 @@
+#!/usr/bin/env bash
+# Apply the glasskit panel layout to COSMIC:
+#   top    floating pill bar: workspaces + app button on the left, Glasskit Island in the middle,
+#          tiling, clock, status, notifications and power on the right (glasskit's own applets
+#          when installed, COSMIC's stock ones otherwise)
+#   bottom floating dock with the app list, hides when a window overlaps it
+# Only applets whose .desktop file exists are put in, so nothing shows up as an empty slot.
+#
+#   glasskit-panel-apply [--dry-run] [--no-backup]
+#
+# It backs up the panel settings first; `glasskit-restore panel` puts them back.
+# COSMIC watches its config: the panels update live, nothing is restarted.
+set -euo pipefail
+
+here=$(dirname "$(readlink -f "$0")")
+C="${XDG_CONFIG_HOME:-$HOME/.config}/cosmic"
+DRY=0; BACKUP=1
+for a in "$@"; do
+  case "$a" in
+    --dry-run|-n) DRY=1 ;; --no-backup) BACKUP=0 ;;
+    -h|--help) sed -n '2,14p' "$0" | sed 's/^# \{0,1\}//'; exit 0 ;;
+    *) echo "unknown option $a" >&2; exit 2 ;;
+  esac
+done
+
+put() {
+  if [ "$DRY" = 1 ]; then echo "would write ${1#"$HOME/"}: $2"; return 0; fi
+  mkdir -p "$(dirname "$1")"; printf '%s' "$2" > "$1"
+}
+
+have() {  # is there an applet with this id?
+  local d
+  for d in "$HOME/.local/share/applications" /usr/share/applications /usr/local/share/applications \
+           "$HOME/.local/share/flatpak/exports/share/applications" /var/lib/flatpak/exports/share/applications; do
+    [ -f "$d/$1.desktop" ] && return 0
+  done
+  return 1
+}
+
+# ron_list a b c -> "a","b","c" (only the ids that exist)
+ron_list() {
+  local out="" id
+  for id in "$@"; do have "$id" && out+="${out:+,}\"$id\""; done
+  printf '%s' "$out"
+}
+
+G=io.github.n1th1n_19.Glasskit
+S=com.system76
+have "$G.Island" || echo "note: Glasskit Island is not installed, the middle of the bar stays empty (glasskit-cosmic install island, then run this again)" >&2
+
+if [ "$BACKUP" = 1 ]; then
+  rargs=(--backup panel); [ "$DRY" = 1 ] && rargs+=(--dry-run)
+  "$here/glasskit-restore" "${rargs[@]}"
+fi
+
+P="$C/$S.CosmicPanel.Panel/v1"
+clock=$S.CosmicAppletTime; have "$G.Clock" && clock=$G.Clock
+if have "$G.Status"; then status=("$G.Status"); else status=("$S.CosmicAppletAudio" "$S.CosmicAppletNetwork" "$S.CosmicAppletBluetooth" "$S.CosmicAppletBattery"); fi
+put "$P/anchor" 'Top'
+put "$P/anchor_gap" 'true'
+put "$P/margin" '6'
+put "$P/border_radius" '12'
+put "$P/opacity" '0.55'
+put "$P/expand_to_edges" 'false'
+put "$P/size" 'XS'
+put "$P/plugins_center" "Some([$(ron_list "$G.Island")])"
+put "$P/plugins_wings" "Some(([$(ron_list "$S.CosmicAppletWorkspaces" "$S.CosmicPanelAppButton")], [$(ron_list "$S.CosmicAppletTiling" "$clock" "${status[@]}" "$S.CosmicAppletNotifications" "$S.CosmicAppletPower")]))"
+
+D="$C/$S.CosmicPanel.Dock/v1"
+put "$D/anchor" 'Bottom'
+put "$D/anchor_gap" 'true'
+put "$D/margin" '10'
+put "$D/border_radius" '24'
+put "$D/opacity" '0.55'
+put "$D/padding" '4'
+put "$D/size" 'M'
+put "$D/exclusive_zone" 'false'
+put "$D/autohide" 'OnOverlap'
+put "$D/plugins_center" "Some([$(ron_list "$S.CosmicAppList")])"
+put "$D/plugins_wings" 'Some(([], []))'
+
+# app button shows its icon, not the "Applications" label
+BTN="$C/$S.CosmicPanelButton/v1/configs"
+if ! grep -qs force_presentation "$BTN"; then
+  put "$BTN" "{\"Panel\":(force_presentation:Some(Icon)),\"Dock\":(force_presentation:Some(Icon)),\"$S.CosmicAppLibrary\":(force_presentation:Some(Icon)),\"$S.CosmicPanelAppButton\":(force_presentation:Some(Icon))}"
+fi
+# make sure both panels are listed
+if [ -f "$C/$S.CosmicPanel/v1/entries" ] && ! grep -q Dock "$C/$S.CosmicPanel/v1/entries"; then
+  put "$C/$S.CosmicPanel/v1/entries" '["Panel","Dock"]'
+fi
+[ "$DRY" = 1 ] || echo "applied"

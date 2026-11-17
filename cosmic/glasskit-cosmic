@@ -1,0 +1,533 @@
+#!/usr/bin/env bash
+# glasskit-cosmic: install, update and remove the glasskit parts for COSMIC, one by one.
+# Everything is per user (no root). Run `glasskit-cosmic help` for usage. Docs: cosmic/README.md
+set -euo pipefail
+
+VERSION=0.1.0
+self=$(readlink -f "${BASH_SOURCE[0]}")
+COSMIC=$(dirname "$self")
+CFG="${XDG_CONFIG_HOME:-$HOME/.config}/glasskit"
+STATE_DIR="${XDG_STATE_HOME:-$HOME/.local/state}/glasskit"
+STATE="$STATE_DIR/cosmic-installed"
+BIN="$HOME/.local/bin"
+APPS="$HOME/.local/share/applications"
+AUTO="${XDG_CONFIG_HOME:-$HOME/.config}/autostart"
+CCFG="${XDG_CONFIG_HOME:-$HOME/.config}/cosmic"
+BACKUPS="$STATE_DIR/backups"
+SPLASH_CACHE="$HOME/.cache/glasskit/splash"
+ICON_DIR="$HOME/.local/share/icons/glasskit-filled"
+G=io.github.n1th1n_19.Glasskit
+
+# A copy of this script outside the repo (not a symlink) finds the repo through ~/.config/glasskit/repo.
+if [ ! -d "$COSMIC/island" ] && [ -f "$CFG/repo" ]; then COSMIC="$(head -n1 "$CFG/repo")/cosmic"; fi
+[ -d "$COSMIC/island" ] || { echo "error: cannot find the glasskit repo (run it from a clone: cd glasskit/cosmic && ./glasskit-cosmic help)" >&2; exit 1; }
+REPO=$(git -C "$COSMIC" rev-parse --show-toplevel 2>/dev/null || dirname "$COSMIC")
+[ -d "$HOME/.cargo/bin" ] && PATH="$HOME/.cargo/bin:$PATH"
+
+PARTS=(island applets widgets launcher launcher-shortcut theme panel icons cursor gestures splash)
+ALL=(island applets widgets launcher theme panel icons gestures)   # `all`; launcher-shortcut only with --with-shortcut
+
+YES=0; DRY=0; NO_BUILD=0; WITH_SHORTCUT=0; PURGE=0
+
+say()  { printf '%s\n' "$*"; }
+warn() { printf 'warning: %s\n' "$*" >&2; }
+die()  { printf 'error: %s\n' "$*" >&2; exit 1; }
+need() { command -v "$1" >/dev/null 2>&1; }
+# run <cmd...>: execute, or with --dry-run only print the line
+run()  { if [ "$DRY" = 1 ]; then printf 'would run:'; printf ' %q' "$@"; printf '\n'; else "$@"; fi; }
+# bin_script <name> [args]: one of cosmic/bin/*, which understand --dry-run themselves
+bin_script() { local n=$1; shift; if [ "$DRY" = 1 ]; then set -- "$@" --dry-run; fi; "$COSMIC/bin/$n" "$@"; }
+
+usage() {
+  cat <<EOF
+glasskit-cosmic $VERSION: glasskit for COSMIC, installed part by part
+
+Usage:
+  glasskit-cosmic install <parts...|all>   add parts (build, install, apply)
+  glasskit-cosmic update                   update every installed part (git pull, rebuild, reinstall)
+  glasskit-cosmic update <parts...>        update only some parts
+  glasskit-cosmic uninstall                remove everything glasskit installed
+  glasskit-cosmic uninstall <parts...>     remove only some parts, e.g. glasskit-cosmic uninstall widgets cursor
+  glasskit-cosmic list                     all parts: installed or not, version, commit
+  glasskit-cosmic status                   what is installed and whether it is current
+  glasskit-cosmic version | help
+
+Parts:
+  island            the Island top-bar applet with the pixel pet (+ island.conf)
+  applets           Clock, Status and Space panel applets (also accepted: clock, status)
+  widgets           the 7 desktop cards, started at login
+  launcher          glasskit-launcher (app launcher popup)
+  launcher-shortcut bind the launcher to Super (edits your custom shortcuts, backed up first)
+  theme             accent #3b82f6, dark #0c0e12, frosted panels, rounder corners, Nunito font
+  panel             floating top bar + bottom dock layout (backed up first)
+  icons             glasskit-filled symbolic icon theme
+  cursor            Bibata-Modern-Ice cursor (needs a new login)
+  gestures          3-finger touchpad gestures (libinput-gestures + ydotool)
+  splash            boot splash: builds the frames, prints the sudo commands for you to run
+
+  all = island applets widgets launcher theme panel icons gestures
+  (cursor, splash and launcher-shortcut only when named; launcher-shortcut also with --with-shortcut)
+
+Flags:  --yes (no questions)   --dry-run (print what would run, change nothing)
+        --no-build (reuse an existing cargo build)   --with-shortcut (adds launcher-shortcut to all)
+        --purge (uninstall also deletes your island.conf)
+EOF
+}
+
+# ---- state file: "<part> <commit>" per line -------------------------------------------------
+head_commit() { git -C "$REPO" rev-parse --short HEAD 2>/dev/null || echo none; }
+installed()   { if [ -f "$STATE" ]; then awk '{print $1}' "$STATE"; fi; }
+is_installed() { [ -f "$STATE" ] && awk -v p="$1" '$1==p{f=1} END{exit !f}' "$STATE"; }
+rec_commit()  { awk -v p="$1" '$1==p{print $2}' "$STATE" 2>/dev/null || true; }
+state_set() {
+  if [ "$DRY" = 1 ]; then say "would record: $1 $(head_commit) in $STATE"; return 0; fi
+  mkdir -p "$STATE_DIR"
+  { [ -f "$STATE" ] && awk -v p="$1" '$1!=p' "$STATE"; echo "$1 $(head_commit)"; } > "$STATE.tmp" || true
+  mv "$STATE.tmp" "$STATE"
+}
+state_del() {
+  [ "$DRY" = 1 ] && { say "would remove $1 from $STATE"; return 0; }
+  [ -f "$STATE" ] || return 0
+  awk -v p="$1" '$1!=p' "$STATE" > "$STATE.tmp" || true
+  mv "$STATE.tmp" "$STATE"
+}
+
+# ---- part names ---------------------------------------------------------------------------
+norm() {
+  case "$1" in
+    clock|status|applet) echo applets ;;
+    shortcut) echo launcher-shortcut ;;
+    island|applets|widgets|launcher|launcher-shortcut|theme|panel|icons|cursor|gestures|splash) echo "$1" ;;
+    *) die "unknown part '$1' (parts: ${PARTS[*]})" ;;
+  esac
+}
+# canonical install order, duplicates dropped
+order() { local p a; for p in "${PARTS[@]}"; do for a in "$@"; do if [ "$a" = "$p" ]; then echo "$p"; break; fi; done; done; }
+rorder() { order "$@" | tac; }
+resolve() {  # args -> normalised, ordered part list; "all" expands
+  local out=() a
+  for a in "$@"; do
+    if [ "$a" = all ]; then out+=("${ALL[@]}"); [ "$WITH_SHORTCUT" = 1 ] && out+=(launcher-shortcut)
+    else out+=("$(norm "$a")"); fi
+  done
+  order "${out[@]}"
+}
+
+# get_parts <args>: fills PARTS_OUT (exits here on an unknown name; a process substitution could not)
+get_parts() { local o; o=$(resolve "$@") || exit 1; PARTS_OUT=(); [ -z "$o" ] || mapfile -t PARTS_OUT <<< "$o"; }
+
+confirm() {  # confirm <question> [default y|n]
+  [ "$YES" = 1 ] || [ "$DRY" = 1 ] && return 0
+  [ -t 0 ] || die "$1 (no terminal: answer with --yes)"
+  local d=${2:-y} a
+  read -r -p "$1 [$([ "$d" = y ] && echo Y/n || echo y/N)] " a
+  a=${a:-$d}; [ "${a,,}" = y ] || [ "${a,,}" = yes ]
+}
+
+# ---- dependencies, checked before anything changes -----------------------------------------
+crate_dir() { case "$1" in island) echo island ;; applets) echo applets ;; widgets) echo widgets ;; launcher) echo launcher ;; *) echo "" ;; esac; }
+built() { local d; d=$(crate_dir "$1"); [ -x "$COSMIC/$d/target/release/glasskit-$1" ]; }
+check_deps() {
+  local miss=() p
+  for p in "$@"; do
+    case "$p" in
+      island|applets|widgets|launcher)
+        if [ "$NO_BUILD" = 1 ] && built "$p"; then continue; fi
+        need cargo || miss+=("cargo (Rust toolchain, for $p): https://rustup.rs")
+        need git   || miss+=("git (cargo fetches libcosmic from GitHub, for $p)")
+        need cc    || miss+=("a C compiler and linker: sudo apt install build-essential pkg-config") ;;
+      icons)  need python3 || miss+=("python3 (for icons)") ;;
+      theme)  need sha256sum || miss+=("sha256sum (coreutils, for theme)") ;;
+      cursor)
+        { need curl || need gh; } || miss+=("curl or gh (to download the cursor)")
+        need xz || miss+=("xz (xz-utils, for cursor)"); need tar || miss+=("tar (for cursor)"); need sha256sum || miss+=("sha256sum (for cursor)") ;;
+      splash)
+        need python3 || miss+=("python3 (for splash)")
+        python3 -c 'import PIL' 2>/dev/null || miss+=("python3 Pillow (for splash): sudo apt install python3-pil") ;;
+      *) ;;
+    esac
+  done
+  [ "${#miss[@]}" = 0 ] && return 0
+  printf 'missing requirements:\n' >&2; printf '  - %s\n' "${miss[@]}" >&2
+  if [ "$DRY" = 1 ]; then warn "dry-run continues anyway"; else exit 1; fi
+}
+
+# ---- links in ~/.local/bin ------------------------------------------------------------------
+link() {  # link <target> <name>
+  local t=$1 d="$BIN/$2"
+  if [ -L "$d" ] && [ "$(readlink -f "$d")" = "$t" ]; then return 0; fi
+  if [ -e "$d" ] || [ -L "$d" ]; then
+    if [ -e "$d.pre-glasskit" ]; then warn "$d exists and $d.pre-glasskit too, not linking $2"; return 0; fi
+    run mv "$d" "$d.pre-glasskit"; warn "kept your old $d as $d.pre-glasskit"
+  fi
+  run mkdir -p "$BIN"; run ln -s "$t" "$d"
+}
+unlink_ours() {  # remove a ~/.local/bin link only if it points into this repo
+  local d="$BIN/$1"
+  if [ -L "$d" ] && [[ "$(readlink -f "$d")" == "$COSMIC"/* ]]; then
+    run rm -f "$d"
+    [ -e "$d.pre-glasskit" ] && run mv "$d.pre-glasskit" "$d"
+  fi
+  return 0
+}
+rmf() { for f in "$@"; do if [ -e "$f" ] || [ -L "$f" ]; then run rm -f "$f"; fi; done; }
+cfg_prompt() { [ "$PURGE" = 1 ] && return 0; [ "$YES" = 1 ] && return 1; [ "$DRY" = 1 ] && return 1; confirm "$1" n; }
+
+# ---- parts: install ---------------------------------------------------------------------
+sh_run() { if [ "$NO_BUILD" = 1 ]; then GLASSKIT_NO_BUILD=1 run "$@"; else run "$@"; fi; }
+
+shortcuts_file() { echo "$CCFG/com.system76.CosmicSettings.Shortcuts/v1/custom"; }
+shortcut_add() {
+  local f entry tmp; f=$(shortcuts_file)
+  if grep -qs 'Glasskit Launcher' "$f"; then say "launcher-shortcut: already bound"; return 0; fi
+  entry="    (
+        modifiers: [
+            Super,
+        ],
+        description: Some(\"Glasskit Launcher\"),
+    ): Spawn(\"$BIN/glasskit-launcher\"),"
+  bin_script glasskit-restore --backup shortcuts
+  if [ "$DRY" = 1 ]; then say "would add Super -> $BIN/glasskit-launcher to $f"; return 0; fi
+  mkdir -p "$(dirname "$f")"
+  if [ ! -s "$f" ] || [ "$(tr -d '[:space:]' < "$f")" = '{}' ]; then
+    printf '{\n%s\n}\n' "$entry" > "$f"
+  else
+    tmp=$(mktemp)
+    awk -v e="$entry" '{l[NR]=$0} END{n=NR; while(n>0 && l[n] ~ /^[[:space:]]*$/) n--;
+        if (l[n] !~ /^[[:space:]]*\}[[:space:]]*$/) exit 3;
+        for(i=1;i<n;i++) print l[i]; print e; for(i=n;i<=NR;i++) print l[i]}' "$f" > "$tmp" \
+      || { rm -f "$tmp"; die "unexpected format in $f, left untouched (backup is in $BACKUPS)"; }
+    mv "$tmp" "$f"
+  fi
+  say "launcher-shortcut: Super now opens glasskit-launcher (COSMIC applies it live; a backup is in $BACKUPS)"
+}
+shortcut_remove() {
+  local f tmp; f=$(shortcuts_file)
+  grep -qs 'Glasskit Launcher' "$f" || return 0
+  bin_script glasskit-restore --backup shortcuts
+  [ "$DRY" = 1 ] && { say "would remove the Glasskit Launcher binding from $f"; return 0; }
+  tmp=$(mktemp)
+  awk '/^    \($/ {b=1; buf=$0 ORS; next}
+       b {buf=buf $0 ORS; if ($0 ~ /^    \):/) {if (buf !~ /Glasskit Launcher/) printf "%s", buf; b=0; buf=""} next}
+       {print}' "$f" > "$tmp"
+  mv "$tmp" "$f"
+}
+
+BIBATA_URL=https://github.com/ful1e5/Bibata_Cursor/releases/download/v2.0.7/Bibata-Modern-Ice.tar.xz
+BIBATA_SHA=a68cae60c4dc706350e194ebc91c5fe48bc7bc9d59e119555834a2a7ee5078ef
+cursor_install() {
+  local d="$HOME/.icons" env="${XDG_CONFIG_HOME:-$HOME/.config}/environment.d/glasskit-cursor.conf" tmp bad
+  if [ -f "$d/Bibata-Modern-Ice/cursors/arrow" ]; then
+    say "cursor: Bibata-Modern-Ice already in ~/.icons, not downloading"
+  elif [ "$DRY" = 1 ]; then
+    say "would download $BIBATA_URL, check sha256 $BIBATA_SHA, check every path and link inside the archive, extract into $d"
+  else
+    mkdir -p "$HOME/.cache/glasskit" "$d"; tmp=$(mktemp -d "$HOME/.cache/glasskit/dl.XXXXXX")
+    if need curl; then curl -fsSL --proto '=https' -o "$tmp/b.tar.xz" "$BIBATA_URL"
+    else gh release download v2.0.7 -R ful1e5/Bibata_Cursor -p Bibata-Modern-Ice.tar.xz -D "$tmp" && mv "$tmp/Bibata-Modern-Ice.tar.xz" "$tmp/b.tar.xz"; fi
+    [ "$(sha256sum "$tmp/b.tar.xz" | cut -d' ' -f1)" = "$BIBATA_SHA" ] || { rm -rf "$tmp"; die "cursor archive failed the sha256 check, nothing extracted"; }
+    xz -t "$tmp/b.tar.xz" || { rm -rf "$tmp"; die "cursor archive is not valid xz"; }
+    # only plain files, dirs and short relative links, all under Bibata-Modern-Ice/ and none with ".."
+    bad=$(LC_ALL=C tar tvJf "$tmp/b.tar.xz" | awk '{t=substr($1,1,1); p=$6
+        if (t!="-" && t!="d" && t!="l") print "type: " $0
+        else if (p !~ /^Bibata-Modern-Ice(\/|$)/ || p ~ /\.\./) print "path: " p
+        else if (t=="l" && ($8 !~ /^[A-Za-z0-9_.-]+$/ || $8 ~ /\.\./)) print "link: " p " -> " $8}')
+    [ -z "$bad" ] || { rm -rf "$tmp"; die "unexpected entries in the cursor archive, nothing extracted: $bad"; }
+    tar xJf "$tmp/b.tar.xz" -C "$d" --no-same-owner
+    rm -rf "$tmp"; mkdir -p "$STATE_DIR"; : > "$STATE_DIR/bibata-installed"
+  fi
+  if [ "$DRY" = 1 ]; then say "would write $env (XCURSOR_THEME=Bibata-Modern-Ice, XCURSOR_SIZE=24) and $d/default/index.theme"; return 0; fi
+  mkdir -p "$(dirname "$env")" "$d/default"
+  printf 'XCURSOR_THEME=Bibata-Modern-Ice\nXCURSOR_SIZE=24\n' > "$env"
+  if [ ! -f "$d/default/index.theme" ] || grep -q 'Inherits=Bibata-Modern-Ice' "$d/default/index.theme"; then
+    printf '[Icon Theme]\nName=Default\nInherits=Bibata-Modern-Ice\n' > "$d/default/index.theme"
+  fi
+  say "cursor: installed. Log out and back in for it to apply everywhere."
+}
+
+splash_cmds() {
+  local c=$SPLASH_CACHE/glasskit t=/usr/share/plymouth/themes
+  cat <<EOF
+Run these yourself (glasskit never runs sudo), then reboot:
+  sudo cp -r "$c" $t/
+  sudo update-alternatives --install $t/default.plymouth default.plymouth $t/glasskit/glasskit.plymouth 200
+  sudo update-alternatives --set default.plymouth $t/glasskit/glasskit.plymouth
+  sudo update-initramfs -u
+EOF
+}
+splash_install() {
+  run rm -rf "$SPLASH_CACHE"; run mkdir -p "$(dirname "$SPLASH_CACHE")"
+  run cp -a "$COSMIC/splash" "$SPLASH_CACHE"
+  run python3 "$SPLASH_CACHE/gen.py"   # builds in the cache, so your clone stays clean
+  splash_cmds
+  say "(preview first: $SPLASH_CACHE/preview.html; undo steps are in $COSMIC/splash/INSTALL.md)"
+}
+
+install_part() {
+  case "$1" in
+    island)   sh_run "$COSMIC/install.sh" ;;
+    applets)  sh_run "$COSMIC/applets/install.sh" ;;
+    widgets)  sh_run "$COSMIC/widgets/install.sh" ;;
+    launcher) sh_run "$COSMIC/launcher/install.sh" ;;
+    launcher-shortcut)
+      is_installed launcher || warn "launcher is not installed yet (glasskit-cosmic install launcher), the shortcut needs it"
+      shortcut_add ;;
+    theme)    link "$COSMIC/bin/glasskit-theme-apply" glasskit-theme-apply; link "$COSMIC/bin/glasskit-restore" glasskit-restore
+              bin_script glasskit-theme-apply
+              say "theme: if the colours do not change, toggle Dark/Light once in COSMIC Settings > Appearance" ;;
+    panel)    link "$COSMIC/bin/glasskit-panel-apply" glasskit-panel-apply; link "$COSMIC/bin/glasskit-restore" glasskit-restore
+              bin_script glasskit-panel-apply ;;
+    icons)    run python3 "$COSMIC/bin/glasskit-icons-build-cosmic"
+              bin_script glasskit-theme-apply --icons ;;
+    cursor)   cursor_install ;;
+    gestures) bin_script glasskit-gestures-apply ;;
+    splash)   splash_install ;;
+    *) die "no installer for $1" ;;
+  esac
+}
+
+# ---- parts: uninstall -------------------------------------------------------------------
+restore_tag() {  # restore_tag <tag>: put back the settings saved before glasskit's first edit
+  if [ -f "$BACKUPS/$1-orig.tgz" ]; then bin_script glasskit-restore "$1"
+  else warn "$1: no backup found in $BACKUPS, your current settings are left as they are"; fi
+}
+uninstall_part() {
+  case "$1" in
+    island)
+      rmf "$BIN/glasskit-island" "$APPS/$G.Island.desktop"
+      if [ -f "$CFG/island.conf" ] && cfg_prompt "Also delete your Island settings ($CFG/island.conf)?"; then rmf "$CFG/island.conf"
+      elif [ -f "$CFG/island.conf" ]; then say "island: kept $CFG/island.conf (--purge deletes it)"; fi ;;
+    applets)  rmf "$BIN/glasskit-applets" "$APPS/$G.Clock.desktop" "$APPS/$G.Status.desktop" "$APPS/$G".Space{.S,,.L,.XL}.desktop ;;
+    widgets)  local c
+              for c in clock calendar system media toggles storage focus; do rmf "$AUTO/glasskit-widget-$c.desktop"; done
+              rmf "$BIN/glasskit-widgets"
+              say "widgets: cards already on screen go away at your next logout (or: pkill glasskit-widgets)" ;;
+    launcher) rmf "$BIN/glasskit-launcher"
+              grep -qs 'Glasskit Launcher' "$(shortcuts_file)" && warn "the Super shortcut still points at the launcher: glasskit-cosmic uninstall launcher-shortcut" ;;
+    launcher-shortcut) shortcut_remove ;;
+    theme)    if confirm "theme: restore your settings from before glasskit (colours, radii, font, icon theme)?" y; then restore_tag theme; fi
+              if [ -f "$STATE_DIR/nunito-installed" ]; then
+                rmf "$HOME/.local/share/fonts/Nunito/Nunito[wght].ttf" "$STATE_DIR/nunito-installed"
+                run rmdir "$HOME/.local/share/fonts/Nunito" 2>/dev/null || true
+              fi ;;
+    panel)    if confirm "panel: restore your top bar and dock layout from the backup glasskit made?" y; then restore_tag panel; fi ;;
+    icons)    if [ "$(cat "$CCFG/com.system76.CosmicTk/v1/icon_theme" 2>/dev/null || true)" = '"glasskit-filled"' ]; then
+                bin_script glasskit-restore --backup theme
+                if [ "$DRY" = 1 ]; then say "would set the icon theme back to Cosmic"; else printf '"Cosmic"' > "$CCFG/com.system76.CosmicTk/v1/icon_theme"; fi
+              fi
+              run rm -rf "$ICON_DIR" "$HOME/.cache/glasskit-filled-icons" ;;
+    cursor)   local env="${XDG_CONFIG_HOME:-$HOME/.config}/environment.d/glasskit-cursor.conf"
+              if grep -qs 'XCURSOR_THEME=Bibata' "$env"; then rmf "$env"; fi
+              if grep -qs 'Inherits=Bibata-Modern-Ice' "$HOME/.icons/default/index.theme"; then
+                rmf "$HOME/.icons/default/index.theme"; run rmdir "$HOME/.icons/default" 2>/dev/null || true
+              fi
+              if [ -f "$STATE_DIR/bibata-installed" ]; then run rm -rf "$HOME/.icons/Bibata-Modern-Ice"; rmf "$STATE_DIR/bibata-installed"
+              else say "cursor: ~/.icons/Bibata-Modern-Ice was there before glasskit, left alone"; fi
+              say "cursor: log out and back in to get the default cursor back" ;;
+    gestures) local conf="${XDG_CONFIG_HOME:-$HOME/.config}/libinput-gestures.conf"
+              if grep -qs 'glasskit-cosmic gestures' "$conf"; then
+                rmf "$conf"
+                [ -f "$BACKUPS/libinput-gestures.conf.orig" ] && run cp "$BACKUPS/libinput-gestures.conf.orig" "$conf"
+              fi
+              if grep -qs 'Libinput Gestures (glasskit)' "$AUTO/libinput-gestures.desktop"; then rmf "$AUTO/libinput-gestures.desktop"; fi ;;
+    splash)   run rm -rf "$SPLASH_CACHE"
+              say "splash: if you ran the sudo steps, undo them yourself:"
+              say "  sudo update-alternatives --set default.plymouth /usr/share/plymouth/themes/pop-basic/pop-basic.plymouth"
+              say "  sudo update-initramfs -u" ;;
+    *) die "no uninstaller for $1" ;;
+  esac
+}
+
+# ---- is a part really there? ------------------------------------------------------------
+part_ok() {
+  case "$1" in
+    island)   [ -x "$BIN/glasskit-island" ] && [ -f "$APPS/$G.Island.desktop" ] ;;
+    applets)  [ -x "$BIN/glasskit-applets" ] && [ -f "$APPS/$G.Clock.desktop" ] ;;
+    widgets)  [ -x "$BIN/glasskit-widgets" ] && [ -f "$AUTO/glasskit-widget-clock.desktop" ] ;;
+    launcher) [ -x "$BIN/glasskit-launcher" ] ;;
+    launcher-shortcut) grep -qs 'Glasskit Launcher' "$(shortcuts_file)" ;;
+    theme)    grep -qs '0.231' "$CCFG/com.system76.CosmicTheme.Dark.Builder/v1/accent" ;;
+    panel)    grep -qs 'Glasskit' "$CCFG/com.system76.CosmicPanel.Panel/v1/plugins_center" "$CCFG/com.system76.CosmicPanel.Panel/v1/plugins_wings" ;;
+    icons)    [ -d "$ICON_DIR" ] ;;
+    cursor)   [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/environment.d/glasskit-cursor.conf" ] ;;
+    gestures) grep -qs 'glasskit-cosmic gestures' "${XDG_CONFIG_HOME:-$HOME/.config}/libinput-gestures.conf" ;;
+    splash)   [ -d "$SPLASH_CACHE/glasskit" ] ;;
+    *) return 1 ;;
+  esac
+}
+# repo paths (relative to cosmic/) whose change means the part needs a reinstall
+part_paths() {
+  case "$1" in
+    island) echo "island install.sh res" ;; applets) echo "applets res" ;; widgets) echo widgets ;; launcher) echo launcher ;;
+    launcher-shortcut|cursor) echo "glasskit-cosmic" ;;
+    theme) echo "bin/glasskit-theme-apply bin/glasskit-restore" ;;
+    panel) echo "bin/glasskit-panel-apply bin/glasskit-restore" ;;
+    icons) echo "bin/glasskit-icons-build-cosmic bin/glasskit-theme-apply" ;;
+    gestures) echo "bin/glasskit-gestures-apply" ;; splash) echo splash ;;
+    *) echo "" ;;
+  esac
+}
+part_desc() {
+  case "$1" in
+    island) echo "Island applet + pixel pet + island.conf" ;; applets) echo "Clock, Status and Space panel applets" ;;
+    widgets) echo "7 desktop cards (autostart)" ;; launcher) echo "app launcher popup" ;;
+    launcher-shortcut) echo "Super opens the launcher (edits shortcuts)" ;; theme) echo "colours, radii, frosted, Nunito" ;;
+    panel) echo "floating top bar + dock layout" ;; icons) echo "glasskit-filled icon theme" ;;
+    cursor) echo "Bibata-Modern-Ice cursor" ;; gestures) echo "3-finger touchpad gestures" ;; splash) echo "boot splash (sudo steps are yours)" ;;
+    *) echo "" ;;
+  esac
+}
+part_version() {
+  local d; d=$(crate_dir "$1"); [ -n "$d" ] || { echo "-"; return; }
+  sed -n 's/^version = "\(.*\)"/\1/p' "$COSMIC/$d/Cargo.toml" | head -n1
+}
+
+# ---- commands --------------------------------------------------------------------------
+ensure_links() {
+  link "$self" glasskit-cosmic
+  if [ "$DRY" = 1 ]; then say "would write $REPO to $CFG/repo"; else mkdir -p "$CFG"; printf '%s\n' "$REPO" > "$CFG/repo"; fi
+  case ":$PATH:" in *":$BIN:"*) ;; *) warn "$BIN is not in your PATH; add it to use glasskit-cosmic from anywhere" ;; esac
+}
+
+cmd_install() {
+  [ "$#" -gt 0 ] || die "install what? e.g. glasskit-cosmic install island launcher   (or: all)"
+  local parts p cfgp=()
+  get_parts "$@"; parts=("${PARTS_OUT[@]}")
+  check_deps "${parts[@]}"
+  for p in "${parts[@]}"; do case "$p" in theme|panel|launcher-shortcut|icons|gestures) cfgp+=("$p") ;; *) ;; esac; done
+  if [ "${#cfgp[@]}" -gt 0 ]; then
+    confirm "These change your COSMIC settings (${cfgp[*]}). A backup is made first, 'glasskit-cosmic uninstall' restores it. Continue?" y || die "cancelled"
+  fi
+  for p in "${parts[@]}"; do
+    say "==> $p"; install_part "$p"; state_set "$p"
+  done
+  ensure_links
+  case " ${parts[*]} " in
+    *" island "*|*" applets "*) is_installed panel && say "note: re-run 'glasskit-cosmic install panel' so the panel layout picks up the new applets" ;;
+    *) ;;
+  esac
+  say "done: ${parts[*]}"
+}
+
+cmd_update() {
+  local parts p head rec dirty=0 changed=0 pp
+  if [ "$#" -gt 0 ]; then
+    get_parts "$@"; parts=("${PARTS_OUT[@]}")
+    for p in "${parts[@]}"; do is_installed "$p" || die "$p is not installed (glasskit-cosmic install $p)"; done
+  else
+    mapfile -t parts < <(installed)
+    [ "${#parts[@]}" -gt 0 ] || die "nothing installed yet (glasskit-cosmic install <parts>)"
+  fi
+  if [ -n "$(git -C "$REPO" status --porcelain --untracked-files=no 2>/dev/null)" ]; then
+    warn "$REPO has local changes: skipping git pull (your changes are kept). Commit or stash them, then run update again."
+    dirty=1
+  fi
+  if [ "$dirty" = 0 ]; then
+    if ! git -C "$REPO" rev-parse --abbrev-ref '@{u}' >/dev/null 2>&1; then
+      warn "this branch has no upstream, skipping git pull"
+    elif [ "$DRY" = 1 ]; then run git -C "$REPO" pull --ff-only; say "(dry-run: upstream not fetched, so changes there are not shown below)"
+    else git -C "$REPO" pull --ff-only || warn "git pull failed, continuing with what is here"; fi
+  fi
+  head=$(head_commit)
+  mapfile -t parts < <(order "${parts[@]}")
+  local todo=()
+  for p in "${parts[@]}"; do
+    rec=$(rec_commit "$p"); read -ra pp <<< "$(part_paths "$p")"
+    if [ "$rec" = "$head" ]; then say "$p: already up to date"
+    elif [ "$head" != none ] && [ "$rec" != none ] && [ -n "$rec" ] && git -C "$REPO" cat-file -e "$rec^{commit}" 2>/dev/null \
+         && (cd "$COSMIC" && git diff --quiet "$rec" HEAD -- "${pp[@]}"); then
+      say "$p: already up to date"; state_set "$p"
+    else todo+=("$p"); fi
+  done
+  [ "${#todo[@]}" = 0 ] && { say "already up to date"; return 0; }
+  check_deps "${todo[@]}"
+  local cfgp=()
+  for p in "${todo[@]}"; do case "$p" in theme|panel|launcher-shortcut|icons|gestures) cfgp+=("$p") ;; *) ;; esac; done
+  if [ "${#cfgp[@]}" -gt 0 ]; then confirm "Updating ${cfgp[*]} re-applies COSMIC settings (backup first). Continue?" y || die "cancelled"; fi
+  for p in "${todo[@]}"; do say "==> $p (rebuild + reinstall)"; install_part "$p"; state_set "$p"; changed=1; done
+  [ "$changed" = 1 ] && say "updated: ${todo[*]}"
+  return 0
+}
+
+cmd_uninstall() {
+  local parts p
+  if [ "$#" = 0 ] || [ "${1:-}" = all ]; then mapfile -t parts < <(installed)
+  else get_parts "$@"; parts=("${PARTS_OUT[@]}"); fi
+  [ "${#parts[@]}" -gt 0 ] || { say "nothing to uninstall"; return 0; }
+  mapfile -t parts < <(rorder "${parts[@]}")
+  say "will remove: ${parts[*]}"
+  confirm "Remove these glasskit parts? (Ember and your other apps are not touched)" n || die "cancelled"
+  for p in "${parts[@]}"; do
+    is_installed "$p" || warn "$p is not in the installed list, removing any leftovers anyway"
+    say "==> $p"; uninstall_part "$p"; state_del "$p"
+  done
+  case " ${parts[*]} " in
+    *" island "*|*" applets "*) is_installed panel && say "note: your panel layout still lists the removed applets: glasskit-cosmic uninstall panel" ;;
+    *) ;;
+  esac
+  if [ "$DRY" = 1 ]; then
+    local left; left=$(installed | grep -vxF -f <(printf '%s\n' "${parts[@]}") || true)
+    [ -n "$left" ] || say "would also remove the glasskit-cosmic command link, $CFG/repo and the state file"
+    return 0
+  fi
+  if [ ! -s "$STATE" ]; then
+    rm -f "$STATE"
+    local n; for n in glasskit-cosmic glasskit-theme-apply glasskit-panel-apply glasskit-restore; do unlink_ours "$n"; done
+    rm -f "$CFG/repo"; rmdir "$CFG" 2>/dev/null || true
+    say "removed: the glasskit-cosmic command link and the state file (this repo is untouched)"
+  fi
+}
+
+cmd_list() {
+  local p flag rec inall
+  printf '%-18s %-9s %-8s %-8s %-6s %s\n' PART INSTALLED VERSION COMMIT IN-ALL DESCRIPTION
+  for p in "${PARTS[@]}"; do
+    if is_installed "$p"; then flag=yes; rec=$(rec_commit "$p"); else flag=no; rec=-; fi
+    case " ${ALL[*]} " in *" $p "*) inall=yes ;; *) inall=no ;; esac
+    printf '%-18s %-9s %-8s %-8s %-6s %s\n' "$p" "$flag" "$(part_version "$p")" "$rec" "$inall" "$(part_desc "$p")"
+  done
+}
+
+cmd_status() {
+  local head dirty="clean" p rec st ps
+  head=$(head_commit)
+  [ -n "$(git -C "$REPO" status --porcelain --untracked-files=no 2>/dev/null)" ] && dirty="local changes"
+  say "glasskit-cosmic $VERSION"
+  say "repo:    $REPO (commit $head, $dirty)"
+  if [ -L "$BIN/glasskit-cosmic" ]; then say "command: $BIN/glasskit-cosmic -> $(readlink "$BIN/glasskit-cosmic")"; else say "command: no $BIN/glasskit-cosmic link yet (made by install)"; fi
+  say "state:   $STATE"
+  if [ -z "$(installed)" ]; then say "nothing installed"; return 0; fi
+  printf '%-18s %-8s %s\n' PART COMMIT STATE
+  mapfile -t ps < <(installed); mapfile -t ps < <(order "${ps[@]}")
+  for p in "${ps[@]}"; do
+    rec=$(rec_commit "$p"); st=ok
+    part_ok "$p" || st="files missing or changed (reinstall: glasskit-cosmic install $p)"
+    [ "$rec" != "$head" ] && st="$st; repo is at $head (glasskit-cosmic update)"
+    printf '%-18s %-8s %s\n' "$p" "$rec" "$st"
+  done
+}
+
+# ---- main ------------------------------------------------------------------------------------
+cmd=${1:-help}; [ "$#" -gt 0 ] && shift
+args=()
+for a in "$@"; do
+  case "$a" in
+    --yes|-y) YES=1 ;; --dry-run|-n) DRY=1 ;; --no-build) NO_BUILD=1 ;;
+    --with-shortcut) WITH_SHORTCUT=1 ;; --purge) PURGE=1 ;;
+    -h|--help) cmd=help ;;
+    -*) die "unknown flag $a (see: glasskit-cosmic help)" ;;
+    *) args+=("$a") ;;
+  esac
+done
+[ "$DRY" = 1 ] && say "(dry-run: nothing will be changed)"
+
+case "$cmd" in
+  install)   cmd_install "${args[@]}" ;;
+  update)    cmd_update "${args[@]}" ;;
+  uninstall) cmd_uninstall "${args[@]}" ;;
+  list)      cmd_list ;;
+  status)    cmd_status ;;
+  version|--version|-V) say "glasskit-cosmic $VERSION (repo commit $(head_commit))" ;;
+  help|-h|--help) usage ;;
+  *) usage >&2; exit 2 ;;
+esac

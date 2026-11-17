@@ -1,0 +1,44 @@
+# glasskit: bg #0c0e12, 14 reveal frames then a 10-frame loop, ready.png at end of boot.
+Window.SetBackgroundTopColor(0.047, 0.055, 0.071);
+Window.SetBackgroundBottomColor(0.047, 0.055, 0.071);
+
+NR = 14; NL = 10; TICKS = 4;   # refresh is ~50 Hz -> 12.5 fps
+for (i = 0; i < NR; i++) frame[i] = Image("r" + (i < 10 ? "0" : "") + i + ".png");
+for (i = 0; i < NL; i++) frame[NR + i] = Image("l0" + i + ".png");
+ready = Image("ready.png");
+
+sw = Window.GetWidth(); sh = Window.GetHeight();
+logo = Sprite();
+logo.SetX(sw / 2 - ready.GetWidth() / 2);
+logo.SetY(sh / 2 - ready.GetHeight() / 2);
+logo.SetImage(frame[0]);
+
+tick = 0; done = 0;
+fun refresh() {
+  if (done) return;
+  step = Math.Int(tick / TICKS);
+  if (step < NR) idx = step; else idx = NR + (step - NR) % NL;
+  logo.SetImage(frame[idx]);
+  tick++;
+}
+Plymouth.SetRefreshFunction(refresh);
+
+fun progress(time, p) { if (p > 0.98) { done = 1; logo.SetImage(ready); } }
+Plymouth.SetBootProgressFunction(progress);
+
+# LUKS / question prompts
+prompt = Sprite(); bullets = Sprite();
+prompt.SetY(sh * 0.72); bullets.SetY(sh * 0.72 + 40);
+fun hide() { prompt.SetOpacity(0); bullets.SetOpacity(0); }
+fun show_prompt(text, count) {
+  p = Image.Text(text, 0.957, 0.961, 0.969);
+  prompt.SetImage(p); prompt.SetX(sw / 2 - p.GetWidth() / 2); prompt.SetOpacity(1);
+  s = ""; for (i = 0; i < count; i++) s += "*";
+  b = Image.Text(s, 0.957, 0.961, 0.969);
+  bullets.SetImage(b); bullets.SetX(sw / 2 - b.GetWidth() / 2); bullets.SetOpacity(1);
+}
+fun password(text, count) { show_prompt(text, count); }
+fun question(text, entry) { show_prompt(text + " " + entry, 0); }
+Plymouth.SetDisplayPasswordFunction(password);
+Plymouth.SetDisplayQuestionFunction(question);
+Plymouth.SetDisplayNormalFunction(hide);

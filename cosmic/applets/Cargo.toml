@@ -1,0 +1,17 @@
+[package]
+name = "glasskit-applets"
+version = "0.1.0"
+edition = "2024"
+license = "GPL-3.0-or-later"
+
+[dependencies]
+ember-core = { git = "https://github.com/n1th1n-19/ember", tag = "v0.1.4" }
+
+[dependencies.libcosmic]
+git = "https://github.com/pop-os/libcosmic.git"
+default-features = false
+features = ["applet", "applet-token", "wgpu"]
+
+[profile.release]
+strip = true
+lto = "thin"

@@ -103,6 +103,16 @@ Then add widgets: right-click the desktop or a panel, choose **Add Widgets** and
 ./uninstall.sh
 ```
 
+## COSMIC (Pop!_OS)
+
+The `cosmic/` folder ports the Island (with a pixel pet), Clock and Status applets, desktop widgets, a launcher, theme, panel layout, filled icons, cursor, gestures and boot splash to the COSMIC desktop (tested on COSMIC 1.11). Every piece is its own part, with one command to install, update and remove them:
+
+```bash
+git clone https://github.com/n1th1n-19/glasskit && cd glasskit/cosmic && ./glasskit-cosmic install island launcher
+```
+
+See [cosmic/README.md](cosmic/README.md) for the parts, `update` and `uninstall`, and the requirements. The Plasma instructions above are unchanged.
+
 ## Claude skill
 
 `skills/glasskit/` is a [Claude Code](https://claude.com/claude-code) skill. With it, Claude can install and adapt glasskit on Plasma, or rebuild the same look on GNOME, COSMIC (Pop!_OS), Hyprland, macOS or Windows. You can install the skill on its own, without the desktop kit:

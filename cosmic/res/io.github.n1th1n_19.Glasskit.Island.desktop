@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Glasskit Island
+Comment=Dynamic island for the COSMIC panel: music, notifications, volume, battery
+Type=Application
+Exec=glasskit-island
+Terminal=false
+Categories=COSMIC;
+Icon=audio-x-generic-symbolic
+StartupNotify=true
+NoDisplay=true
+X-CosmicApplet=true
+X-CosmicHoverPopup=Auto
+X-OverflowPriority=10

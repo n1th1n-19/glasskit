@@ -1,0 +1,14 @@
+[package]
+name = "glasskit-launcher"
+version = "0.1.0"
+edition = "2024"
+license = "GPL-3.0-or-later"
+
+[dependencies.libcosmic]
+git = "https://github.com/pop-os/libcosmic.git"
+default-features = false
+features = ["tokio", "wayland", "winit", "wgpu"]
+
+[profile.release]
+strip = true
+lto = "thin"
