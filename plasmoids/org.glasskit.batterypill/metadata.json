@@ -1,0 +1,5 @@
+{
+  "KPackageStructure": "Plasma/Applet",
+  "KPlugin": { "Id": "org.glasskit.batterypill", "Name": "Glasskit Battery Pill", "Description": "Battery icon and percent in a rounded pill", "Icon": "battery-080", "Category": "System Information", "Authors": [{ "Name": "glasskit contributors" }], "License": "GPL-2.0+", "Version": "1.0", "FormFactors": ["panel"] },
+  "X-Plasma-API-Minimum-Version": "6.0"
+}

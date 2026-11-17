@@ -1,0 +1,73 @@
+# glasskit
+
+Frosted-glass widgets, a dynamic top-bar island, filled rounded icons and a grain boot splash for **KDE Plasma 6**. Everything installs per user, with no root.
+
+## What you get
+
+| Piece | What it does |
+|---|---|
+| **Island** (top bar) | A black pill that springs open for music (art, title, equaliser), notifications, volume changes, charging and low battery. It also shows an orange dot while an app records from the microphone. Click it for a media card with a progress bar. |
+| **Battery Pill** (top bar) | Battery icon and percentage. Turns green while charging and orange at 15% or below. |
+| **Desktop widgets** | Clock with day progress, month calendar, CPU/RAM/battery/temperature rings, media player, quick toggles (Wi-Fi, Bluetooth, Do Not Disturb, Night Light, Mute), storage and network speed, Pomodoro focus timer. |
+| **Glasskit-Filled icons** | About 245 KDE UI icon names (toolbar, menu and tray states) mapped to Material Symbols Rounded, filled. They recolour with your colour scheme. App icons are not touched. |
+| **Glass Plasma style** | Popups get an 18 px radius, translucent fill and rounded blur. The top bar gets translucent glass with a soft light glow. |
+| **Boot splash** | Your wordmark forms out of film grain, the full stop blinks while the session loads, then it fades. |
+| **Lock screen** (opt-in) | A big rounded clock with a greeting, battery pill and now-playing card. It shrinks away when you start typing your password. |
+| **Konsole "Glass"** | A translucent, blurred terminal profile. |
+
+Design rules: dark surfaces, one blue accent (`#3b82f6`), Nunito everywhere, rounded cards and no gradients.
+
+## Requirements
+
+- KDE Plasma 6.x (tested on 6.8.3, Fedora 45, Wayland)
+- `python3`, `python3-pillow`, `curl`, `fontconfig`
+- Optional: [WhiteSur-kde](https://github.com/vinceliuice/WhiteSur-kde), the base for the glass style and window decorations, and [Kvantum](https://github.com/tsujan/Kvantum) for translucent apps
+
+## Install
+
+```bash
+git clone <this repo> glasskit && cd glasskit
+./install.sh                       # widgets, icons, fonts, splash, Konsole profile
+./install.sh --apply --word yourname        # also switch the look now, with your own splash wordmark
+./install.sh --lockscreen --island-popups   # opt-in extras, see below
+```
+
+Then add widgets: right-click the desktop or a panel, choose **Add Widgets** and search for **Glasskit**. To centre Island, put it between two flexible spacers in the top bar.
+
+### Opt-in extras, and what they change
+
+- `--lockscreen`: on Plasma 6 the lock screen lives inside the desktop shell package. glasskit keeps a user copy of that package, with only the clock block patched, and rebuilds it from the system files before every login. If an update changes the stock clock code, the copy is dropped and you get the stock lock screen. If the lock screen ever fails, Plasma falls back to its built-in locker, so you can still unlock.
+- `--island-popups`: turns off Plasma's own notification popups for every installed app, so notifications appear only in Island. History is kept. Undo with `glasskit-island-popups on`.
+
+## Commands
+
+| Command | Purpose |
+|---|---|
+| `glasskit-theme-apply` | Re-apply the whole look after a Global Theme change resets it |
+| `glasskit-icons-build` | Rebuild the filled icon theme. Edit the mapping inside to cover more icons |
+| `glasskit-glass-style` | Recreate the glass Plasma style from WhiteSur-dark |
+| `glasskit-glass-frame-build` / `glasskit-glass-panel-build` | Redraw the popup frame or the bar. Tune radius, opacity and glow at the top of each file |
+| `glasskit-splash-build --word NAME --dot-color '#hex'` | Rebuild the boot splash |
+| `glasskit-island-popups off\|on` | Route notifications to Island, or back to Plasma |
+| `glasskit-lockscreen-sync` | Rebuild the big-clock lock screen (runs at login when enabled) |
+| `glasskit-gestures-rebuild` | Optional dnf5 hook that rebuilds [kwin-winlike-gestures](https://github.com/LiberaTeMetuMortis/kwin-winlike-gestures) after KWin updates. See the comments inside |
+
+## Known limits
+
+- Island, the media widgets and the lock-screen cards use private Plasma QML modules (mpris, battery, notificationmanager), which a Plasma update can change.
+- Notifications from senders with no app entry (some scripts, some web notifications) still show Plasma's popup.
+- Plasma's SVG renderer is SVG Tiny 1.2, so it has no blur filters. The bar's glow is drawn as stacked 1 px rings.
+
+## Uninstall
+
+```bash
+./uninstall.sh
+```
+
+## Claude skill
+
+`skill/glasskit/` is a [Claude](https://claude.com/claude-code) skill. With it, Claude can install and adapt glasskit on Plasma, or rebuild the same look on GNOME, COSMIC (Pop!_OS), Hyprland, macOS or Windows. Copy it to `~/.claude/skills/glasskit/`.
+
+## License
+
+GPL-3.0-or-later. See [LICENSE](LICENSE) and [CREDITS.md](CREDITS.md) for third-party pieces.

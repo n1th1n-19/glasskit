@@ -1,0 +1,5 @@
+{
+  "KPackageStructure": "Plasma/Applet",
+  "KPlugin": { "Id": "org.glasskit.system", "Name": "Glasskit System", "Description": "CPU, RAM, battery and temperature rings", "Icon": "utilities-system-monitor", "Category": "Date and Time", "Authors": [{ "Name": "glasskit contributors" }], "License": "GPL-2.0+", "Version": "1.0" },
+  "X-Plasma-API-Minimum-Version": "6.0"
+}

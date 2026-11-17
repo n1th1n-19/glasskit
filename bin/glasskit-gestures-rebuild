@@ -1,0 +1,24 @@
+#!/bin/sh
+# Rebuild + reinstall kwin-winlike-gestures after a kwin update.
+# Called as root by the dnf5 actions plugin; builds as the source owner, installs as root.
+# Always exits 0 so a failed rebuild never fails the dnf transaction; check the log.
+# Install: set OWNER and SRC below, then (as root)
+#   install -Dm755 glasskit-gestures-rebuild /usr/local/libexec/glasskit-gestures-rebuild
+#   install -Dm644 glasskit-gestures.actions /etc/dnf/libdnf5-plugins/actions.d/glasskit-gestures.actions
+# Needs libdnf5-plugin-actions. Security: root runs `cmake --install` from SRC, so SRC must only be writable by OWNER.
+OWNER=CHANGE_ME                                  # your login name; runs as root, so $HOME would be /root
+SRC=/home/$OWNER/src/kwin-winlike-gestures
+[ "$OWNER" = CHANGE_ME ] && { echo "glasskit-gestures-rebuild: set OWNER first" >>/var/log/winlike-rebuild.log; exit 0; }
+LOG=/var/log/winlike-rebuild.log
+{
+    echo "=== $(date -Is) kwin $(rpm -q kwin --qf '%{VERSION}-%{RELEASE}')"
+    runuser -u "$OWNER" -- sh -c "cd '$SRC' \
+        && cmake -S . -B build -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+        && cmake --build build -j$(nproc) \
+        && ctest --test-dir build --output-on-failure" \
+    && cmake --install "$SRC/build" \
+    && chown "$OWNER": "$SRC/build/install_manifest.txt" \
+    && echo "ok: log out and back in to load it" \
+    || echo "FAILED: plugin not updated, gestures off until fixed"
+} >>"$LOG" 2>&1
+exit 0

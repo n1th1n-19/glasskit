@@ -1,0 +1,109 @@
+#!/usr/bin/env python3
+"""Draw the glass top-bar background for WhiteSur-dark-glass: translucent, rounded, with a light glow.
+
+Writes widgets/panel-background.svgz as Plasma 9-slice frames (SVG Tiny 1.2 safe: no nested svg,
+no filters, no clip paths; each piece is drawn in place):
+  "" (floating), north-, south-   translucent fill + 1 px light rim
+  mask-*, north-mask-, south-mask-  rounded blur region
+  shadow-*                        drawn in LIGHT, so the "shadow" is a soft glow around the bar
+The glow is stacked 1 px rings of falling opacity. The first run keeps the original as panel-background.whitesur.svgz.
+"""
+import gzip
+import shutil
+import sys
+from pathlib import Path
+
+THEME = Path.home() / ".local/share/plasma/desktoptheme/WhiteSur-dark-glass"
+R = 12                  # bar corner radius
+E = 10                  # stretchable edge/centre size
+FILL = "fill:#101216;fill-opacity:0.55"
+RIM_RGB, RIM_OP = "#cfe0ff", 0.38
+RIM = False             # inner light line along the bar edge; off by request
+GLOW = 10               # glow width outside the bar
+GLOW_RGB, GLOW_PEAK = "#9cc2ff", 0.16
+
+# corner geometry: (name, sx, sy) where s = +1 means the rounded side faces +x / +y
+CORNERS = [("topleft", -1, -1), ("topright", 1, -1), ("bottomleft", -1, 1), ("bottomright", 1, 1)]
+
+
+def arc(cx, cy, r, sx, sy):
+    """Quarter arc around (cx, cy) on the (sx, sy) side, from the horizontal end to the vertical end."""
+    return f"M{cx},{cy + sy * r} A{r},{r} 0 0 {0 if sx * sy > 0 else 1} {cx + sx * r},{cy}"
+
+
+def piece_boxes(ox, oy, C):
+    return {"topleft": (ox, oy), "top": (ox + C, oy), "topright": (ox + C + E, oy),
+            "left": (ox, oy + C), "center": (ox + C, oy + C), "right": (ox + C + E, oy + C),
+            "bottomleft": (ox, oy + C + E), "bottom": (ox + C, oy + C + E), "bottomright": (ox + C + E, oy + C + E)}
+
+
+def body(prefix, ox, oy, mask=False):
+    p = prefix + "-" if prefix else ""
+    C = R; b = piece_boxes(ox, oy, C); out = []
+    style = "fill:#000000" if mask else FILL
+    for name, sx, sy in CORNERS:
+        x, y = b[name]
+        cx, cy = (x + C if sx < 0 else x), (y + C if sy < 0 else y)          # centre = inner corner
+        d = f"M{cx},{cy} L{cx},{cy + sy * R} A{R},{R} 0 0 {0 if sx * sy > 0 else 1} {cx + sx * R},{cy} Z"
+        g = f'<path d="{d}" style="{style}"/>'
+        if not mask and RIM:
+            g += f'<path d="{arc(cx, cy, R - 0.5, sx, sy)}" style="fill:none;stroke:{RIM_RGB};stroke-opacity:{RIM_OP};stroke-width:1"/>'
+        out.append(f'<g id="{p}{name}">{g}</g>')
+    rim = lambda x1, y1, x2, y2: "" if mask or not RIM else f'<path d="M{x1},{y1} L{x2},{y2}" style="fill:none;stroke:{RIM_RGB};stroke-opacity:{RIM_OP};stroke-width:1"/>'
+    x, y = b["top"]; out.append(f'<g id="{p}top"><rect x="{x}" y="{y}" width="{E}" height="{C}" style="{style}"/>{rim(x, y + .5, x + E, y + .5)}</g>')
+    x, y = b["bottom"]; out.append(f'<g id="{p}bottom"><rect x="{x}" y="{y}" width="{E}" height="{C}" style="{style}"/>{rim(x, y + C - .5, x + E, y + C - .5)}</g>')
+    x, y = b["left"]; out.append(f'<g id="{p}left"><rect x="{x}" y="{y}" width="{C}" height="{E}" style="{style}"/>{rim(x + .5, y, x + .5, y + E)}</g>')
+    x, y = b["right"]; out.append(f'<g id="{p}right"><rect x="{x}" y="{y}" width="{C}" height="{E}" style="{style}"/>{rim(x + C - .5, y, x + C - .5, y + E)}</g>')
+    x, y = b["center"]; out.append(f'<rect id="{p}center" x="{x}" y="{y}" width="{E}" height="{E}" style="{style}"/>')
+    return "".join(out), 2 * C + E
+
+
+def glow(ox, oy):
+    """shadow-* pieces: rings outside a rounded rect whose edge sits GLOW px inside the frame."""
+    C = R + GLOW; b = piece_boxes(ox, oy, C); out = []
+    rings = [(i + 0.5, GLOW_PEAK * ((i + 1) / GLOW) ** 2.2) for i in range(GLOW)]      # (distance from outer edge, opacity)
+    st = lambda op: f"fill:none;stroke:{GLOW_RGB};stroke-opacity:{op:.3f};stroke-width:1"
+    for name, sx, sy in CORNERS:
+        x, y = b[name]
+        cx, cy = (x + C if sx < 0 else x), (y + C if sy < 0 else y)
+        out.append(f'<g id="shadow-{name}">' + "".join(f'<path d="{arc(cx, cy, C - d, sx, sy)}" style="{st(op)}"/>' for d, op in rings) + "</g>")
+    x, y = b["top"]; out.append('<g id="shadow-top">' + "".join(f'<path d="M{x},{y + d} L{x + E},{y + d}" style="{st(op)}"/>' for d, op in rings) + "</g>")
+    x, y = b["bottom"]; out.append('<g id="shadow-bottom">' + "".join(f'<path d="M{x},{y + C - d} L{x + E},{y + C - d}" style="{st(op)}"/>' for d, op in rings) + "</g>")
+    x, y = b["left"]; out.append('<g id="shadow-left">' + "".join(f'<path d="M{x + d},{y} L{x + d},{y + E}" style="{st(op)}"/>' for d, op in rings) + "</g>")
+    x, y = b["right"]; out.append('<g id="shadow-right">' + "".join(f'<path d="M{x + C - d},{y} L{x + C - d},{y + E}" style="{st(op)}"/>' for d, op in rings) + "</g>")
+    x, y = b["center"]; out.append(f'<rect id="shadow-center" x="{x}" y="{y}" width="{E}" height="{E}" style="fill:none"/>')
+    return "".join(out), 2 * C + E
+
+
+def hints(prefix, oy, margin, inset, vmargin=None):
+    # vmargin: padding above/below the bar contents; small so widgets scale with the bar height
+    p = prefix + "-" if prefix else ""
+    v = margin if vmargin is None else vmargin
+    items = [("hint-top-margin", 4, v), ("hint-bottom-margin", 4, v), ("hint-left-margin", margin, 4),
+             ("hint-right-margin", margin, 4), ("hint-top-inset", 4, inset), ("hint-bottom-inset", 4, inset),
+             ("hint-left-inset", inset, 4), ("hint-right-inset", inset, 4)]
+    return "".join(f'<rect id="{p}{n}" x="{i * 14}" y="{oy}" width="{w}" height="{h}" style="fill:#ff00ff"/>' for i, (n, w, h) in enumerate(items))
+
+
+def main() -> int:
+    dst = THEME / "widgets/panel-background.svgz"
+    backup = THEME / "widgets/panel-background.whitesur.svgz"
+    if not backup.exists():
+        shutil.copy2(dst, backup)
+    parts, x = [], 0
+    for prefix in ("", "north", "south"):
+        a, S = body(prefix, x, 0); parts.append(a)
+        m, _ = body(f"{prefix}-mask" if prefix else "mask", x, S + 10, mask=True); parts.append(m)
+        x += S + 10
+    g, GS = glow(x, 0); parts.append(g)
+    parts.append(hints("", 200, 10, 0.2, vmargin=3)); parts.append(hints("shadow", 220, GLOW, 0.2))
+    svg = f'<svg xmlns="http://www.w3.org/2000/svg" width="{x + GS + 20}" height="260">{"".join(parts)}</svg>'
+    assert "<svg" not in svg[5:], "nested svg would be skipped by Qt"
+    assert svg.count('id="mask-') == 9 and svg.count('id="shadow-') == 17
+    dst.write_bytes(gzip.compress(svg.encode()))
+    print(f"wrote {dst}: radius {R}, fill 55%, light rim, {GLOW}px glow")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

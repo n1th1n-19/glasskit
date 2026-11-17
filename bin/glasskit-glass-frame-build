@@ -1,0 +1,77 @@
+#!/usr/bin/env python3
+"""Draw a rounded glass popup frame for the WhiteSur-dark-glass Plasma style.
+
+Writes dialogs/background.svgz as a 9-slice Plasma FrameSvg: corners of radius R, a translucent
+fill (KWin blurs behind it) and a 1 px light hairline. mask-* pieces repeat the shapes so the blur
+follows the rounded corners. The first run keeps the original as background.whitesur.svgz.
+"""
+import gzip
+import shutil
+import sys
+from pathlib import Path
+
+THEME = Path.home() / ".local/share/plasma/desktoptheme/WhiteSur-dark-glass"
+R = 18            # corner radius, px
+E = 10            # size of the stretchable edge/centre pieces
+MARGIN = 12       # content padding inside the frame
+FILL = 'fill:#121419;fill-opacity:0.58'
+LINE = 'fill:none;stroke:#ffffff;stroke-opacity:0.10;stroke-width:1'
+HAIRLINE = False   # thin light edge around the frame; off by request
+
+
+def corner(name, x, y, rot, mask=False):
+    # quarter disc centred on the inner corner; rotate the top-left drawing for the other three
+    cx, cy = x + R, y + R
+    body = f'<path d="M {x+R},{y} A {R},{R} 0 0 0 {x},{y+R} L {x+R},{y+R} Z" style="{"fill:#000000" if mask else FILL}"/>'
+    line = "" if mask or not HAIRLINE else f'<path d="M {x+0.5},{y+R} A {R-0.5},{R-0.5} 0 0 1 {x+R},{y+0.5}" style="{LINE}"/>'
+    return f'<g id="{name}" transform="rotate({rot} {x + R/2} {y + R/2})">{body}{line}</g>'
+
+
+def piece(name, x, y, w, h, line=None, mask=False):
+    style = "fill:#000000" if mask else FILL
+    out = f'<rect x="{x}" y="{y}" width="{w}" height="{h}" style="{style}"/>'
+    if line and not mask and HAIRLINE:
+        x1, y1, x2, y2 = line
+        out += f'<path d="M {x1},{y1} L {x2},{y2}" style="{LINE}"/>'
+    return f'<g id="{name}">{out}</g>'
+
+
+def frame(prefix, ox, mask=False):
+    p = (prefix + "-") if prefix else ""
+    S = 2 * R + E
+    a, b = ox, ox + R + E
+    return "".join([
+        corner(p + "topleft", a, 0, 0, mask), corner(p + "topright", b, 0, 90, mask),
+        corner(p + "bottomright", b, R + E, 180, mask), corner(p + "bottomleft", a, R + E, 270, mask),
+        piece(p + "top", a + R, 0, E, R, (a + R, 0.5, a + R + E, 0.5), mask),
+        piece(p + "bottom", a + R, R + E, E, R, (a + R, S - 0.5, a + R + E, S - 0.5), mask),
+        piece(p + "left", a, R, R, E, (a + 0.5, R, a + 0.5, R + E), mask),
+        piece(p + "right", b, R, R, E, (b + R - 0.5, R, b + R - 0.5, R + E), mask),
+        piece(p + "center", a + R, R, E, E, None, mask),
+    ])
+
+
+def hints(y):
+    m, i = MARGIN, 0.2
+    return "".join(f'<rect id="{n}" x="{x}" y="{y}" width="{w}" height="{h}" style="fill:#ff00ff"/>' for n, x, w, h in [
+        ("hint-top-margin", 0, 4, m), ("hint-bottom-margin", 10, 4, m), ("hint-left-margin", 20, m, 4),
+        ("hint-right-margin", 40, m, 4), ("hint-top-inset", 60, 4, i), ("hint-bottom-inset", 70, 4, i),
+        ("hint-left-inset", 80, i, 4), ("hint-right-inset", 90, i, 4)])
+
+
+def main() -> int:
+    dst = THEME / "dialogs/background.svgz"
+    backup = THEME / "dialogs/background.whitesur.svgz"
+    if not backup.exists():
+        shutil.copy2(dst, backup)
+    S = 2 * R + E
+    svg = (f'<svg xmlns="http://www.w3.org/2000/svg" width="{2 * S + 40}" height="{S + 40}">'
+           + frame("", 0) + frame("mask", S + 20, mask=True) + hints(S + 20) + "</svg>")
+    assert svg.count('id="mask-') == 9 and svg.count('id="hint-') == 8
+    dst.write_bytes(gzip.compress(svg.encode()))
+    print(f"wrote {dst} (radius {R}px); original kept at {backup.name}")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

@@ -1,0 +1,46 @@
+#!/bin/sh
+# Re-apply this machine's desktop look after a Global Theme change resets it.
+# Only touches appearance; panels, dock, launcher and lock screen are not affected by theme switches.
+set -u
+ok() { printf '  %-16s %s\n' "$1" "$2"; }
+
+plasma-apply-colorscheme WhiteSurDark >/dev/null 2>&1;            ok colors WhiteSurDark
+plasma-apply-desktoptheme WhiteSur-dark-glass >/dev/null 2>&1;    ok plasma-style WhiteSur-dark-glass
+/usr/libexec/plasma-changeicons Glasskit-Filled >/dev/null 2>&1; ok icons "Glasskit-Filled (filled rounded UI icons)"
+kwriteconfig6 --file kcminputrc --group Mouse --key cursorTheme WhiteSur-cursors; ok cursor "WhiteSur-cursors (full effect after re-login)"
+
+kwriteconfig6 --file kdeglobals --group KDE --key widgetStyle kvantum
+kwriteconfig6 --file ~/.config/Kvantum/kvantum.kvconfig --group General --key theme WhiteSurDark
+ok app-style "Kvantum WhiteSurDark (restart apps)"
+
+kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key library org.kde.kwin.aurorae
+kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key theme __aurorae__svg__WhiteSur-dark
+kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key ButtonsOnLeft ""
+kwriteconfig6 --file kwinrc --group org.kde.kdecoration2 --key ButtonsOnRight IAX
+gdbus call --session --dest org.kde.KWin --object-path /KWin --method org.kde.KWin.reconfigure >/dev/null
+ok decoration "WhiteSur-dark, buttons right"
+
+kwriteconfig6 --file ksplashrc --group KSplash --key Theme org.glasskit.splash
+kwriteconfig6 --file ksplashrc --group KSplash --key Engine KSplashQML
+ok splash org.glasskit.splash
+
+# wallpapers are optional: set GLASSKIT_WALLPAPER / GLASSKIT_LOCK_WALLPAPER (image paths) to apply them
+if [ -n "${GLASSKIT_WALLPAPER:-}" ]; then plasma-apply-wallpaperimage "$GLASSKIT_WALLPAPER" >/dev/null 2>&1; ok wallpaper "$GLASSKIT_WALLPAPER"; fi
+if [ -n "${GLASSKIT_LOCK_WALLPAPER:-}" ]; then
+    kwriteconfig6 --file kscreenlockerrc --group Greeter --key WallpaperPlugin org.kde.image
+    kwriteconfig6 --file kscreenlockerrc --group Greeter --group Wallpaper --group org.kde.image --group General --key Image "file://$GLASSKIT_LOCK_WALLPAPER"
+    ok lock-wallpaper "$GLASSKIT_LOCK_WALLPAPER"
+fi
+
+K="kwriteconfig6 --notify --file kdeglobals"
+$K --group General --key font "Nunito,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1"
+$K --group General --key menuFont "Nunito,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1"
+$K --group General --key toolBarFont "Nunito,9,-1,5,500,0,0,0,0,0,0,0,0,0,0,1"
+$K --group General --key smallestReadableFont "Nunito,8,-1,5,400,0,0,0,0,0,0,0,0,0,0,1"
+$K --group General --key fixed "JetBrains Mono,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1"
+$K --group WM --key activeFont "Nunito,10,-1,5,700,0,0,0,0,0,0,0,0,0,0,1"
+for v in gtk-3.0 gtk-4.0; do kwriteconfig6 --file ~/.config/$v/settings.ini --group Settings --key gtk-font-name "Nunito,  10"; done
+ok fonts "Nunito UI, JetBrains Mono code"
+
+# record a matching global-theme id so System Settings shows the right base
+kwriteconfig6 --file kdeglobals --group KDE --key LookAndFeelPackage com.github.vinceliuice.WhiteSur-dark

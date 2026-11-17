@@ -1,0 +1,18 @@
+#!/bin/sh
+# Turn Plasma's own notification popups off (Island shows them instead) or back on.
+# Usage: glasskit-island-popups off|on      Notification history is never touched.
+# Covers every installed app (.desktop) and KDE service (.notifyrc); apps installed later need a re-run.
+set -u
+mode=${1:-}
+case "$mode" in off) val=false ;; on) val="" ;; *) echo "usage: $0 off|on" >&2; exit 2 ;; esac
+set_key() {   # $1 = Applications|Services, $2 = id
+    if [ -n "$val" ]; then kwriteconfig6 --file plasmanotifyrc --group "$1" --group "$2" --key ShowPopups "$val"
+    else kwriteconfig6 --file plasmanotifyrc --group "$1" --group "$2" --key ShowPopups --delete; fi
+}
+n=0
+for d in /usr/share/applications "$HOME/.local/share/applications" /var/lib/flatpak/exports/share/applications "$HOME/.local/share/flatpak/exports/share/applications"; do
+    [ -d "$d" ] || continue
+    for f in "$d"/*.desktop; do [ -e "$f" ] || continue; set_key Applications "$(basename "$f" .desktop)"; n=$((n+1)); done
+done
+for f in /usr/share/knotifications6/*.notifyrc; do [ -e "$f" ] || continue; set_key Services "$(basename "$f" .notifyrc)"; n=$((n+1)); done
+echo "popups $mode for $n apps/services"

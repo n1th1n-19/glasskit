@@ -1,0 +1,166 @@
+#!/usr/bin/env python3
+"""Build the Glasskit-Filled icon theme: KDE UI icon names mapped to Material Symbols Rounded (filled).
+
+Output: ~/.local/share/icons/Glasskit-Filled, inheriting breeze-dark for everything not mapped.
+Icons carry KDE's current-color-scheme stylesheet so Plasma/KDE recolor them with the theme.
+Re-run any time; downloads are cached in ~/.cache/glasskit-filled-icons.
+Source icons: Google Material Symbols, Apache License 2.0.
+"""
+import re
+import shutil
+import sys
+import urllib.request
+from pathlib import Path
+
+OUT = Path.home() / ".local/share/icons/Glasskit-Filled"
+CACHE = Path.home() / ".cache/glasskit-filled-icons"
+URL = "https://raw.githubusercontent.com/google/material-design-icons/master/symbols/web/{0}/materialsymbolsrounded/{0}_fill1_24px.svg"
+
+# KDE icon name -> Material Symbols name. "actions"/"status" are small by nature; "places" only get -symbolic names
+# so large folder/drive icons in file managers stay Breeze.
+ACTIONS = {
+    "go-previous": "arrow_back", "go-next": "arrow_forward", "go-up": "arrow_upward", "go-down": "arrow_downward",
+    "go-home": "home", "go-first": "first_page", "go-last": "last_page", "go-top": "vertical_align_top",
+    "go-bottom": "vertical_align_bottom", "go-parent-folder": "arrow_upward", "go-jump": "arrow_outward",
+    "edit-find": "search", "edit-find-replace": "find_replace", "edit-copy": "content_copy", "edit-cut": "content_cut",
+    "edit-paste": "content_paste", "edit-delete": "delete", "edit-undo": "undo", "edit-redo": "redo",
+    "edit-clear": "backspace", "edit-clear-all": "clear_all", "edit-select-all": "select_all", "edit-rename": "edit",
+    "document-edit": "edit", "edit-entry": "edit", "edit-clear-history": "history",
+    "document-new": "note_add", "document-open": "folder_open", "document-save": "save", "document-save-as": "save_as",
+    "document-print": "print", "document-properties": "info", "document-share": "share", "document-export": "ios_share",
+    "document-import": "download", "document-send": "send", "document-revert": "history", "document-preview": "visibility",
+    "document-open-recent": "history", "folder-new": "create_new_folder",
+    "configure": "settings", "settings-configure": "settings", "application-menu": "menu", "open-menu": "menu",
+    "overflow-menu": "more_vert", "view-more": "more_horiz", "view-more-horizontal": "more_horiz",
+    "list-add": "add", "list-remove": "remove", "window-close": "close", "window-minimize": "minimize",
+    "window-maximize": "crop_square", "window-restore": "filter_none", "window-pin": "keep", "window-unpin": "keep_off",
+    "view-list-details": "view_list", "view-list-icons": "grid_view", "view-list-tree": "account_tree",
+    "view-sort": "sort", "view-sort-ascending": "arrow_upward", "view-sort-descending": "arrow_downward",
+    "view-filter": "filter_alt", "view-refresh": "refresh", "view-fullscreen": "fullscreen", "view-restore": "fullscreen_exit",
+    "view-hidden": "visibility_off", "view-visible": "visibility", "zoom-in": "zoom_in", "zoom-out": "zoom_out",
+    "zoom-fit-best": "fit_screen", "dialog-ok": "check", "dialog-ok-apply": "check", "dialog-cancel": "close",
+    "dialog-close": "close", "help-about": "info", "help-contents": "help", "bookmarks": "bookmark",
+    "bookmark-new": "bookmark_add", "tag": "label", "insert-link": "link", "insert-image": "image",
+    "object-locked": "lock", "object-unlocked": "lock_open", "mail-send": "send", "mail-attachment": "attach_file",
+    "media-playback-start": "play_arrow", "media-playback-pause": "pause", "media-playback-stop": "stop",
+    "media-skip-forward": "skip_next", "media-skip-backward": "skip_previous", "media-seek-forward": "fast_forward",
+    "media-seek-backward": "fast_rewind", "media-playlist-shuffle": "shuffle", "media-playlist-repeat": "repeat",
+    "media-record": "fiber_manual_record", "system-shutdown": "power_settings_new", "system-reboot": "restart_alt",
+    "system-log-out": "logout", "system-lock-screen": "lock", "system-suspend": "bedtime", "system-hibernate": "bedtime",
+    "system-switch-user": "switch_account", "system-search": "search", "user-identity": "person",
+    "emblem-favorite": "favorite", "starred": "star", "download": "download", "upload": "upload", "link": "link",
+}
+STATUS = {
+    "audio-volume-high": "volume_up", "audio-volume-medium": "volume_down", "audio-volume-low": "volume_mute",
+    "audio-volume-muted": "volume_off", "audio-volume-high-danger": "volume_up",
+    "microphone-sensitivity-high": "mic", "microphone-sensitivity-medium": "mic", "microphone-sensitivity-low": "mic",
+    "microphone-sensitivity-muted": "mic_off", "audio-input-microphone": "mic", "audio-input-microphone-muted": "mic_off",
+    "bluetooth-active": "bluetooth", "bluetooth-inactive": "bluetooth", "bluetooth-disabled": "bluetooth_disabled",
+    "bluetooth-online": "bluetooth_connected", "network-bluetooth": "bluetooth",
+    "network-wired": "lan", "network-wired-activated": "lan", "network-wired-disconnected": "lan",
+    "network-offline": "cloud_off", "airplane-mode": "airplanemode_active", "network-vpn": "vpn_key",
+    "network-wireless-disconnected": "wifi_off", "network-wireless-offline": "wifi_off", "network-wireless": "wifi",
+    "brightness-high": "light_mode", "brightness-low": "brightness_low", "display-brightness": "light_mode",
+    "video-display-brightness": "light_mode", "redshift-status-on": "nightlight", "redshift-status-off": "nightlight",
+    "notifications": "notifications", "notifications-disabled": "notifications_off",
+    "notification-active": "notifications_active", "klipper": "content_paste",
+    "dialog-information": "info", "dialog-warning": "warning", "dialog-error": "error", "dialog-question": "help",
+    "battery-full": "battery_full", "battery-good": "battery_5_bar", "battery-low": "battery_2_bar",
+    "battery-caution": "battery_alert", "battery-empty": "battery_alert", "battery-missing": "battery_unknown",
+    "battery-full-charging": "battery_charging_full", "battery-good-charging": "battery_charging_80",
+    "battery-low-charging": "battery_charging_30", "battery-caution-charging": "battery_charging_20",
+    "ac-adapter": "power", "input-touchpad": "touchpad_mouse", "input-keyboard": "keyboard",
+    "update-none": "check_circle", "update-low": "system_update", "update-medium": "system_update", "update-high": "system_update",
+}
+PLACES = {  # -symbolic only
+    "folder": "folder", "folder-open": "folder_open", "user-trash": "delete", "user-trash-full": "delete",
+    "user-home": "home", "user-desktop": "desktop_windows", "folder-download": "download", "folder-documents": "description",
+    "folder-pictures": "image", "folder-music": "music_note", "folder-videos": "movie", "drive-harddisk": "hard_drive",
+    "drive-removable-media": "usb", "computer": "computer", "network-workgroup": "lan", "folder-cloud": "cloud",
+}
+
+# Wi-Fi strength families used by Plasma's network applet
+for pct, m in [("100", "wifi"), ("80", "network_wifi_3_bar"), ("75", "network_wifi_3_bar"), ("60", "network_wifi_2_bar"),
+               ("50", "network_wifi_2_bar"), ("40", "network_wifi_1_bar"), ("25", "network_wifi_1_bar"),
+               ("20", "network_wifi_1_bar"), ("0", "signal_wifi_0_bar"), ("00", "signal_wifi_0_bar")]:
+    STATUS[f"network-wireless-{pct}"] = m
+    STATUS[f"network-wireless-{pct}-locked"] = m
+    STATUS[f"network-wireless-connected-{pct}"] = m
+for q, m in [("excellent", "wifi"), ("good", "network_wifi_3_bar"), ("ok", "network_wifi_2_bar"),
+             ("weak", "network_wifi_1_bar"), ("low", "network_wifi_1_bar"), ("none", "signal_wifi_0_bar")]:
+    STATUS[f"network-wireless-signal-{q}"] = m
+    STATUS[f"network-wireless-signal-{q}-secure"] = m
+# battery levels, plain and charging
+BARS = {100: "battery_full", 90: "battery_6_bar", 80: "battery_6_bar", 70: "battery_5_bar", 60: "battery_4_bar",
+        50: "battery_4_bar", 40: "battery_3_bar", 30: "battery_2_bar", 20: "battery_1_bar", 10: "battery_0_bar", 0: "battery_alert"}
+CHG = {100: "battery_charging_full", 90: "battery_charging_90", 80: "battery_charging_80", 70: "battery_charging_60",
+       60: "battery_charging_60", 50: "battery_charging_50", 40: "battery_charging_30", 30: "battery_charging_30",
+       20: "battery_charging_20", 10: "battery_charging_20", 0: "battery_charging_20"}
+for lvl in BARS:
+    STATUS[f"battery-{lvl:03d}"] = BARS[lvl]
+    STATUS[f"battery-{lvl:03d}-charging"] = CHG[lvl]
+
+STYLE = '<style type="text/css" id="current-color-scheme">.ColorScheme-Text{color:#fcfcfc;}</style>'
+
+
+def material(name: str) -> str:
+    CACHE.mkdir(parents=True, exist_ok=True)
+    f = CACHE / f"{name}.svg"
+    if not f.exists():
+        req = urllib.request.Request(URL.format(name), headers={"User-Agent": "glasskit-icons/1.0"})
+        with urllib.request.urlopen(req, timeout=30) as r:
+            f.write_bytes(r.read())
+    return f.read_text()
+
+
+def kde_svg(src: str) -> str:
+    # one recolourable path set: class + currentColor so KDE swaps the stylesheet colour
+    body = re.sub(r"<path ", '<path class="ColorScheme-Text" fill="currentColor" ', src)
+    return body.replace(">", ">" + STYLE, 1)
+
+
+def main() -> int:
+    if OUT.exists():
+        shutil.rmtree(OUT)
+    sizes = ["16", "22", "24"]
+    failed = []
+    count = 0
+    for ctx, table, plain in (("actions", ACTIONS, True), ("status", STATUS, True), ("places", PLACES, False)):
+        for kde, mat in table.items():
+            try:
+                svg = kde_svg(material(mat))
+            except Exception as e:  # missing upstream name: leave this icon to Breeze
+                failed.append(f"{kde}->{mat}: {e}")
+                continue
+            if plain:
+                for s in sizes:
+                    d = OUT / ctx / s
+                    d.mkdir(parents=True, exist_ok=True)
+                    (d / f"{kde}.svg").write_text(svg)
+            d = OUT / "symbolic" / ctx
+            d.mkdir(parents=True, exist_ok=True)
+            (d / f"{kde}-symbolic.svg").write_text(svg)
+            count += 1
+    dirs = [f"{c}/{s}" for c in ("actions", "status") for s in sizes] + [f"symbolic/{c}" for c in ("actions", "status", "places")]
+    idx = ["[Icon Theme]", "Name=Glasskit Filled", "Comment=Rounded filled UI icons (Material Symbols) over Breeze Dark",
+           "Inherits=breeze-dark,hicolor", "Directories=" + ",".join(dirs), ""]
+    for dd in dirs:
+        ctx = dd.split("/")[-1] if dd.startswith("symbolic") else dd.split("/")[0]
+        context = {"actions": "Actions", "status": "Status", "places": "Places"}[ctx]
+        if dd.startswith("symbolic"):
+            idx += [f"[{dd}]", "Size=16", "MinSize=8", "MaxSize=512", f"Context={context}", "Type=Scalable", ""]
+        else:
+            idx += [f"[{dd}]", f"Size={dd.split('/')[1]}", f"Context={context}", "Type=Fixed", ""]
+    (OUT / "index.theme").write_text("\n".join(idx))
+    # self-check: theme exists, most names built, every icon carries the KDE colour hook
+    sample = next((OUT / "status" / "22").glob("*.svg"))
+    assert "current-color-scheme" in sample.read_text() and 'fill="currentColor"' in sample.read_text()
+    assert count > 150, f"only {count} icons built"
+    print(f"Glasskit-Filled: {count} icon names built, {len(failed)} skipped")
+    for f in failed:
+        print("  skipped", f)
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

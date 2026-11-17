@@ -1,0 +1,105 @@
+#!/usr/bin/env python3
+"""Build the glasskit boot splash: a wordmark that forms out of film grain, blinks its dot, then settles.
+
+Usage: glasskit-splash-build [--word TEXT] [--dot TEXT] [--dot-color #RRGGBB] [--font FAMILY] [--size PX]
+Writes a Look-and-Feel package to ~/.local/share/plasma/look-and-feel/org.glasskit.splash with
+20 reveal frames, a 12-frame blink loop and a final frame, played by Splash.qml at ~14 fps.
+Requires Pillow (python3-pillow) and fontconfig (fc-match).
+"""
+import argparse
+import json
+import math
+import random
+import shutil
+import subprocess
+import sys
+from pathlib import Path
+
+from PIL import Image, ImageDraw, ImageFilter, ImageFont
+
+HERE = Path(__file__).resolve().parent
+PKG = Path.home() / ".local/share/plasma/look-and-feel/org.glasskit.splash"
+LO = 135   # darkest grain brightness
+
+
+def font_file(family: str) -> str:
+    out = subprocess.run(["fc-match", "-f", "%{file}", f"{family}:style=Bold"], capture_output=True, text=True)
+    if out.returncode != 0 or not out.stdout:
+        sys.exit(f"font not found: {family}")
+    return out.stdout
+
+
+def hex_rgb(h: str):
+    h = h.lstrip("#")
+    return tuple(int(h[i:i + 2], 16) for i in (0, 2, 4))
+
+
+def masks(word, dot, font, size):
+    f = ImageFont.truetype(font, size)
+    ww, dw = f.getlength(word), f.getlength(dot)
+    pad = int(size * 0.2)
+    w, h = int(ww + dw + pad * 2), int(size * 1.25 + pad * 2)
+    wm, dm = Image.new("L", (w, h), 0), Image.new("L", (w, h), 0)
+    ImageDraw.Draw(wm).text((pad, h // 2), word, font=f, fill=255, anchor="lm")
+    ImageDraw.Draw(dm).text((pad + ww, h // 2), dot, font=f, fill=255, anchor="lm")
+    both = Image.new("L", (w, h), 0); both.paste(wm, (0, 0)); both.paste(255, (0, 0), dm)
+    soft = both.filter(ImageFilter.GaussianBlur(size * 0.03))
+    return w, h, list(wm.getdata()), list(dm.getdata()), list(soft.getdata())
+
+
+def frame(M, thr, reveal, dot_on, seed, dot_rgb):
+    w, h, word, dot, soft = M
+    rnd = random.Random(seed)
+    out = Image.new("RGBA", (w, h), (0, 0, 0, 0)); px = out.load()
+    for i in range(w * h):
+        p = 1.0 if max(word[i], dot[i]) > 200 and soft[i] > 235 else soft[i] / 255.0   # crisp core, dissolving edge
+        is_dot = dot[i] > 40 or (word[i] < 40 and dot[i] > 0)
+        p *= reveal * (dot_on if is_dot else 1.0)
+        if thr[i] < p:
+            k = rnd.randint(LO, 255) / 255
+            c = tuple(int(v * k + 15) for v in dot_rgb) if is_dot else (int(255 * k),) * 3
+            px[i % w, i // w] = (*[min(255, v) for v in c], 255)
+    return out
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser(description=__doc__.split("\n")[0])
+    ap.add_argument("--word", default="glasskit")
+    ap.add_argument("--dot", default=".")
+    ap.add_argument("--dot-color", default="#3b82f6")
+    ap.add_argument("--font", default="Inter")
+    ap.add_argument("--size", type=int, default=150)
+    a = ap.parse_args()
+
+    img_dir = PKG / "contents/splash/images"
+    if PKG.exists():
+        shutil.rmtree(PKG)
+    img_dir.mkdir(parents=True)
+    M = masks(a.word, a.dot, font_file(a.font), a.size)
+    r = random.Random(99)
+    thr = [r.random() for _ in range(M[0] * M[1])]
+    dot_rgb = hex_rgb(a.dot_color)
+    for k in range(20):
+        t = (k + 1) / 20
+        frame(M, thr, 1 - (1 - t) ** 3, 1.0, 1000 + k, dot_rgb).save(img_dir / f"r{k:02d}.png")
+    for k in range(12):
+        frame(M, thr, 1.0, 0.35 + 0.65 * (0.5 + 0.5 * math.cos(k / 12 * 2 * math.pi)), 2000 + k, dot_rgb).save(img_dir / f"l{k:02d}.png")
+    frame(M, thr, 1.0, 1.0, 3000, dot_rgb).save(img_dir / "ready.png")
+
+    src = HERE.parent / "splash/Splash.qml"
+    if not src.exists():
+        src = Path.home() / ".local/share/glasskit/splash/Splash.qml"   # installed layout
+    qml = src.read_text().replace('"#3b82f6"', f'"{a.dot_color}"')
+    (PKG / "contents/splash/Splash.qml").write_text(qml)
+    (PKG / "metadata.json").write_text(json.dumps({
+        "KPackageStructure": "Plasma/LookAndFeel",
+        "KPlugin": {"Id": "org.glasskit.splash", "Name": "Glasskit Splash", "Description": f"Grain wordmark: {a.word}{a.dot}",
+                    "Authors": [{"Name": "glasskit contributors"}], "License": "GPL-3.0-or-later", "Version": "1.0"},
+        "X-Plasma-APIVersion": "2"}, indent=2))
+    assert len(list(img_dir.glob("*.png"))) == 33
+    print(f"splash built: {a.word}{a.dot} -> {PKG}")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

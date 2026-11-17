@@ -1,0 +1,34 @@
+#!/bin/sh
+# Make the glass Plasma style: copy an installed Plasma style (default WhiteSur-dark) to
+# WhiteSur-dark-glass, turn on blur/contrast, hide its own tray icons (so the icon theme wins),
+# then draw the rounded glass popup frame and the glowing glass bar.
+# Usage: glasskit-glass-style [SOURCE_STYLE]
+set -eu
+SRC_NAME=${1:-WhiteSur-dark}
+BASE=$HOME/.local/share/plasma/desktoptheme
+SRC=$BASE/$SRC_NAME
+[ -d "$SRC" ] || SRC=/usr/share/plasma/desktoptheme/$SRC_NAME
+[ -d "$SRC" ] || { echo "Plasma style '$SRC_NAME' not found (install WhiteSur-kde first, see README)" >&2; exit 1; }
+DST=$BASE/WhiteSur-dark-glass
+rm -rf "$DST"; cp -a "$SRC" "$DST"
+
+python3 -I - "$DST" <<'EOF'
+import json, sys, pathlib
+d = pathlib.Path(sys.argv[1]); m = d / "metadata.json"
+if m.exists():
+    j = json.loads(m.read_text()); j.setdefault("KPlugin", {}).update({"Id": "WhiteSur-dark-glass", "Name": "WhiteSur Dark Glass"})
+    m.write_text(json.dumps(j, indent=2))
+EOF
+[ -f "$DST/metadata.desktop" ] && sed -i 's/^Name=.*/Name=WhiteSur Dark Glass/; s/^X-KDE-PluginInfo-Name=.*/X-KDE-PluginInfo-Name=WhiteSur-dark-glass/' "$DST/metadata.desktop"
+kwriteconfig6 --file "$DST/plasmarc" --group ContrastEffect --key enabled true
+kwriteconfig6 --file "$DST/plasmarc" --group ContrastEffect --key contrast 0.6
+kwriteconfig6 --file "$DST/plasmarc" --group ContrastEffect --key intensity 1.2
+kwriteconfig6 --file "$DST/plasmarc" --group ContrastEffect --key saturation 1.6
+kwriteconfig6 --file "$DST/plasmarc" --group BlurBehindEffect --key enabled true
+[ -d "$DST/icons" ] && mv "$DST/icons" "$DST/icons.disabled"     # style icons would override the icon theme in the tray
+
+HERE=$(dirname "$(readlink -f "$0")")
+python3 -I "$HERE/glasskit-glass-frame-build"
+python3 -I "$HERE/glasskit-glass-panel-build"
+rm -rf "$HOME"/.cache/plasma-svgelements* "$HOME"/.cache/plasma_theme_* "$HOME"/.cache/ksvg-elements* 2>/dev/null || true
+echo "glass style ready: WhiteSur-dark-glass (apply with: plasma-apply-desktoptheme WhiteSur-dark-glass)"

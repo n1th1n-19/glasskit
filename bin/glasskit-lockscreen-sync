@@ -1,0 +1,163 @@
+#!/usr/bin/env python3
+"""Rebuild the user override of the Plasma desktop shell with a big rounded lock-screen clock.
+
+Runs before Plasma starts (via ~/.config/plasma-workspace/env/black-lockscreen.sh), so the
+override is always a fresh copy of the installed shell plus one patch. If the stock clock
+block changes upstream, the override is removed and the stock lock screen is used.
+Undo for good: delete this script, the env hook, and ~/.local/share/plasma/shells/org.kde.plasma.desktop
+"""
+import shutil
+import sys
+from pathlib import Path
+
+SYS = Path("/usr/share/plasma/shells/org.kde.plasma.desktop")
+USR = Path.home() / ".local/share/plasma/shells/org.kde.plasma.desktop"
+UI = "contents/lockscreen/LockScreenUi.qml"
+
+STOCK_CLOCK = """        Clock {
+            id: clock
+            property Item shadow: clockShadow
+            visible: y > 0 && config.alwaysShowClock
+            anchors.horizontalCenter: parent.horizontalCenter
+            y: (mainBlock.userList.y + mainStack.y)/2 - height/2
+            Layout.alignment: Qt.AlignBaseline
+        }"""
+
+BIG_CLOCK = """        // black: big rounded clock, centred while idle; shrinks to the stock spot when the login UI shows
+        Column {
+            id: clock
+            property Item shadow: clockShadow
+            readonly property bool idle: !lockScreenRoot.uiVisible
+            readonly property real dockedY: (mainBlock.userList.y + mainStack.y) / 2 - height / 2
+            visible: config.alwaysShowClock
+            anchors.horizontalCenter: parent.horizontalCenter
+            transformOrigin: Item.Top
+            scale: idle ? 1 : 0.4
+            y: idle ? (lockScreenRoot.height - height) / 2 : Math.max(Kirigami.Units.gridUnit * 2, dockedY)
+            spacing: Kirigami.Units.gridUnit * 0.5
+            Behavior on scale { NumberAnimation { duration: Kirigami.Units.veryLongDuration; easing.type: Easing.OutCubic } }
+            Behavior on y { NumberAnimation { duration: Kirigami.Units.veryLongDuration; easing.type: Easing.OutCubic } }
+
+            PlasmaClock.Clock { id: timeSource; trackSeconds: false }
+
+            Text {
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: Qt.formatTime(timeSource.dateTime, "h:mm")
+                color: "#ffffff"
+                font.family: "Nunito"; font.weight: Font.Black
+                font.pixelSize: Math.round(lockScreenRoot.height * 0.26)
+                font.features: { "tnum": 1 }   // digits keep equal width so the clock doesn't jiggle
+            }
+            Text {
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: Qt.formatDate(timeSource.dateTime, "dddd, d MMMM")
+                color: "#e6e8ee"
+                font.family: "Nunito"; font.weight: Font.Bold
+                font.pixelSize: Math.round(lockScreenRoot.height * 0.035)
+            }
+            Text {   // greeting
+                anchors.horizontalCenter: parent.horizontalCenter
+                text: {
+                    const h = timeSource.dateTime.getHours();
+                    return (h < 5 ? "Still up" : h < 12 ? "Good morning" : h < 18 ? "Good afternoon" : "Good evening") + ", " + kscreenlocker_userName;
+                }
+                color: "#aab1bf"
+                font.family: "Nunito"; font.weight: Font.Bold
+                font.pixelSize: Math.round(lockScreenRoot.height * 0.022)
+            }
+            Item { width: 1; height: Kirigami.Units.gridUnit }
+            Bat.BatteryControlModel { id: blackBattery }
+            Rectangle {   // battery pill
+                anchors.horizontalCenter: parent.horizontalCenter
+                visible: blackBattery.hasInternalBatteries
+                height: Math.round(lockScreenRoot.height * 0.045)
+                width: blackBatRow.implicitWidth + height
+                radius: height / 2
+                color: Qt.rgba(0.08, 0.09, 0.11, 0.7)
+                Row {
+                    id: blackBatRow
+                    anchors.centerIn: parent
+                    spacing: 8
+                    Kirigami.Icon {
+                        anchors.verticalCenter: parent.verticalCenter
+                        width: blackBatRow.parent.height * 0.5; height: width
+                        isMask: true
+                        color: blackBattery.pluggedIn ? "#34d399" : "#ffffff"
+                        source: "battery-" + String(Math.round(blackBattery.percent / 10) * 10).padStart(3, "0") + (blackBattery.pluggedIn ? "-charging" : "")
+                    }
+                    Text {
+                        anchors.verticalCenter: parent.verticalCenter
+                        text: blackBattery.percent + "%"
+                        color: "#ffffff"
+                        font.family: "Nunito"; font.weight: Font.Black
+                        font.pixelSize: Math.round(blackBatRow.parent.height * 0.42)
+                    }
+                }
+            }
+            Item { width: 1; height: Kirigami.Units.gridUnit; visible: blackNowPlaying.visible }
+            Mpris.Mpris2Model { id: blackMpris }
+            Rectangle {   // now playing
+                id: blackNowPlaying
+                readonly property var p: blackMpris.currentPlayer
+                readonly property bool playing: !!p && p.playbackStatus === Mpris.PlaybackStatus.Playing
+                visible: !!p && !!p.track
+                anchors.horizontalCenter: parent.horizontalCenter
+                width: Math.round(lockScreenRoot.width * 0.26); height: Math.round(lockScreenRoot.height * 0.1)
+                radius: height * 0.3
+                color: Qt.rgba(0.08, 0.09, 0.11, 0.72)
+                Row {
+                    anchors.fill: parent; anchors.margins: blackNowPlaying.height * 0.14
+                    spacing: blackNowPlaying.height * 0.16
+                    Rectangle {
+                        width: parent.height; height: width; radius: width * 0.22; color: "#22262e"; clip: true
+                        Image { anchors.fill: parent; source: blackNowPlaying.p ? blackNowPlaying.p.artUrl : ""; fillMode: Image.PreserveAspectCrop }
+                    }
+                    Column {
+                        anchors.verticalCenter: parent.verticalCenter
+                        width: parent.width - parent.height * 1.8 - parent.spacing * 2
+                        Text {
+                            width: parent.width; elide: Text.ElideRight
+                            text: blackNowPlaying.p ? blackNowPlaying.p.track : ""
+                            color: "#ffffff"; font.family: "Nunito"; font.weight: Font.Black
+                            font.pixelSize: Math.round(blackNowPlaying.height * 0.2)
+                        }
+                        Text {
+                            width: parent.width; elide: Text.ElideRight
+                            text: blackNowPlaying.p ? (blackNowPlaying.p.artist || "") : ""
+                            color: "#aab1bf"; font.family: "Nunito"; font.weight: Font.Bold
+                            font.pixelSize: Math.round(blackNowPlaying.height * 0.16)
+                        }
+                    }
+                    Rectangle {
+                        anchors.verticalCenter: parent.verticalCenter
+                        width: parent.height * 0.8; height: width; radius: width / 2; color: "#3b82f6"
+                        Kirigami.Icon {
+                            anchors.centerIn: parent; width: parent.width * 0.5; height: width; isMask: true; color: "#ffffff"
+                            source: blackNowPlaying.playing ? "media-playback-pause" : "media-playback-start"
+                        }
+                        MouseArea { anchors.fill: parent; onClicked: blackNowPlaying.p.PlayPause() }
+                    }
+                }
+            }
+        }"""
+
+IMPORT_ANCHOR = "import org.kde.breeze.components\n"
+IMPORT_ADD = "import org.kde.plasma.clock as PlasmaClock\nimport org.kde.plasma.private.battery as Bat\nimport org.kde.plasma.private.mpris as Mpris\n"
+
+
+def main() -> int:
+    if USR.is_symlink() or USR.exists():
+        shutil.rmtree(USR) if not USR.is_symlink() else USR.unlink()
+    src = (SYS / UI).read_text()
+    if src.count(STOCK_CLOCK) != 1 or src.count(IMPORT_ANCHOR) != 1:
+        print("glasskit-lockscreen-sync: stock lock screen changed, using stock", file=sys.stderr)
+        return 0
+    patched = src.replace(STOCK_CLOCK, BIG_CLOCK).replace(IMPORT_ANCHOR, IMPORT_ANCHOR + IMPORT_ADD)
+    assert "font.family: \"Nunito\"" in patched and IMPORT_ADD in patched, "patch did not apply"
+    shutil.copytree(SYS, USR, symlinks=False)   # real copies: KPackage rejects links leaving the package
+    (USR / UI).write_text(patched)
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())

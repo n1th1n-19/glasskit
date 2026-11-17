@@ -1,0 +1,5 @@
+{
+  "KPackageStructure": "Plasma/Applet",
+  "KPlugin": { "Id": "org.glasskit.island", "Name": "Glasskit Island", "Description": "Top-bar pill that grows for music and charging", "Icon": "media-playback-start", "Category": "Multimedia", "Authors": [{ "Name": "glasskit contributors" }], "License": "GPL-2.0+", "Version": "1.0", "FormFactors": ["panel"] },
+  "X-Plasma-API-Minimum-Version": "6.0"
+}

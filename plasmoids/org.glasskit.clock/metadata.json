@@ -1,0 +1,5 @@
+{
+  "KPackageStructure": "Plasma/Applet",
+  "KPlugin": { "Id": "org.glasskit.clock", "Name": "Glasskit Clock", "Description": "Big rounded clock with day progress", "Icon": "clock", "Category": "Date and Time", "Authors": [{ "Name": "glasskit contributors" }], "License": "GPL-2.0+", "Version": "1.0" },
+  "X-Plasma-API-Minimum-Version": "6.0"
+}

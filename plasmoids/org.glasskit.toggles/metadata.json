@@ -1,0 +1,5 @@
+{
+  "KPackageStructure": "Plasma/Applet",
+  "KPlugin": { "Id": "org.glasskit.toggles", "Name": "Glasskit Toggles", "Description": "Wi-Fi, Bluetooth, Do Not Disturb, Night Light, Mute", "Icon": "preferences-system-network", "Category": "System Information", "Authors": [{ "Name": "glasskit contributors" }], "License": "GPL-2.0+", "Version": "1.0" },
+  "X-Plasma-API-Minimum-Version": "6.0"
+}

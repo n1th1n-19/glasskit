@@ -1,0 +1,5 @@
+{
+  "KPackageStructure": "Plasma/Applet",
+  "KPlugin": { "Id": "org.glasskit.stats", "Name": "Glasskit Storage & Network", "Description": "Disk space and live network speed", "Icon": "drive-harddisk", "Category": "System Information", "Authors": [{ "Name": "glasskit contributors" }], "License": "GPL-2.0+", "Version": "1.0" },
+  "X-Plasma-API-Minimum-Version": "6.0"
+}
