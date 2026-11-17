@@ -15,6 +15,7 @@
 | glow | `#9cc2ff`, peak opacity 0.16, 10 px | Bar edge glow |
 
 - Font: Nunito (UI 10 pt, toolbar 9 pt Medium, titles Bold, big numbers Black). JetBrains Mono for code. Use tabular figures for anything that ticks.
+- Cursor: Bibata Modern Ice (white, rounded tips); Bibata Modern Classic on light setups.
 - Radius: widget cards 28 px, popups 18 px, bar 12 px, buttons fully round.
 - No gradients, no decorative blobs, no emoji as icons. Glow comes from stacked strokes, not gradient fills.
 - Motion: springy width changes (`OutBack`, overshoot 1.1, about 420 ms), opacity cross-fades 200 ms, nothing bouncing at rest except music equaliser bars.

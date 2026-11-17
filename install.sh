@@ -41,6 +41,9 @@ if fc-list | grep -qi 'Nunito'; then echo "  already installed"; else
     done; fc-cache -f "$HOME/.local/share/fonts/nunito" >/dev/null; echo "  installed"
 fi
 
+say "Cursor (Bibata Modern Ice, GPL-3.0)"
+"$HOME/.local/bin/glasskit-cursor" "${GLASSKIT_CURSOR:-Bibata-Modern-Ice}" || echo "  cursor download failed: skipping"
+
 say "Filled UI icons (Material Symbols Rounded, Apache-2.0)"
 python3 -I "$HOME/.local/bin/glasskit-icons-build"
 

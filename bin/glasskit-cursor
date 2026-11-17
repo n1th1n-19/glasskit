@@ -1,0 +1,30 @@
+#!/bin/sh
+# Install and apply a Bibata cursor theme (default: Bibata-Modern-Ice, white with rounded tips).
+# Usage: glasskit-cursor [THEME]   e.g. Bibata-Modern-Classic, Bibata-Modern-Ice, Bibata-Original-Classic
+# Downloads the official release (GPL-3.0, https://github.com/ful1e5/Bibata_Cursor), installs per user,
+# and applies it to KDE, GTK/Electron apps and X11/Flatpak fallbacks. Cursor themes are image files only.
+set -eu
+THEME=${1:-Bibata-Modern-Ice}
+DEST=$HOME/.local/share/icons/$THEME
+if [ ! -d "$DEST/cursors" ]; then
+    tmp=$(mktemp -d)
+    trap 'rm -rf "${tmp:?}"' EXIT
+    curl -fsSL -o "$tmp/c.tar.xz" "https://github.com/ful1e5/Bibata_Cursor/releases/latest/download/$THEME.tar.xz" \
+        || { echo "no Bibata release named $THEME" >&2; exit 1; }
+    tar -xJf "$tmp/c.tar.xz" -C "$tmp"
+    [ -d "$tmp/$THEME/cursors" ] || { echo "unexpected archive layout" >&2; exit 1; }
+    mkdir -p "$HOME/.local/share/icons"; cp -r "$tmp/$THEME" "$DEST"
+fi
+# Plasma's cursor list only scans ~/.icons, not ~/.local/share/icons
+mkdir -p "$HOME/.icons/default"; ln -sfn "$DEST" "$HOME/.icons/$THEME"
+printf '[Icon Theme]\nInherits=%s\n' "$THEME" > "$HOME/.icons/default/index.theme"
+for v in gtk-3.0 gtk-4.0; do
+    mkdir -p "$HOME/.config/$v"
+    kwriteconfig6 --file "$HOME/.config/$v/settings.ini" --group Settings --key gtk-cursor-theme-name "$THEME"
+done
+command -v gsettings >/dev/null && gsettings set org.gnome.desktop.interface cursor-theme "$THEME" 2>/dev/null || true
+kwriteconfig6 --notify --file kcminputrc --group Mouse --key cursorTheme "$THEME"
+# switching away and back makes the running session pick it up now (setting the same name is a no-op)
+plasma-apply-cursortheme breeze_cursors >/dev/null 2>&1 || true
+plasma-apply-cursortheme "$THEME" >/dev/null 2>&1 || true
+echo "cursor: $THEME (open apps pick it up after a restart)"

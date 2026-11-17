@@ -16,6 +16,7 @@ Frosted-glass widgets, a dynamic top-bar island, filled rounded icons and a grai
 | **Boot splash** | Your wordmark forms out of film grain, the full stop blinks while the session loads, then it fades. |
 | **Lock screen** (opt-in) | A big rounded clock with a greeting, battery pill and now-playing card. It shrinks away when you start typing your password. |
 | **Konsole "Glass"** | A translucent, blurred terminal profile. |
+| **Cursor** | [Bibata Modern Ice](https://github.com/ful1e5/Bibata_Cursor): white with rounded tips, applied to KDE and GTK apps. Pick another variant with `glasskit-cursor`. |
 
 Design rules: dark surfaces, one blue accent (`#3b82f6`), Nunito everywhere, rounded cards and no gradients.
 
@@ -82,6 +83,7 @@ Then add widgets: right-click the desktop or a panel, choose **Add Widgets** and
 | `glasskit-glass-style` | Recreate the glass Plasma style from WhiteSur-dark |
 | `glasskit-glass-frame-build` / `glasskit-glass-panel-build` | Redraw the popup frame or the bar. Tune radius, opacity and glow at the top of each file |
 | `glasskit-splash-build --word NAME --dot-color '#hex'` | Rebuild the boot splash |
+| `glasskit-cursor [Bibata-Modern-Classic\|Bibata-Modern-Ice\|...]` | Install and apply a Bibata cursor (default Bibata-Modern-Ice) |
 | `glasskit-island-popups off\|on` | Route notifications to Island, or back to Plasma |
 | `glasskit-lockscreen-sync` | Rebuild the big-clock lock screen (runs at login when enabled) |
 | `glasskit-gestures-rebuild` | Optional dnf5 hook that rebuilds [kwin-winlike-gestures](https://github.com/LiberaTeMetuMortis/kwin-winlike-gestures) after KWin updates. See the comments inside |

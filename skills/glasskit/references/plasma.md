@@ -54,6 +54,8 @@ Learned by building glasskit on Plasma 6.8 (Fedora 45, Wayland). Each item cost 
 
 ## Other config facts
 
+- Cursors: `plasma-apply-cursortheme` and System Settings only list themes in `~/.icons` (and `/usr/share/icons`), **not** `~/.local/share/icons`. Install there and symlink into `~/.icons`. Setting the theme already in `kcminputrc` is a no-op for the live session, so switch to another theme and back. Also set `~/.icons/default/index.theme` `Inherits=` and `gtk-cursor-theme-name` for GTK, Electron and Flatpak apps.
+
 - Fonts: `kdeglobals [General] font/menuFont/toolBarFont/smallestReadableFont/fixed`, `[WM] activeFont`. Use `kwriteconfig6 --notify` so running apps update. GTK uses `~/.config/gtk-{3,4}.0/settings.ini gtk-font-name`.
 - Power: `powerdevilrc [AC][Display] DimDisplayWhenIdle/TurnOffDisplayWhenIdle`, `[AC][SuspendAndShutdown] AutoSuspendAction=0`, then `org.kde.Solid.PowerManagement.reparseConfiguration`.
 - Charge limit: `/sys/class/power_supply/BAT0/charge_control_end_threshold` if present. HP exposes it via `hp-bioscfg` at `/sys/class/firmware-attributes/hp-bioscfg/attributes/Battery Health Manager`.

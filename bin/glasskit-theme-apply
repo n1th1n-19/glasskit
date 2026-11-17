@@ -7,7 +7,7 @@ ok() { printf '  %-16s %s\n' "$1" "$2"; }
 plasma-apply-colorscheme WhiteSurDark >/dev/null 2>&1;            ok colors WhiteSurDark
 plasma-apply-desktoptheme WhiteSur-dark-glass >/dev/null 2>&1;    ok plasma-style WhiteSur-dark-glass
 /usr/libexec/plasma-changeicons Glasskit-Filled >/dev/null 2>&1; ok icons "Glasskit-Filled (filled rounded UI icons)"
-kwriteconfig6 --file kcminputrc --group Mouse --key cursorTheme WhiteSur-cursors; ok cursor "WhiteSur-cursors (full effect after re-login)"
+"$(dirname "$(readlink -f "$0")")/glasskit-cursor" "${GLASSKIT_CURSOR:-Bibata-Modern-Ice}" >/dev/null 2>&1; ok cursor "${GLASSKIT_CURSOR:-Bibata-Modern-Ice}"
 
 kwriteconfig6 --file kdeglobals --group KDE --key widgetStyle kvantum
 kwriteconfig6 --file ~/.config/Kvantum/kvantum.kvconfig --group General --key theme WhiteSurDark
