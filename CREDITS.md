@@ -14,3 +14,5 @@ glasskit downloads or builds on these projects. None of them is bundled in this 
 | [kwin-winlike-gestures](https://github.com/LiberaTeMetuMortis/kwin-winlike-gestures) | Optional touchpad gestures; the rebuild hook only | see project |
 
 Techniques: Plasma FrameSvg 9-slice frames, KDE `current-color-scheme` icon recolouring, and the film-grain dissolve (keep a pixel when random < blurred alpha) used for the splash.
+
+Pets by Frakassets (https://frakassets.itch.io/free-pets-pack), CC BY 4.0, https://creativecommons.org/licenses/by/4.0/ - the Free Pets Pack sprites (32px, scroller, outline; lit + shine layers) are bundled in `cosmic/island/assets/pets/` for the COSMIC Island idle pet; licence text in `cosmic/island/assets/pets/LICENSE.txt`.

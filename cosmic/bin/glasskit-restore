@@ -1,0 +1,95 @@
+#!/usr/bin/env bash
+# Back up and restore the parts of ~/.config/cosmic that glasskit edits.
+#
+#   glasskit-restore --backup <tag>     save the current state (see tags below)
+#   glasskit-restore <tag>              put back the state saved before glasskit's first edit
+#   glasskit-restore --latest <tag>     put back the newest backup instead
+#   glasskit-restore --list             show the backups
+#   add --dry-run to any of these to only print what would happen
+#
+# Tags: theme (colours, radii, font, icon theme), panel (top bar + dock), shortcuts (custom keybindings).
+# Backups live in ~/.local/state/glasskit/backups/<tag>-orig.tgz (made once, kept until restored)
+# and <tag>-<timestamp>.tgz (the newest 5 are kept). Nothing is restarted: COSMIC watches its config.
+set -euo pipefail
+
+C="${XDG_CONFIG_HOME:-$HOME/.config}/cosmic"
+B="${XDG_STATE_HOME:-$HOME/.local/state}/glasskit/backups"
+DRY=0
+
+dirs_of() {
+  case "$1" in
+    theme)     echo "com.system76.CosmicTheme.Dark.Builder com.system76.CosmicTk" ;;
+    panel)     echo "com.system76.CosmicPanel com.system76.CosmicPanel.Panel com.system76.CosmicPanel.Dock com.system76.CosmicPanelButton" ;;
+    shortcuts) echo "com.system76.CosmicSettings.Shortcuts" ;;
+    *) echo "unknown tag '$1' (theme, panel, shortcuts)" >&2; exit 2 ;;
+  esac
+}
+
+backup() {
+  local tag=$1 d out ts tmp
+  ts=$(date +%Y%m%d-%H%M%S)
+  out="$B/$tag-$ts.tgz"
+  if [ "$DRY" = 1 ]; then echo "would back up $(dirs_of "$tag") -> $out"; return 0; fi
+  mkdir -p "$B"
+  tmp=$(mktemp -d)
+  mkdir -p "$tmp/cosmic/.absent"
+  for d in $(dirs_of "$tag"); do
+    if [ -d "$C/$d" ]; then cp -a "$C/$d" "$tmp/cosmic/"; else : > "$tmp/cosmic/.absent/$d"; fi
+  done
+  tar czf "$out" -C "$tmp" cosmic
+  rm -rf "$tmp"
+  [ -e "$B/$tag-orig.tgz" ] || cp "$out" "$B/$tag-orig.tgz"
+  # keep the newest 5 timestamped backups per tag
+  # shellcheck disable=SC2012
+  ls -t "$B/$tag"-2*.tgz 2>/dev/null | tail -n +6 | while read -r old; do rm -f -- "$old"; done
+  echo "backup: $out"
+}
+
+restore() {
+  local tag=$1 mode=$2 f d tmp rel
+  if [ "$mode" = latest ]; then
+    # shellcheck disable=SC2012
+    f=$(ls -t "$B/$tag"-2*.tgz 2>/dev/null | head -n1 || true)
+  else
+    f="$B/$tag-orig.tgz"
+  fi
+  if [ -z "${f:-}" ] || [ ! -f "$f" ]; then echo "no $mode backup for '$tag' in $B" >&2; exit 1; fi
+  tar tzf "$f" 2>/dev/null | grep '^cosmic/' >/dev/null || { echo "$f is not a glasskit backup" >&2; exit 1; }
+  if [ "$DRY" = 1 ]; then echo "would restore $(dirs_of "$tag") from $f"; return 0; fi
+  tmp=$(mktemp -d)
+  tar xzf "$f" -C "$tmp" --no-same-owner
+  for d in $(dirs_of "$tag"); do
+    if [ -d "$tmp/cosmic/$d" ]; then
+      mkdir -p "$C/$d"
+      cp -a "$tmp/cosmic/$d/." "$C/$d/"
+    fi
+    # drop files that did not exist when the backup was taken (the directory stays: COSMIC watches it)
+    if [ -d "$C/$d" ]; then
+      while IFS= read -r -d '' rel; do
+        rel=${rel#"$C/"}
+        [ -e "$tmp/cosmic/$rel" ] || rm -f -- "$C/$rel"
+      done < <(find "$C/$d" -type f -print0)
+    fi
+  done
+  rm -rf "$tmp"
+  echo "restored $tag from $f"
+  [ "$mode" = orig ] && mv -f "$f" "$f.restored"
+  return 0
+}
+
+list() { ls -1 "$B" 2>/dev/null || echo "no backups yet ($B)"; }
+
+args=(); op=restore; mode=orig
+for a in "$@"; do
+  case "$a" in
+    --dry-run|-n) DRY=1 ;;
+    --backup) op=backup ;;
+    --latest) mode=latest ;;
+    --list) op=list ;;
+    -h|--help) sed -n '2,12p' "$0" | sed 's/^# \{0,1\}//'; exit 0 ;;
+    *) args+=("$a") ;;
+  esac
+done
+[ "$op" = list ] && { list; exit 0; }
+[ "${#args[@]}" = 1 ] || { echo "usage: glasskit-restore [--backup|--latest] [--dry-run] <theme|panel|shortcuts> | --list" >&2; exit 2; }
+if [ "$op" = backup ]; then backup "${args[0]}"; else restore "${args[0]}" "$mode"; fi

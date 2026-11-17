@@ -1,0 +1,75 @@
+# Glasskit Island settings  (~/.config/glasskit/island.conf)
+#
+# One `key = value` per line. Lines starting with # and blank lines are ignored,
+# and so is anything after a # on a setting line. Names are not case sensitive.
+# A missing key, an unknown key or a bad value just uses the default shown here.
+# Restart the applet (remove it and add it again in the panel) after editing.
+
+# ---------------------------------------------------------------------------
+# pet
+#   Which pixel pet lives in the island. When several places say something the
+#   first of these wins: the GLASSKIT_PET environment variable, this setting,
+#   the old one-word file ~/.config/glasskit/pet, then `random`.
+#
+# Available pets:
+#   cat       orange cat
+#   puppy     shiba inu puppy
+#   fox       red fox
+#   bunny     white bunny
+#   hamster   golden hamster
+#   hedgehog  brown hedgehog
+#   piglet    pink piglet
+#   duckling  yellow duckling
+#   frog      green frog
+#   turtle    green turtle
+#   gator     the glasskit mascot, drawn in code
+#   random    a random animal each time the applet starts
+#   off       no pet, just the plain accent dot in the panel (also: 0, false)
+#
+# Animal sprites: Pets by Frakassets, CC BY 4.0
+# (https://frakassets.itch.io/free-pets-pack).
+pet = random
+
+# ---------------------------------------------------------------------------
+# popup_pet = true | false
+#   Show the pet, bigger and on its own, in the little card that opens when you
+#   click the island while nothing is playing. Click the pet to make it hop.
+#   false = that card shows "Nothing playing" and the Prev/Play/Next buttons.
+popup_pet = true
+
+# pet_in_panel = true | false
+#   Show the idle pet in the panel pill. false = a small accent dot instead.
+pet_in_panel = true
+
+# sleep_after_seconds = 0 ... 86400
+#   Idle time before the pet lies down to sleep. 0 = never sleeps.
+sleep_after_seconds = 60
+
+# walk_speed = slow | normal | fast
+#   How fast the pet walks.
+walk_speed = normal
+
+# hop_frequency = never | rare | normal | often
+#   How often the pet hops while resting.
+hop_frequency = normal
+
+# scale = auto | 1 | 2 | 3
+#   Size of the pet in the panel pill. auto picks 1 for a normal panel and 2 for
+#   a very tall one. 1 is a 32 px animal (the gator is drawn to the same
+#   height). (The popup pet has its own fixed size.)
+scale = auto
+
+# animation_fps = 4 ... 15
+#   Animation frames per second (values outside are clamped). 10 is the default
+#   look; higher is smoother but wakes the applet more often, and the pet also
+#   walks and hops proportionally faster.
+animation_fps = 10
+
+# ---------------------------------------------------------------------------
+# pet_widget = true | false
+#   Show the pet as a card on the desktop (glasskit-widgets `--card pet`). It
+#   uses the settings above (pet, sleep_after_seconds, walk_speed, hop_frequency,
+#   animation_fps). The little arrows at its corners switch pets and write the
+#   choice to `pet =` above, so the panel pet follows after its next restart.
+#   false = that card does not start.
+pet_widget = true
