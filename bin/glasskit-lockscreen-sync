@@ -67,6 +67,13 @@ BIG_CLOCK = """        // black: big rounded clock, centred while idle; shrinks 
             }
             Item { width: 1; height: Kirigami.Units.gridUnit }
             Bat.BatteryControlModel { id: blackBattery }
+            P5Support.DataSource {   // battery saver = power-profiles-daemon "power-saver" profile, polled every 5 s
+                id: saverSource; engine: "executable"
+                property bool on: false
+                onNewData: (source, data) => { on = (data.stdout || "").indexOf("power-saver") >= 0; disconnectSource(source); }
+            }
+            Timer { interval: 5000; repeat: true; running: true; triggeredOnStart: true
+                onTriggered: saverSource.connectSource("gdbus call --system --dest net.hadess.PowerProfiles --object-path /net/hadess/PowerProfiles --method org.freedesktop.DBus.Properties.Get net.hadess.PowerProfiles ActiveProfile #" + Date.now()) }
             Rectangle {   // battery pill
                 anchors.horizontalCenter: parent.horizontalCenter
                 visible: blackBattery.hasInternalBatteries
@@ -78,18 +85,13 @@ BIG_CLOCK = """        // black: big rounded clock, centred while idle; shrinks 
                     id: blackBatRow
                     anchors.centerIn: parent
                     spacing: 8
-                    Item {   // battery drawn from shapes: always horizontal, terminal on the right, fill = charge level
+                    BatteryGlyph {
                         anchors.verticalCenter: parent.verticalCenter
                         height: blackBatRow.parent.height * 0.36
                         width: height * 1.9
-                        readonly property color c: blackBattery.pluggedIn ? "#34d399" : "#ffffff"
-                        readonly property real bw: Math.max(1.5, height * 0.12)
-                        Rectangle { id: batBody; width: parent.width - parent.height * 0.2; height: parent.height; radius: height * 0.3; color: "transparent"; border.width: parent.bw; border.color: parent.c }
-                        Rectangle { x: batBody.width + parent.height * 0.05; anchors.verticalCenter: parent.verticalCenter; width: parent.height * 0.14; height: parent.height * 0.4; radius: width / 2; color: parent.c }
-                        Rectangle {
-                            x: parent.bw * 1.8; y: parent.bw * 1.8; height: parent.height - parent.bw * 3.6; radius: height * 0.3; color: parent.c
-                            width: Math.max(height * 0.5, (batBody.width - parent.bw * 3.6) * Math.min(1, blackBattery.percent / 100))
-                        }
+                        percent: blackBattery.percent
+                        charging: blackBattery.pluggedIn
+                        saver: saverSource.on
                     }
                     Text {
                         anchors.verticalCenter: parent.verticalCenter
@@ -147,8 +149,96 @@ BIG_CLOCK = """        // black: big rounded clock, centred while idle; shrinks 
             }
         }"""
 
+GLYPH = """import QtQuick
+import QtQuick.Shapes
+
+// Horizontal battery drawn from shapes, so it points the same way under every icon theme.
+// States: charging = green bolt, battery saver = yellow leaf, low (15 % or less) = red "!",
+// otherwise an inner fill that shows the charge level.
+Item {
+    id: g
+    property real percent: 0
+    property bool charging: false
+    property bool saver: false
+    property color normalColor: "#ffffff"
+
+    readonly property bool low: !charging && percent <= 15
+    readonly property string mode: charging ? "charging" : saver ? "saver" : low ? "low" : "normal"
+    readonly property color c: charging ? "#34d399" : saver ? "#facc15" : low ? "#f87171" : normalColor
+    readonly property real bw: Math.max(1.5, height * 0.12)
+
+    implicitHeight: 12
+    implicitWidth: implicitHeight * 1.9
+
+    Rectangle {   // body outline
+        id: body
+        width: g.width - g.height * 0.2; height: g.height
+        radius: height * 0.3
+        color: "transparent"; border.width: g.bw; border.color: g.c
+    }
+    Rectangle {   // terminal, on the right
+        x: body.width + g.height * 0.05
+        anchors.verticalCenter: parent.verticalCenter
+        width: g.height * 0.14; height: g.height * 0.4; radius: width / 2
+        color: g.c
+    }
+    Rectangle {   // level fill (normal state only; the other states show a symbol instead)
+        visible: g.mode === "normal"
+        x: g.bw * 1.8; y: g.bw * 1.8
+        height: g.height - g.bw * 3.6; radius: height * 0.3
+        width: Math.max(height * 0.5, (body.width - g.bw * 3.6) * Math.min(1, g.percent / 100))
+        color: g.c
+    }
+
+    Item {   // symbol, centred in the body
+        id: sym
+        anchors.centerIn: body
+        height: body.height * 0.72; width: height
+
+        Shape {   // lightning bolt
+            anchors.fill: parent
+            visible: g.mode === "charging"
+            preferredRendererType: Shape.CurveRenderer
+            ShapePath {
+                fillColor: g.c; strokeColor: "transparent"
+                PathPolyline {
+                    path: [Qt.point(sym.width * 0.60, 0), Qt.point(sym.width * 0.16, sym.height * 0.58),
+                           Qt.point(sym.width * 0.48, sym.height * 0.58), Qt.point(sym.width * 0.40, sym.height),
+                           Qt.point(sym.width * 0.84, sym.height * 0.42), Qt.point(sym.width * 0.52, sym.height * 0.42),
+                           Qt.point(sym.width * 0.60, 0)]
+                }
+            }
+        }
+        Rectangle {   // "!" stem
+            visible: g.mode === "low"
+            anchors.horizontalCenter: parent.horizontalCenter
+            width: sym.width * 0.2; height: sym.height * 0.6; radius: width / 2
+            color: g.c
+        }
+        Rectangle {   // "!" dot
+            visible: g.mode === "low"
+            anchors.horizontalCenter: parent.horizontalCenter
+            y: sym.height * 0.76
+            width: sym.width * 0.22; height: width; radius: width / 2
+            color: g.c
+        }
+        Shape {   // leaf
+            anchors.fill: parent
+            visible: g.mode === "saver"
+            preferredRendererType: Shape.CurveRenderer
+            ShapePath {
+                fillColor: g.c; strokeColor: "transparent"
+                startX: sym.width * 0.12; startY: sym.height * 0.88
+                PathQuad { x: sym.width * 0.88; y: sym.height * 0.12; controlX: sym.width * 0.04; controlY: sym.height * 0.04 }
+                PathQuad { x: sym.width * 0.12; y: sym.height * 0.88; controlX: sym.width * 0.96; controlY: sym.height * 0.96 }
+            }
+        }
+    }
+}
+"""
+
 IMPORT_ANCHOR = "import org.kde.breeze.components\n"
-IMPORT_ADD = "import org.kde.plasma.clock as PlasmaClock\nimport org.kde.plasma.private.battery as Bat\nimport org.kde.plasma.private.mpris as Mpris\n"
+IMPORT_ADD = "import org.kde.plasma.plasma5support as P5Support\nimport org.kde.plasma.clock as PlasmaClock\nimport org.kde.plasma.private.battery as Bat\nimport org.kde.plasma.private.mpris as Mpris\n"
 
 
 def main() -> int:
@@ -162,6 +252,7 @@ def main() -> int:
     assert "font.family: \"Nunito\"" in patched and IMPORT_ADD in patched, "patch did not apply"
     shutil.copytree(SYS, USR, symlinks=False)   # real copies: KPackage rejects links leaving the package
     (USR / UI).write_text(patched)
+    (USR / UI).parent.joinpath("BatteryGlyph.qml").write_text(GLYPH)   # battery drawn from shapes
     return 0
 
 

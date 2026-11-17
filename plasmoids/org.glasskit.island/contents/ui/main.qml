@@ -25,6 +25,13 @@ PlasmoidItem {
 
     // ---------- battery: charge flash + low-battery warning ----------
     Bat.BatteryControlModel { id: battery }
+    P5Support.DataSource {   // battery saver = power-profiles-daemon "power-saver" profile, polled every 5 s
+        id: saverSource; engine: "executable"
+        property bool on: false
+        onNewData: (source, data) => { on = (data.stdout || "").indexOf("power-saver") >= 0; disconnectSource(source); }
+    }
+    Timer { interval: 5000; repeat: true; running: true; triggeredOnStart: true
+        onTriggered: saverSource.connectSource("gdbus call --system --dest net.hadess.PowerProfiles --object-path /net/hadess/PowerProfiles --method org.freedesktop.DBus.Properties.Get net.hadess.PowerProfiles ActiveProfile #" + Date.now()) }
     property bool lowWarned: false
     Connections {
         target: battery
@@ -228,19 +235,14 @@ PlasmoidItem {
                 RowLayout {
                     anchors.centerIn: parent
                     spacing: pill.height * 0.25
-                    Item {   // battery drawn from shapes: always horizontal, terminal on the right, fill = charge level
+                    BatteryGlyph {
                         Layout.preferredHeight: pill.height * 0.42
                         Layout.preferredWidth: Layout.preferredHeight * 1.9
                         height: Layout.preferredHeight
                         width: Layout.preferredWidth
-                        readonly property color c: root.mode === "low" ? "#f87171" : (battery.pluggedIn ? "#34d399" : "#ffffff")
-                        readonly property real bw: Math.max(1.5, height * 0.12)
-                        Rectangle { id: batBody; width: parent.width - parent.height * 0.2; height: parent.height; radius: height * 0.3; color: "transparent"; border.width: parent.bw; border.color: parent.c }
-                        Rectangle { x: batBody.width + parent.height * 0.05; anchors.verticalCenter: parent.verticalCenter; width: parent.height * 0.14; height: parent.height * 0.4; radius: width / 2; color: parent.c }
-                        Rectangle {
-                            x: parent.bw * 1.8; y: parent.bw * 1.8; height: parent.height - parent.bw * 3.6; radius: height * 0.3; color: parent.c
-                            width: Math.max(height * 0.5, (batBody.width - parent.bw * 3.6) * Math.min(1, battery.percent / 100))
-                        }
+                        percent: battery.percent
+                        charging: battery.pluggedIn
+                        saver: saverSource.on
                     }
                     Text {
                         text: root.mode === "low" ? "Low battery " + battery.percent + "%"
