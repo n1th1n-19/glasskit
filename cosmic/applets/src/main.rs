@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-//! Glasskit panel applets: `glasskit-applets clock` and `glasskit-applets status`.
+//! Glasskit panel applets: `glasskit-applets <clock|status|space[-s|-l|-xl]>`.
 mod logic;
 
 use std::marker::PhantomData;
@@ -154,9 +154,66 @@ pub enum Message {
 pub trait Kind: 'static {
     const ID: &'static str;
     const STATUS: bool;
+    /// Spacer length in px; 0 for the real applets.
+    const SPACE: u32 = 0;
 }
 pub struct Clock;
 pub struct Status;
+pub struct SpaceS;
+pub struct Space;
+pub struct SpaceL;
+pub struct SpaceXl;
+macro_rules! space_kind {
+    ($t:ty, $id:literal, $px:literal) => {
+        impl Kind for $t {
+            const ID: &'static str = $id;
+            const STATUS: bool = false;
+            const SPACE: u32 = $px;
+        }
+    };
+}
+space_kind!(SpaceS, "io.github.n1th1n_19.Glasskit.Space.S", 8);
+space_kind!(Space, "io.github.n1th1n_19.Glasskit.Space", 16);
+space_kind!(SpaceL, "io.github.n1th1n_19.Glasskit.Space.L", 32);
+space_kind!(SpaceXl, "io.github.n1th1n_19.Glasskit.Space.XL", 64);
+
+/// Invisible panel spacer: an empty transparent window, no button, tooltip, popup or input handling.
+struct Spacer<K: Kind> {
+    core: Core,
+    _k: PhantomData<K>,
+}
+
+impl<K: Kind> cosmic::Application for Spacer<K> {
+    type Executor = cosmic::SingleThreadExecutor;
+    type Flags = ();
+    type Message = Message;
+    const APP_ID: &'static str = K::ID;
+
+    fn core(&self) -> &Core {
+        &self.core
+    }
+    fn core_mut(&mut self) -> &mut Core {
+        &mut self.core
+    }
+    fn init(core: Core, _: ()) -> (Self, Task<Message>) {
+        (Self { core, _k: PhantomData }, Task::none())
+    }
+    fn view(&self) -> Element<'_, Message> {
+        let applet = &self.core.applet;
+        let horizontal = applet.is_horizontal();
+        let (w, h) = applet.suggested_window_size();
+        let cross = if horizontal { h } else { w }.get();
+        let len = space_px(K::SPACE, std::env::var("GLASSKIT_SPACE_PX").ok().as_deref());
+        let (w, h) = space_dims(len, cross, horizontal);
+        applet.autosize_window(widget::Space::new().width(Length::Fixed(w as f32)).height(Length::Fixed(h as f32))).into()
+    }
+    fn view_window(&self, _id: Id) -> Element<'_, Message> {
+        "".into()
+    }
+    fn style(&self) -> Option<cosmic::iced::theme::Style> {
+        Some(cosmic::applet::style()) // fully transparent background
+    }
+}
 impl Kind for Clock {
     const ID: &'static str = "io.github.n1th1n_19.Glasskit.Clock";
     const STATUS: bool = false;
@@ -812,8 +869,12 @@ fn main() -> cosmic::iced::Result {
     match std::env::args().nth(1).as_deref() {
         Some("clock") => cosmic::applet::run::<Applet<Clock>>(()),
         Some("status") => cosmic::applet::run::<Applet<Status>>(()),
+        Some("space-s") => cosmic::applet::run::<Spacer<SpaceS>>(()),
+        Some("space") => cosmic::applet::run::<Spacer<Space>>(()),
+        Some("space-l") => cosmic::applet::run::<Spacer<SpaceL>>(()),
+        Some("space-xl") => cosmic::applet::run::<Spacer<SpaceXl>>(()),
         _ => {
-            eprintln!("usage: glasskit-applets <clock|status>");
+            eprintln!("usage: glasskit-applets <clock|status|space-s|space|space-l|space-xl>");
             std::process::exit(2);
         }
     }

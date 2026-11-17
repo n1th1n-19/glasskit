@@ -243,6 +243,22 @@ pub fn chevron(open: bool, c: &str) -> String {
     doc(stroke(if open { "M7 14.5l5-5 5 5" } else { "M7 9.5l5 5 5-5" }, c, 2.2, 1.0))
 }
 
+// ---- space applets ------------------------------------------------------------
+
+pub const SPACE_MIN: u32 = 4;
+pub const SPACE_MAX: u32 = 256;
+
+/// Spacer length in logical px: `GLASSKIT_SPACE_PX` (when it parses) overrides the kind's `base`
+/// for every spacer, clamped to 4..=256.
+pub fn space_px(base: u32, env: Option<&str>) -> u32 {
+    env.and_then(|v| v.trim().parse::<u32>().ok()).unwrap_or(base).clamp(SPACE_MIN, SPACE_MAX)
+}
+
+/// (width, height) of the spacer: `len` along the panel's main axis, `cross` (the applet height) across it.
+pub fn space_dims(len: u32, cross: u32, horizontal: bool) -> (u32, u32) {
+    if horizontal { (len, cross) } else { (cross, len) }
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -337,5 +353,18 @@ mod tests {
         for s in [volume(Vol::High, "#abcdef"), wifi(3, false, "#abcdef"), bluetooth(BtState::Connected, "#abcdef"), battery(BattState::Charging, 50.0, "#abcdef"), lock("#abcdef"), chevron(true, "#abcdef")] {
             assert!(s.contains("#abcdef") && !s.contains("currentColor") && s.starts_with("<svg") && s.ends_with("</svg>"));
         }
+    }
+
+    #[test]
+    fn space_sizes() {
+        assert_eq!(space_px(16, None), 16);
+        assert_eq!(space_px(16, Some("40")), 40);
+        assert_eq!(space_px(16, Some(" 40 ")), 40);
+        assert_eq!(space_px(16, Some("1")), 4);
+        assert_eq!(space_px(16, Some("9999")), 256);
+        assert_eq!(space_px(16, Some("junk")), 16);
+        assert_eq!(space_px(16, Some("-3")), 16);
+        assert_eq!(space_dims(16, 32, true), (16, 32));
+        assert_eq!(space_dims(16, 32, false), (32, 16));
     }
 }

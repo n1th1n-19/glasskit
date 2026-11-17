@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Glasskit Space (64 px)
+Comment=Invisible 64 px gap between panel applets
+Type=Application
+Exec=glasskit-applets space-xl
+Terminal=false
+Categories=COSMIC;
+Icon=view-more-horizontal-symbolic
+StartupNotify=true
+NoDisplay=true
+X-CosmicApplet=true
+X-OverflowPriority=5

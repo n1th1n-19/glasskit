@@ -54,7 +54,7 @@ Usage:
 
 Parts:
   island            the Island top-bar applet with the pixel pet (+ island.conf)
-  applets           Clock and Status panel applets (also accepted: clock, status)
+  applets           Clock, Status and Space panel applets (also accepted: clock, status)
   widgets           the 7 desktop cards, started at login
   launcher          glasskit-launcher (app launcher popup)
   launcher-shortcut bind the launcher to Super (edits your custom shortcuts, backed up first)
@@ -297,7 +297,7 @@ uninstall_part() {
       rmf "$BIN/glasskit-island" "$APPS/$G.Island.desktop"
       if [ -f "$CFG/island.conf" ] && cfg_prompt "Also delete your Island settings ($CFG/island.conf)?"; then rmf "$CFG/island.conf"
       elif [ -f "$CFG/island.conf" ]; then say "island: kept $CFG/island.conf (--purge deletes it)"; fi ;;
-    applets)  rmf "$BIN/glasskit-applets" "$APPS/$G.Clock.desktop" "$APPS/$G.Status.desktop" ;;
+    applets)  rmf "$BIN/glasskit-applets" "$APPS/$G.Clock.desktop" "$APPS/$G.Status.desktop" "$APPS/$G".Space{.S,,.L,.XL}.desktop ;;
     widgets)  local c
               for c in clock calendar system media toggles storage focus; do rmf "$AUTO/glasskit-widget-$c.desktop"; done
               rmf "$BIN/glasskit-widgets"
@@ -369,7 +369,7 @@ part_paths() {
 }
 part_desc() {
   case "$1" in
-    island) echo "Island applet + pixel pet + island.conf" ;; applets) echo "Clock and Status panel applets" ;;
+    island) echo "Island applet + pixel pet + island.conf" ;; applets) echo "Clock, Status and Space panel applets" ;;
     widgets) echo "7 desktop cards (autostart)" ;; launcher) echo "app launcher popup" ;;
     launcher-shortcut) echo "Super opens the launcher (edits shortcuts)" ;; theme) echo "colours, radii, frosted, Nunito" ;;
     panel) echo "floating top bar + dock layout" ;; icons) echo "glasskit-filled icon theme" ;;
