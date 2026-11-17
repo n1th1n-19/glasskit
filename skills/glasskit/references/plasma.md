@@ -52,6 +52,14 @@ Learned by building glasskit on Plasma 6.8 (Fedora 45, Wayland). Each item cost 
 - Private modules (`org.kde.plasma.private.*`) are not API: pin to the Plasma version and test after updates.
 - Sensors: `org.kde.ksysguard.sensors` → `Sensor { sensorId: "cpu/all/usage" }`. List ids with `kstatsviewer --list`. Battery sensor ids are machine-specific, so prefer `BatteryControlModel`.
 
+## Touchpad gestures
+
+- Plasma 6's built-in gestures are fixed (4-finger: up = Overview, down = Grid, left/right = desktops) and can't be remapped in settings.
+- Windows-style mapping: [kwin-winlike-gestures](https://github.com/LiberaTeMetuMortis/kwin-winlike-gestures), a KWin plugin with a settings page (Mouse & Touchpad > Touchpad Gestures). 3 fingers: up Overview, down Show desktop, left/right live Alt+Tab. 4 fingers: up/down same, left/right desktops. It has no tap gestures.
+- It is compiled against KWin internals and **must match the exact KWin version**. After every Plasma update it stops loading until rebuilt and re-installed, then the user must log out and in. On dnf5 systems, `libdnf5-plugin-actions` can rebuild it automatically: `post_transaction:kwin:in::<script>` in `/etc/dnf/libdnf5-plugins/actions.d/`. That script runs as root, so `$HOME` is `/root`: hard-code the owner and source path. Root then runs `cmake --install` from a user-writable tree, which is a privilege-escalation path: say so.
+- The enable key is `[Plugins] winlikegesturesEnabled` in `~/.config/kwinrc` (check the real name in kwinrc after enabling; don't guess). A plugin crash takes KWin down: recover from a TTY by setting it to `false`.
+- Installing it needs sudo and running the project's `install.sh`. Auto mode usually blocks both, so give the user the commands. Clone into a durable path (not a temp dir), because rebuilds need the source.
+
 ## Other config facts
 
 - Cursors: `plasma-apply-cursortheme` and System Settings only list themes in `~/.icons` (and `/usr/share/icons`), **not** `~/.local/share/icons`. Install there and symlink into `~/.icons`. Setting the theme already in `kcminputrc` is a no-op for the live session, so switch to another theme and back. Also set `~/.icons/default/index.theme` `Inherits=` and `gtk-cursor-theme-name` for GTK, Electron and Flatpak apps.

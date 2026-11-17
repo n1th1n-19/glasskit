@@ -1,18 +1,19 @@
 #!/bin/sh
 # glasskit installer: user-level only, never uses sudo.
-# Usage: ./install.sh [--apply] [--lockscreen] [--island-popups] [--word TEXT]
+# Usage: ./install.sh [--apply] [--lockscreen] [--island-popups] [--gestures] [--word TEXT]
 #   --apply           switch colours, Plasma style, icons, splash and fonts to glasskit now
 #   --lockscreen      big-clock lock screen (rebuilds a user copy of the desktop shell at each login)
 #   --island-popups   let Island show notifications instead of Plasma's popups
+#   --gestures        Windows-style 3/4-finger touchpad gestures (builds a KWin plugin, asks for sudo)
 #   --word TEXT       wordmark for the boot splash (default: glasskit)
 set -eu
 cd "$(dirname "$(readlink -f "$0")")"
-APPLY=0; LOCK=0; POPUPS=0; WORD=glasskit
+APPLY=0; LOCK=0; POPUPS=0; GESTURES=0; WORD=glasskit
 while [ $# -gt 0 ]; do
     case "$1" in
-        --apply) APPLY=1 ;; --lockscreen) LOCK=1 ;; --island-popups) POPUPS=1 ;;
+        --apply) APPLY=1 ;; --lockscreen) LOCK=1 ;; --island-popups) POPUPS=1 ;; --gestures) GESTURES=1 ;;
         --word) shift; WORD=${1:?--word needs text} ;;
-        -h|--help) sed -n '2,8p' "$0"; exit 0 ;;
+        -h|--help) sed -n '2,9p' "$0"; exit 0 ;;
         *) echo "unknown option: $1" >&2; exit 2 ;;
     esac; shift
 done
@@ -67,6 +68,7 @@ if [ $LOCK = 1 ]; then
 fi
 [ $POPUPS = 1 ] && { say "Island notifications"; "$HOME/.local/bin/glasskit-island-popups" off; }
 [ $APPLY = 1 ] && { say "Applying the look"; "$HOME/.local/bin/glasskit-theme-apply"; }
+[ $GESTURES = 1 ] && { say "Touchpad gestures"; "$HOME/.local/bin/glasskit-gestures"; }
 
 say "Done"
 cat <<'EOF'

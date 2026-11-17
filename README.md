@@ -16,6 +16,7 @@ Frosted-glass widgets, a dynamic top-bar island, filled rounded icons and a grai
 | **Boot splash** | Your wordmark forms out of film grain, the full stop blinks while the session loads, then it fades. |
 | **Lock screen** (opt-in) | A big rounded clock with a greeting, battery pill and now-playing card. It shrinks away when you start typing your password. |
 | **Konsole "Glass"** | A translucent, blurred terminal profile. |
+| **Touchpad gestures** (opt-in) | Windows-style: 3 fingers up/down = Overview/Show desktop, left/right = switch apps; 4 fingers left/right = switch virtual desktops. Via [kwin-winlike-gestures](https://github.com/LiberaTeMetuMortis/kwin-winlike-gestures). |
 | **Cursor** | [Bibata Modern Ice](https://github.com/ful1e5/Bibata_Cursor): white with rounded tips, applied to KDE and GTK apps. Pick another variant with `glasskit-cursor`. |
 
 Design rules: dark surfaces, one blue accent (`#3b82f6`), Nunito everywhere, rounded cards and no gradients.
@@ -72,6 +73,7 @@ Then add widgets: right-click the desktop or a panel, choose **Add Widgets** and
 ### Opt-in extras, and what they change
 
 - `--lockscreen`: on Plasma 6 the lock screen lives inside the desktop shell package. glasskit keeps a user copy of that package, with only the clock block patched, and rebuilds it from the system files before every login. If an update changes the stock clock code, the copy is dropped and you get the stock lock screen. If the lock screen ever fails, Plasma falls back to its built-in locker, so you can still unlock.
+- `--gestures`: clones and builds [kwin-winlike-gestures](https://github.com/LiberaTeMetuMortis/kwin-winlike-gestures), a KWin plugin, and installs it into `/usr` (it asks for your sudo password). It runs inside KWin and must match your exact KWin version, so after each Plasma update run `glasskit-gestures` again (or install the `glasskit-gestures-rebuild` dnf hook). Enable it in System Settings > Mouse & Touchpad > Touchpad Gestures.
 - `--island-popups`: turns off Plasma's own notification popups for every installed app, so notifications appear only in Island. History is kept. Undo with `glasskit-island-popups on`.
 
 ## Commands
@@ -86,6 +88,7 @@ Then add widgets: right-click the desktop or a panel, choose **Add Widgets** and
 | `glasskit-cursor [Bibata-Modern-Classic\|Bibata-Modern-Ice\|...]` | Install and apply a Bibata cursor (default Bibata-Modern-Ice) |
 | `glasskit-island-popups off\|on` | Route notifications to Island, or back to Plasma |
 | `glasskit-lockscreen-sync` | Rebuild the big-clock lock screen (runs at login when enabled) |
+| `glasskit-gestures` | Fetch, build and install the touchpad gesture plugin (re-run after Plasma updates) |
 | `glasskit-gestures-rebuild` | Optional dnf5 hook that rebuilds [kwin-winlike-gestures](https://github.com/LiberaTeMetuMortis/kwin-winlike-gestures) after KWin updates. See the comments inside |
 
 ## Known limits

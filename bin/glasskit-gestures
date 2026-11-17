@@ -1,0 +1,34 @@
+#!/bin/sh
+# Windows-style touchpad gestures for Plasma 6 Wayland via kwin-winlike-gestures
+# (https://github.com/LiberaTeMetuMortis/kwin-winlike-gestures):
+#   3 fingers: up = Overview, down = Show desktop, left/right = switch apps (live Alt+Tab)
+#   4 fingers: up = Overview, down = Show desktop, left/right = switch virtual desktops (follows fingers)
+# The plugin runs inside KWin and must match the exact KWin version: rebuild after every Plasma update.
+# Usage: glasskit-gestures [SRC_DIR]   (default ~/src/kwin-winlike-gestures). Needs a terminal: the
+# plugin's own install.sh asks for your sudo password to install into /usr.
+set -eu
+SRC=${1:-$HOME/src/kwin-winlike-gestures}
+[ -t 0 ] || { echo "run this in a terminal (sudo needs to ask for your password)" >&2; exit 1; }
+
+if [ -d "$SRC/.git" ]; then git -C "$SRC" pull -q --ff-only || true
+else mkdir -p "$(dirname "$SRC")"; git clone -q --depth 1 https://github.com/LiberaTeMetuMortis/kwin-winlike-gestures.git "$SRC"; fi
+
+cat <<'EOF'
+Build dependencies (install these first if the build fails):
+  Fedora:  sudo dnf install git cmake gcc-c++ extra-cmake-modules kwin-devel kf6-kcmutils-devel kf6-ki18n-devel \
+             kf6-kconfig-devel kf6-kcoreaddons-devel kf6-kwindowsystem-devel qt6-qtbase-devel qt6-qtbase-private-devel \
+             qt6-qtdeclarative-devel libepoxy-devel libdrm-devel vulkan-loader-devel vulkan-headers wayland-devel
+  Others:  see the plugin README (openSUSE, Arch, Debian/Kubuntu lists)
+Read the plugin's install.sh before running it if you have not already.
+EOF
+printf 'Build and install now? [y/N] '; read -r ans
+case "$ans" in y|Y) ;; *) echo "skipped"; exit 0 ;; esac
+( cd "$SRC" && ./install.sh )
+cat <<'EOF'
+
+Next: log out and back in, then enable it in System Settings > Mouse & Touchpad > Touchpad Gestures > Apply.
+After a Plasma update the gestures stop until you rebuild: run glasskit-gestures again, then log out and in.
+Automatic rebuild on dnf updates: see the comments in glasskit-gestures-rebuild.
+If KWin ever crashes at login: switch to a TTY (Ctrl+Alt+F3), set winlikegesturesEnabled=false under [Plugins]
+in ~/.config/kwinrc, and log in again.
+EOF

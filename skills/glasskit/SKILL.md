@@ -1,6 +1,6 @@
 ---
 name: glasskit
-description: Install, adapt or rebuild the glasskit desktop look (frosted glass panels and popups, a top-bar "island" that shows music, notifications, volume and battery, bold rounded desktop widgets, filled rounded UI icons, a grain boot splash, a big-clock lock screen). Use when the user wants to style or rice a Linux desktop, macOS or Windows; add desktop or panel widgets; make panels or popups glassy, translucent, blurred or glowing; add a dynamic island; change icon style to filled or rounded; customise a boot splash or lock screen; or install glasskit. Works on KDE Plasma 6 directly, and gives build recipes for GNOME, COSMIC (Pop!_OS), Hyprland/wlroots, macOS and Windows.
+description: Install, adapt or rebuild the glasskit desktop look (frosted glass panels and popups, a top-bar "island" that shows music, notifications, volume and battery, bold rounded desktop widgets, filled rounded UI icons, a grain boot splash, a big-clock lock screen, Windows-style touchpad gestures). Use when the user wants to style or rice a Linux desktop, macOS or Windows; add desktop or panel widgets; make panels or popups glassy, translucent, blurred or glowing; add a dynamic island; change icon style to filled or rounded; customise a boot splash or lock screen; set up 3- or 4-finger touchpad gestures; or install glasskit. Works on KDE Plasma 6 directly, and gives build recipes for GNOME, COSMIC (Pop!_OS), Hyprland/wlroots, macOS and Windows.
 ---
 
 # glasskit

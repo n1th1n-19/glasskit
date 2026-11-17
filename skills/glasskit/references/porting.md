@@ -11,6 +11,7 @@ Rebuild the same pieces with each platform's native tools. The table names the t
 | Font | `gsettings set org.gnome.desktop.interface font-name 'Nunito 10'` | COSMIC Settings → Appearance → fonts | GTK settings.ini + bar CSS | Can't replace the system UI font; use it in widgets | Not system-wide; use it in widgets |
 | Boot splash | Plymouth theme (script module), needs root | Plymouth | Plymouth | Not customisable | Not customisable |
 | Lock screen | Hard to theme; an extension can restyle the unlock dialog | Not themeable yet | hyprlock / swaylock-effects config | Not themeable | Not themeable (wallpaper only) |
+| Touchpad gestures | Built in (3/4-finger); remap with the "Gesture Improvements" extension | Built-in workspace/overview gestures; check Settings → Touchpad | `gesture = 3, horizontal, workspace` (Hyprland 0.51+) or `bindgesture` in Sway; libinput-gestures on X11 | Native (System Settings → Trackpad) | Native (Settings → Touchpad → Three-finger gestures) |
 | Notifications in island | Extension hooks `Main.messageTray` sources | Watch `org.freedesktop.Notifications` with your own daemon | Replace the notification daemon (swaync, mako) and forward to Eww | Not possible (sandboxed) | Not supported |
 
 ## COSMIC (Pop!_OS 24.04 and later)
