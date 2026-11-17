@@ -60,6 +60,12 @@ pub fn sc(x: f32) -> f32 {
 fn scu(x: u32) -> u32 {
     sc(x as f32).round() as u32
 }
+/// GLASSKIT_DEBUG_INPUT=1: log every mouse event, message and surface setup to stderr.
+fn debug_input() -> bool {
+    static ON: std::sync::OnceLock<bool> = std::sync::OnceLock::new();
+    *ON.get_or_init(|| std::env::var_os("GLASSKIT_DEBUG_INPUT").is_some_and(|v| v != "0"))
+}
+
 /// s = clamp(min(h/1080, w/1920), 0.5, 1.5)
 fn scale_for(w: i32, h: i32) -> f32 {
     (h as f32 / 1080.0).min(w as f32 / 1920.0).clamp(0.5, 1.5)
@@ -106,7 +112,7 @@ impl Card {
             Card::Media => 160,
             Card::Toggles => 204,
             Card::Storage => 224,
-            Card::Focus => 170,
+            Card::Focus => 200, // heading + 48px time + button row + 2x24 padding (170 clipped the buttons)
             Card::Pet => 170,
         }
     }
@@ -240,6 +246,9 @@ impl App {
         let h = self.card.height();
         let id = Id::unique();
         self.surface = Some(id);
+        if debug_input() {
+            eprintln!("[input] {}: layer surface {id:?} layer={:?} keyboard=None edit={} size={w}x{h}", self.card.name(), if self.edit { Layer::Top } else { Layer::Bottom }, self.edit);
+        }
         get_layer_surface(SctkLayerSurfaceSettings {
             id,
             layer: if self.edit { Layer::Top } else { Layer::Bottom },
@@ -427,6 +436,14 @@ impl cosmic::Application for App {
             _ => None,
         });
         let mut subs = vec![cosmic::iced::time::every(Duration::from_secs(1)).map(|_| Message::Tick), cosmic::iced::time::every(Duration::from_millis(250)).map(|_| Message::Poll), events];
+        if debug_input() {
+            subs.push(cosmic::iced::event::listen_raw(|e, status, id| {
+                if let cosmic::iced::Event::Mouse(m) = &e {
+                    eprintln!("[input] mouse {m:?} status={status:?} window={id:?}");
+                }
+                None
+            }));
+        }
         if self.edit {
             subs.push(cosmic::iced::event::listen_raw(|e, _, _| match e {
                 cosmic::iced::Event::Mouse(mouse::Event::CursorMoved { position }) => Some(Message::Ptr(position)),
@@ -446,6 +463,9 @@ impl cosmic::Application for App {
     }
 
     fn update(&mut self, msg: Message) -> Task<Message> {
+        if debug_input() && !matches!(msg, Message::Tick | Message::Poll | Message::Anim | Message::Frame | Message::Media(..) | Message::Art(..) | Message::Toggles(_) | Message::Output(..)) {
+            eprintln!("[input] {}: message {msg:?} (edit={})", self.card.name(), self.edit);
+        }
         // edit mode: a click only drags, the card's own buttons are dead
         if self.edit && matches!(msg, Message::Flip(_) | Message::MediaCmd(_) | Message::Seek(_) | Message::FocusToggle | Message::FocusSkip | Message::FocusReset | Message::Poke | Message::PetSwitch(_)) {
             return Task::none();
