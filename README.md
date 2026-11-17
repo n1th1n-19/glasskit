@@ -2,6 +2,8 @@
 
 Frosted-glass widgets, a dynamic top-bar island, filled rounded icons and a grain boot splash for **KDE Plasma 6**. Everything installs per user, with no root.
 
+![glasskit overview: desktop, lock screen, island, widgets, icons and splash](docs/overview.jpg)
+
 ## What you get
 
 | Piece | What it does |
@@ -16,6 +18,38 @@ Frosted-glass widgets, a dynamic top-bar island, filled rounded icons and a grai
 | **Konsole "Glass"** | A translucent, blurred terminal profile. |
 
 Design rules: dark surfaces, one blue accent (`#3b82f6`), Nunito everywhere, rounded cards and no gradients.
+
+## Gallery
+
+All screenshots are from a real Plasma 6.8 session. The wallpaper is a blurred public-domain photo.
+
+**Desktop**: the six widgets, the glass top bar with Island and the dock
+
+![Desktop with glasskit widgets, glass top bar and dock](docs/desktop.jpg)
+
+**Island**: music with an equaliser, the volume level, and a notification with its card
+
+![Island showing music, volume and a notification](docs/island.png)
+
+**Top bar**: battery pill and filled tray icons
+
+![Top bar with battery pill and filled tray icons](docs/topbar.png)
+
+**Widgets**: clock, quick toggles, media, system rings, calendar, storage and network
+
+![The six glasskit desktop widgets](docs/widgets.png)
+
+**Lock screen**: big rounded clock, greeting, battery pill and now playing
+
+![glasskit lock screen](docs/lockscreen.jpg)
+
+**Filled rounded UI icons**: tray states, toolbar and system actions
+
+![Glasskit-Filled icon sample](docs/icons.png)
+
+**Boot splash**: the wordmark forms out of grain and the dot blinks while the session loads
+
+![Boot splash frames](docs/splash.png)
 
 ## Requirements
 
