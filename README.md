@@ -66,7 +66,25 @@ Then add widgets: right-click the desktop or a panel, choose **Add Widgets** and
 
 ## Claude skill
 
-`skill/glasskit/` is a [Claude](https://claude.com/claude-code) skill. With it, Claude can install and adapt glasskit on Plasma, or rebuild the same look on GNOME, COSMIC (Pop!_OS), Hyprland, macOS or Windows. Copy it to `~/.claude/skills/glasskit/`.
+`skills/glasskit/` is a [Claude Code](https://claude.com/claude-code) skill. With it, Claude can install and adapt glasskit on Plasma, or rebuild the same look on GNOME, COSMIC (Pop!_OS), Hyprland, macOS or Windows. You can install the skill on its own, without the desktop kit:
+
+```text
+/plugin install glasskit --marketplace n1th1n-19/glasskit
+```
+
+Or with the [skills CLI](https://skills.sh):
+
+```bash
+npx skills add n1th1n-19/glasskit@glasskit
+```
+
+Or as a plain file copy, with no Claude Code plugin system needed:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/n1th1n-19/glasskit/main/install-skill.sh | sh
+```
+
+On older Claude Code versions, add the marketplace first: `/plugin marketplace add n1th1n-19/glasskit`, then `/plugin install glasskit@glasskit`.
 
 ## License
 

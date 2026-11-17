@@ -5,7 +5,7 @@ description: Install, adapt or rebuild the glasskit desktop look (frosted glass 
 
 # glasskit
 
-A desktop look built from four ideas: **glass surfaces** (translucent, blurred, rounded, a soft light edge), **one accent** (`#3b82f6` on near-black `#0c0e12`), **one rounded type family** (Nunito) and **filled rounded icons**. The glasskit repo (local: `~/Documents/Marie/glasskit`, run `install.sh`) ships a working KDE Plasma 6 implementation. On other platforms, rebuild the same pieces with that platform's tools.
+A desktop look built from four ideas: **glass surfaces** (translucent, blurred, rounded, a soft light edge), **one accent** (`#3b82f6` on near-black `#0c0e12`), **one rounded type family** (Nunito) and **filled rounded icons**. The glasskit repo (https://github.com/n1th1n-19/glasskit) ships a working KDE Plasma 6 implementation: `git clone https://github.com/n1th1n-19/glasskit && cd glasskit && ./install.sh`. On other platforms, rebuild the same pieces with that platform's tools.
 
 ## First: find out where you are
 
@@ -25,7 +25,7 @@ sw_vers 2>/dev/null; ver 2>/dev/null
 
 ## Plasma 6: install and adapt
 
-1. Clone and install: `./install.sh` (add `--apply --word NAME` to switch the look now and set the splash wordmark). It is user-level, with no sudo.
+1. Clone (if this skill was installed on its own, the kit is not on disk yet) and install: `./install.sh` (add `--apply --word NAME` to switch the look now and set the splash wordmark). It is user-level, with no sudo.
 2. Optional third-party bases: WhiteSur-kde (for `glasskit-glass-style`), Kvantum, a launcher and a dock. These need the user's own install command, because some need sudo or run downloaded scripts. Read any downloaded script before you suggest running it.
 3. Place widgets with Plasma scripting over D-Bus (`gdbus call --session --dest org.kde.plasmashell --object-path /PlasmaShell --method org.kde.PlasmaShell.evaluateScript '<js>'`). Read the panel-order rules in references/plasma.md first: the order you write is often lost on restart.
 4. Verify every change: read the value back, check `journalctl --user -u plasma-plasmashell` for QML errors, and test the lock screen only with `kscreenlocker_greet --testing`.

@@ -1,0 +1,21 @@
+{
+  "name": "glasskit",
+  "version": "1.0.0",
+  "description": "Skill for building a frosted-glass desktop: glass panels and popups, a dynamic top-bar island, bold rounded widgets, filled rounded icons, grain splash and big-clock lock screen. KDE Plasma 6 directly; recipes for GNOME, COSMIC, Hyprland, macOS and Windows.",
+  "author": {
+    "name": "n1th1n",
+    "url": "https://github.com/n1th1n-19"
+  },
+  "homepage": "https://github.com/n1th1n-19/glasskit",
+  "repository": "https://github.com/n1th1n-19/glasskit",
+  "license": "GPL-3.0-or-later",
+  "keywords": [
+    "kde",
+    "plasma",
+    "desktop",
+    "ricing",
+    "widgets",
+    "glassmorphism"
+  ],
+  "icon": ".claude-plugin/icon.png"
+}

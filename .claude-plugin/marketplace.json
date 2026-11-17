@@ -1,0 +1,15 @@
+{
+  "name": "glasskit",
+  "description": "glasskit: a Claude skill for building a frosted-glass desktop with a dynamic island, rounded widgets and filled icons.",
+  "owner": {
+    "name": "n1th1n",
+    "url": "https://github.com/n1th1n-19"
+  },
+  "plugins": [
+    {
+      "name": "glasskit",
+      "source": "./",
+      "description": "Build or install the glasskit glass desktop look on KDE Plasma 6, GNOME, COSMIC, Hyprland, macOS or Windows."
+    }
+  ]
+}
