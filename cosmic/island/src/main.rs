@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 //! Glasskit Island: a COSMIC panel applet that shows, in priority order,
 //! notification > volume > charge/low battery > now playing > idle dot.
+mod art;
 mod conf;
 mod pet;
 mod sprites;
@@ -11,7 +12,8 @@ use std::time::{Duration, Instant};
 use cosmic::app::{Core, Task};
 use cosmic::iced::window::Id;
 use cosmic::iced::alignment::{Horizontal, Vertical};
-use cosmic::iced::{Alignment, Background, Border, Color, Length, Rectangle, Subscription};
+use cosmic::iced::advanced::text::Wrapping;
+use cosmic::iced::{Alignment, Background, Border, Color, ContentFit, Length, Rectangle, Subscription};
 use cosmic::surface::action::{app_popup, destroy_popup};
 use cosmic::widget::{self, column, row};
 use cosmic::Element;
@@ -72,6 +74,9 @@ pub struct Snap {
     player: Option<Player>,
 }
 
+/// Which track a cover belongs to: (player bus, title, artist).
+type ArtKey = (String, String, String);
+
 #[derive(Debug, Clone)]
 pub enum Message {
     Tick,
@@ -82,6 +87,8 @@ pub enum Message {
     Snap(Snap),
     Notify(String, String),
     Media(Cmd),
+    /// Cover for the track `ArtKey` (None: no art or it failed to load).
+    Art(ArtKey, Option<widget::image::Handle>),
     PopupClosed(Id),
     Surface(cosmic::surface::Action<Message>),
 }
@@ -101,6 +108,9 @@ struct Island {
     popup_pet: pet::Pet,
     look: Look,
     conf: conf::Conf,
+    /// Track whose cover is loaded (or loading) and the cover itself; `None` shows the placeholder tile.
+    art_key: Option<ArtKey>,
+    art: Option<widget::image::Handle>,
 }
 
 /// The popup card shows the pet instead of album art only when nothing plays and a pet is on.
@@ -166,6 +176,26 @@ impl Island {
 
     fn media(&self) -> bool {
         self.snap.player.as_ref().is_some_and(|p| !p.title.is_empty())
+    }
+
+    /// Start loading the cover when the popup is open and the shown track is not the one we have (track change or popup open).
+    fn load_art(&mut self) -> Task<Message> {
+        let key = match &self.snap.player {
+            Some(p) if self.popup.is_some() && !p.title.is_empty() => (p.bus.clone(), p.title.clone(), p.artist.clone()),
+            _ => return Task::none(),
+        };
+        if self.art_key.as_ref() == Some(&key) {
+            return Task::none();
+        }
+        self.art_key = Some(key.clone());
+        self.art = None;
+        cosmic::task::future(async move {
+            let art = match art::read_art_url(&key.0).await {
+                Some(url) => art::load_art(url).await,
+                None => None,
+            };
+            Message::Art(key, art)
+        })
     }
 
     /// A pet is on and the popup may show it when nothing plays.
@@ -274,7 +304,7 @@ impl cosmic::Application for Island {
         let seed = std::time::SystemTime::now().duration_since(std::time::UNIX_EPOCH).map_or(1, |d| d.subsec_nanos());
         let conf = conf::load();
         let (look, pet, popup_pet) = look(seed, &conf);
-        let s = Self { core, popup: None, start: Instant::now(), snap: Snap::default(), seen: false, notify: None, volume_at: None, charge_at: None, low_at: None, pet, popup_pet, look, conf };
+        let s = Self { core, popup: None, start: Instant::now(), snap: Snap::default(), seen: false, notify: None, volume_at: None, charge_at: None, low_at: None, pet, popup_pet, look, conf, art_key: None, art: None };
         (s, cosmic::task::message(cosmic::Action::App(Message::Poll)))
     }
 
@@ -335,10 +365,16 @@ impl cosmic::Application for Island {
                 }
                 self.seen = true;
                 self.snap = s;
+                return self.load_art();
             }
             Message::Notify(app, summary) => {
                 if self.start.elapsed() > IGNORE_NOTIFY {
                     self.notify = Some((if summary.is_empty() { app } else { format!("{app}: {summary}") }, Instant::now()));
+                }
+            }
+            Message::Art(key, art) => {
+                if self.art_key.as_ref() == Some(&key) {
+                    self.art = art;
                 }
             }
             Message::Media(c) => {
@@ -435,24 +471,38 @@ fn card(s: &Island) -> Element<'_, Message> {
         Some(p) => (p.title.clone(), p.artist.clone(), p.playing),
         None => ("Nothing playing".into(), String::new(), false),
     };
-    let play = widget::button::custom(widget::text(if playing { "Pause" } else { "Play" }).class(cosmic::theme::Text::Color(Color::WHITE)))
-        .class(cosmic::theme::Button::Custom {
-            active: Box::new(|_, _| accent_btn()),
-            disabled: Box::new(|_| accent_btn()),
-            hovered: Box::new(|_, _| accent_btn()),
-            pressed: Box::new(|_, _| accent_btn()),
-        })
-        .padding([8, 20])
-        .on_press(Message::Media(Cmd::PlayPause));
     let controls = row::with_capacity(3)
-        .spacing(10)
+        .spacing(12)
         .align_y(Alignment::Center)
-        .push(widget::button::standard("Prev").on_press(Message::Media(Cmd::Previous)))
-        .push(play)
-        .push(widget::button::standard("Next").on_press(Message::Media(Cmd::Next)));
-    let body = column::with_capacity(3).spacing(10).align_x(Alignment::Center).push(widget::text::title4(title)).push(widget::text::caption(artist)).push(controls);
+        .push(icon_btn(Glyph::Prev, 36.0, 24.0, "#f4f5f7", None, Message::Media(Cmd::Previous)))
+        .push(icon_btn(toggle_glyph(playing), 44.0, 28.0, "#ffffff", Some(ACCENT), Message::Media(Cmd::PlayPause)))
+        .push(icon_btn(Glyph::Next, 36.0, 24.0, "#f4f5f7", None, Message::Media(Cmd::Next)));
+    let body: Element<'_, Message> = if s.media() {
+        let tile: Element<Message> = match &s.art {
+            Some(h) => widget::image(h.clone()).width(ART_PX).height(ART_PX).content_fit(ContentFit::Cover).border_radius([ART_RADIUS; 4]).into(),
+            None => widget::container(widget::Space::new()).width(ART_PX).height(ART_PX).class(cosmic::theme::Container::custom(|_| placeholder_style())).into(),
+        };
+        let info = column::with_capacity(2).spacing(2).width(Length::Fill).push(clipped(widget::text::title4(title))).push(clipped(widget::text::caption(artist)));
+        let head = row::with_capacity(2).spacing(14).align_y(Alignment::Center).push(tile).push(info);
+        column::with_capacity(2).spacing(10).align_x(Alignment::Center).push(head).push(controls).into()
+    } else {
+        column::with_capacity(3).spacing(10).align_x(Alignment::Center).push(widget::text::title4(title)).push(widget::text::caption(artist)).push(controls).into()
+    };
     let framed = widget::container(body).padding(16).width(Length::Fixed(W)).class(glass(18.0, 0.58, [0.071, 0.078, 0.098]));
     autosized(framed, W)
+}
+
+/// Cover tile: 64 px square, radius 14; the placeholder (#22262e) shows while loading or on failure.
+const ART_PX: f32 = 64.0;
+const ART_RADIUS: f32 = 14.0;
+
+/// One unwrapped, clipped text line (a long title is cut, not wrapped).
+fn clipped<'a>(t: widget::Text<'a, cosmic::Theme>) -> widget::Container<'a, Message, cosmic::Theme> {
+    widget::container(t.wrapping(Wrapping::None)).width(Length::Fill).clip(true)
+}
+
+fn placeholder_style() -> widget::container::Style {
+    widget::container::Style { background: Some(Background::Color(Color::from_rgb8(0x22, 0x26, 0x2e))), border: Border { radius: ART_RADIUS.into(), ..Default::default() }, ..Default::default() }
 }
 
 /// The popup window follows the card's size, which is `w` wide.
@@ -462,8 +512,54 @@ fn autosized(card: widget::Container<'_, Message, cosmic::Theme>, w: f32) -> Ele
         .into()
 }
 
-fn accent_btn() -> widget::button::Style {
-    widget::button::Style { background: Some(Background::Color(ACCENT)), border_radius: 18.0.into(), text_color: Some(Color::WHITE), ..Default::default() }
+/// Media icons: Material Icons Round (filled), 24x24, same paths as the desktop Media card.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+enum Glyph {
+    Prev,
+    Play,
+    Pause,
+    Next,
+}
+
+/// The toggle shows the action a press performs: pause while playing, play otherwise.
+fn toggle_glyph(playing: bool) -> Glyph {
+    if playing { Glyph::Pause } else { Glyph::Play }
+}
+
+impl Glyph {
+    fn path(self) -> &'static str {
+        match self {
+            Glyph::Prev => "M7 6c.55 0 1 .45 1 1v10c0 .55-.45 1-1 1s-1-.45-1-1V7c0-.55.45-1 1-1zm3.66 6.82l5.77 4.07c.66.47 1.58-.01 1.58-.82V7.93c0-.81-.92-1.29-1.58-.82l-5.77 4.07c-.57.4-.57 1.24 0 1.64z",
+            Glyph::Next => "M7.58 16.89l5.77-4.07c.56-.4.56-1.24 0-1.63L7.58 7.11C6.91 6.65 6 7.12 6 7.93v8.14c0 .81.91 1.28 1.58.82zM16 7v10c0 .55.45 1 1 1s1-.45 1-1V7c0-.55-.45-1-1-1s-1 .45-1 1z",
+            Glyph::Play => "M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18c.62-.39.62-1.29 0-1.69L9.54 5.98C8.87 5.55 8 6.03 8 6.82z",
+            Glyph::Pause => "M8 19c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2s-2 .9-2 2v10c0 1.1.9 2 2 2zm6-12v10c0 1.1.9 2 2 2s2-.9 2-2V7c0-1.1-.9-2-2-2s-2 .9-2 2z",
+        }
+    }
+    /// Inline SVG with an explicit fill (no theme recolouring).
+    fn svg(self, fill: &str) -> String {
+        format!(r#"<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="{fill}" d="{}"/></svg>"#, self.path())
+    }
+}
+
+/// Round icon button: `hit` px circle, `icon` px glyph; `bg` filled, else a faint white tint on hover.
+fn icon_btn(g: Glyph, hit: f32, icon: f32, fill: &str, bg: Option<Color>, msg: Message) -> Element<'static, Message> {
+    let style = move |hover: bool| {
+        let c = bg.or(hover.then(|| Color::from_rgba(1.0, 1.0, 1.0, 0.0625))); // #ffffff10
+        widget::button::Style { background: c.map(Background::Color), border_radius: (hit / 2.0).into(), ..Default::default() }
+    };
+    let glyph = widget::icon::from_svg_bytes(g.svg(fill).into_bytes()).icon().size(icon as u16);
+    widget::button::custom(widget::container(glyph).center(Length::Fill))
+        .width(hit)
+        .height(hit)
+        .padding(0)
+        .on_press(msg)
+        .class(cosmic::theme::Button::Custom {
+            active: Box::new(move |_, _| style(false)),
+            disabled: Box::new(move |_| style(false)),
+            hovered: Box::new(move |_, _| style(true)),
+            pressed: Box::new(move |_, _| style(true)),
+        })
+        .into()
 }
 
 fn main() -> cosmic::iced::Result {
@@ -498,6 +594,13 @@ mod tests {
         assert_eq!(i32::from(pop.x_max) - 3 + sprites::CELL - 3, i32::from(POP_CANVAS_W));
         let (_, g) = Look::Gator.cfgs(&conf);
         assert_eq!(g.x_max + pet::SPR_W_GRID, POP_GRID_W);
+    }
+
+    #[test]
+    fn toggle_icon_follows_playback() {
+        assert_eq!(toggle_glyph(true), Glyph::Pause);
+        assert_eq!(toggle_glyph(false), Glyph::Play);
+        assert!(Glyph::Pause.svg("#fff").contains(r##"fill="#fff""##) && Glyph::Play.path() != Glyph::Pause.path());
     }
 
     #[test]

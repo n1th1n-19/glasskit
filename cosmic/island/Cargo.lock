@@ -1973,6 +1973,7 @@ dependencies = [
  "serde_json",
  "tokio",
  "zbus 6.2.1",
+ "zune-jpeg 0.5.15",
 ]
 
 [[package]]
