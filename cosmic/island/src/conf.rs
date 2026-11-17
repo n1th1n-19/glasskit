@@ -82,8 +82,12 @@ pub fn parse(text: &str) -> (Conf, Vec<String>) {
     (c, warn)
 }
 
+/// `$GLASSKIT_CONFIG_DIR` if set (tests, trying a layout on a copy), else
 /// `$XDG_CONFIG_HOME/glasskit` or `~/.config/glasskit`.
 pub fn dir() -> Option<PathBuf> {
+    if let Some(d) = std::env::var_os("GLASSKIT_CONFIG_DIR").filter(|d| !d.is_empty()) {
+        return Some(PathBuf::from(d));
+    }
     let base = std::env::var_os("XDG_CONFIG_HOME").map(PathBuf::from).or_else(|| std::env::var_os("HOME").map(|h| PathBuf::from(h).join(".config")))?;
     Some(base.join("glasskit"))
 }

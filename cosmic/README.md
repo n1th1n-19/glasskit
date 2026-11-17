@@ -39,7 +39,7 @@ glasskit-cosmic uninstall                      # all of it; your settings come b
 | Part | What it is | What it touches |
 |---|---|---|
 | `island` | The Island top-bar applet: music, notifications, volume and charging in a pill, and an idle pixel pet ([README-pet.md](island/README-pet.md)) | `~/.local/bin/glasskit-island`, its `.desktop` file, `~/.config/glasskit/island.conf` (made once from [island.conf.example](island/island.conf.example), never overwritten) |
-| `applets` | Clock and Status panel applets (`clock` and `status` are accepted as names, they share one binary and install together) | `~/.local/bin/glasskit-applets`, two `.desktop` files |
+| `applets` | Clock and Status panel applets, plus four invisible Space spacers (`clock` and `status` are accepted as names, they share one binary and install together) | `~/.local/bin/glasskit-applets`, six `.desktop` files |
 | `widgets` | The seven desktop cards: clock, calendar, system rings, media, toggles, storage and network, Pomodoro | `~/.local/bin/glasskit-widgets`, seven autostart entries in `~/.config/autostart` |
 | `launcher` | `glasskit-launcher`, a glass app launcher popup (run it again to close it) | `~/.local/bin/glasskit-launcher` |
 | `launcher-shortcut` | Binds Super to the launcher | Adds one entry to COSMIC's custom shortcuts, after a backup. Not part of `all` unless you pass `--with-shortcut`. Super alone may overlap COSMIC's own launcher binding |
@@ -49,6 +49,8 @@ glasskit-cosmic uninstall                      # all of it; your settings come b
 | `cursor` | Bibata-Modern-Ice 2.0.7 from the upstream GitHub release. The archive's sha256 and every path inside it are checked before extracting. Log out and in afterwards | `~/.icons/Bibata-Modern-Ice`, `~/.icons/default`, `~/.config/environment.d/glasskit-cursor.conf` |
 | `gestures` | Windows-style gestures through libinput-gestures and ydotool 0.1.8: 3 fingers up = overview, down = launcher, left/right = Alt+Tab / Alt+Shift+Tab | `~/.config/libinput-gestures.conf` (an existing one is backed up), an autostart entry |
 | `splash` | The grain boot splash. It builds the frames in `~/.cache/glasskit/splash` (your clone stays clean) and **prints** the sudo commands from [splash/INSTALL.md](splash/INSTALL.md). glasskit never runs sudo | Only that cache folder |
+
+**Space applets.** The `applets` part also installs four invisible spacers, because COSMIC has no built-in one. They draw nothing and take up a fixed gap in the panel (width in a horizontal panel, height in a vertical one): `Glasskit Space (8 px)`, `(16 px)`, `(32 px)` and `(64 px)`, with the ids `io.github.n1th1n_19.Glasskit.Space.S`, `.Space`, `.Space.L` and `.Space.XL`. Add them in COSMIC Settings > Desktop > Panel > Applets, as many as you like; they are not added for you. Set `GLASSKIT_SPACE_PX` (4 to 256) in the applets' environment to give every spacer the same size instead.
 
 `all` = `island applets widgets launcher theme panel icons gestures`. `cursor`, `splash` and `launcher-shortcut` only install when you name them (`launcher-shortcut` also with `--with-shortcut`). Parts always install in a fixed order, whatever order you type them in. Installing a part twice is safe.
 
@@ -72,6 +74,30 @@ glasskit-cosmic uninstall                      # all of it; your settings come b
 | `glasskit-gestures-apply` | Write the gestures config |
 | `glasskit-restore <theme\|panel\|shortcuts>` | Put back the settings saved before glasskit's first edit |
 | `glasskit-icons-build-cosmic` | Build the `glasskit-filled` icon theme |
+
+## Rearranging widgets
+
+The desktop cards can be dragged anywhere on the screen. The layout is saved in `~/.config/glasskit/widgets.conf` and restored at login.
+
+```
+glasskit-widgets --edit            toggle edit mode (--edit on / --edit off, --lock = off)
+glasskit-widgets --show <card|all> bring back a card you hid with its x button
+glasskit-widgets --reset           back up widgets.conf to widgets.conf.bak, delete it, back to the default layout
+```
+
+In edit mode every card gets a blue dashed outline, a move handle and an x (hide) button, and a click only drags; the card's own buttons are off. Positions snap to an 8 px grid and to the screen edges. Release to save. Right-clicking any card also toggles edit mode. Turn it off again the same way and the cards return to normal.
+
+Bind a keyboard shortcut to `glasskit-widgets --edit` in COSMIC Settings > Keyboard > Custom shortcuts (glasskit does not bind one for you).
+
+`widgets.conf` is plain text, one `[card]` section per card (`clock calendar system pet media toggles storage focus`), `##` comments allowed. A card or key you leave out keeps its default place:
+
+| Key | Meaning |
+|---|---|
+| `anchor = left\|right` | which screen edge `x` is measured from |
+| `x`, `y` | offsets from that edge and from the top, in px at 1080p scale 1.0 (scaled per display) |
+| `visible = true\|false` | `false` hides the card; `--show` brings it back |
+
+[widgets/widgets.conf.example](widgets/widgets.conf.example) documents every key and is what `install` copies into place (only when there is no `widgets.conf` yet). `GLASSKIT_CONFIG_DIR` points glasskit at another config folder, handy for trying a layout on a copy.
 
 ## Requirements
 

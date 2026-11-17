@@ -1,7 +1,10 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 //! glasskit-widgets: one home-screen card per process (`--card NAME`), a wlr layer
 //! surface on the Bottom layer (above wallpaper, below windows, no keyboard focus).
+//! Cards are rearrangeable: `--edit` (or a right-click on any card) toggles edit mode, where the
+//! cards sit on the Top layer, wear an outline and drag anywhere; positions live in widgets.conf.
 mod calendar;
+mod layout;
 mod mediacard;
 // The island's pet engine, shared by path (not copied). Only parts of it are used here.
 #[allow(dead_code)]
@@ -15,29 +18,32 @@ mod pomodoro;
 #[allow(dead_code)]
 #[path = "../../island/src/sprites.rs"]
 mod sprites;
+mod store;
 mod style;
 
 use std::sync::atomic::{AtomicU32, Ordering};
-use std::time::Duration;
+use std::time::{Duration, Instant};
 use cosmic::cctk::sctk::output::OutputInfo;
 
 use cosmic::app::{Core, Settings, Task};
 use cosmic::cctk::sctk::shell::wlr_layer::{Anchor, KeyboardInteractivity, Layer};
 use cosmic::iced::platform_specific::runtime::wayland::layer_surface::{IcedMargin, IcedOutput, SctkLayerSurfaceSettings};
-use cosmic::iced::widget::canvas::{self, Frame, Geometry, Path, Stroke, Text};
-use cosmic::iced::{Color, Length, Limits, Point, Radians, Rectangle, Subscription, mouse};
+use cosmic::iced::widget::canvas::{self, Frame, Geometry, LineDash, Path, Stroke, Text};
+use cosmic::iced::widget::stack;
+use cosmic::iced::{Color, Length, Limits, Point, Radians, Rectangle, Size, Subscription, mouse};
 use cosmic::iced::{Alignment as VAlign, alignment::Vertical};
 use cosmic::iced::advanced::text::Alignment;
 use cosmic::iced::window::Id;
 use cosmic::cctk::sctk::reexports::client::protocol::wl_output::WlOutput;
 use cosmic::iced::event::wayland::{Event as WlEvent, OutputEvent};
-use cosmic::iced::platform_specific::shell::commands::layer_surface::get_layer_surface;
+use cosmic::iced::platform_specific::shell::commands::layer_surface::{get_layer_surface, set_anchor, set_layer, set_margin};
 use cosmic::widget::{self, button, container, text};
 use cosmic::{Element, Renderer, Theme};
 use ember_core::calendar::{MONTHS, WEEKDAYS, now};
 use ember_core::control::{bluetooth, media, network, sound};
 use ember_core::{Sampler, Snapshot};
 use pomodoro::{Phase, State};
+use layout::{Dims, Place, Px, Side};
 use style::*;
 
 const GAP: u32 = 16;
@@ -58,9 +64,11 @@ fn scu(x: u32) -> u32 {
 fn scale_for(w: i32, h: i32) -> f32 {
     (h as f32 / 1080.0).min(w as f32 / 1920.0).clamp(0.5, 1.5)
 }
-fn scale_of(i: &OutputInfo) -> Option<f32> {
+/// (scale, (width, height)) of an output.
+type Geo = (f32, (i32, i32));
+fn scale_of(i: &OutputInfo) -> Option<Geo> {
     let (w, h) = i.logical_size.filter(|s| s.0 > 0 && s.1 > 0).or_else(|| i.modes.iter().find(|m| m.current).map(|m| m.dimensions))?;
-    Some(scale_for(w, h))
+    Some((scale_for(w, h), (w, h)))
 }
 
 #[derive(Clone, Copy, PartialEq, Eq, Debug)]
@@ -102,6 +110,9 @@ impl Card {
             Card::Pet => 170,
         }
     }
+    fn name(self) -> &'static str {
+        Card::ALL.iter().find(|(_, c)| *c == self).map_or("", |(n, _)| n)
+    }
     /// (left column?, cards above it in the same column)
     fn slot(self) -> (bool, &'static [Card]) {
         match self {
@@ -115,6 +126,25 @@ impl Card {
             Card::Focus => (false, &[Card::Media, Card::Toggles, Card::Storage]),
         }
     }
+}
+
+/// Where a card sits with no widgets.conf entry: the original two columns, in output px (needs
+/// SCALE set). Same rounding as before widgets.conf existed, so no file = no change.
+fn default_px(c: Card) -> Px {
+    let (left, above) = c.slot();
+    Px { side: if left { Side::Left } else { Side::Right }, x: scu(EDGE as u32) as i32, y: scu(TOP as u32) as i32 + above.iter().map(|a| (a.height() + scu(GAP)) as i32).sum::<i32>() }
+}
+
+fn card_names() -> Vec<&'static str> {
+    Card::ALL.iter().map(|(n, _)| *n).collect()
+}
+
+fn margin_of(p: Px) -> IcedMargin {
+    IcedMargin { top: p.y, right: if p.side == Side::Right { p.x } else { 0 }, bottom: 0, left: if p.side == Side::Left { p.x } else { 0 } }
+}
+
+fn anchor_of(side: Side) -> Anchor {
+    Anchor::TOP | if side == Side::Left { Anchor::LEFT } else { Anchor::RIGHT }
 }
 
 #[derive(Debug, Clone, Copy)]
@@ -138,7 +168,7 @@ struct Toggles {
 #[derive(Debug, Clone)]
 enum Message {
     Tick,
-    Output(Option<String>, WlOutput, Option<f32>, bool),
+    Output(Option<String>, WlOutput, Option<Geo>, bool),
     Media(Option<media::Player>, Option<mediacard::Extra>),
     Art(String, Option<widget::image::Handle>),
     Seek(f32),
@@ -152,6 +182,15 @@ enum Message {
     Anim,
     Poke,
     PetSwitch(i32),
+    /// every 250 ms: edit flag and reload stamp
+    Poll,
+    /// right-click on a card
+    ToggleEdit,
+    /// raw pointer position / left release (edit mode only)
+    Ptr(Point),
+    PtrUp,
+    DragStart,
+    Hide,
 }
 
 struct App {
@@ -164,45 +203,126 @@ struct App {
     focus: State,
     ticks: u32,
     made: bool,
-    first: Option<(WlOutput, f32)>,
+    first: Option<(WlOutput, Geo)>,
     scale: f32,
     made_on: Option<String>,
     conf: conf::Conf,
     pet: Option<petcard::PetState>,
+    // --- rearranging
+    edit: bool,
+    surface: Option<Id>,
+    out: (i32, i32),
+    px: Px,
+    /// last pointer position (surface coordinates) while in edit mode
+    ptr: Option<Point>,
+    /// `Some(None)` = pressed, waiting for the first pointer position; `Some(Some(p))` = press point
+    drag: Option<Option<Point>>,
+    last_move: Instant,
+    reload: Option<String>,
 }
 
 impl App {
     /// Create the card's layer surface on `output` (once).
-    fn make(&mut self, output: IcedOutput, scale: f32, name: Option<String>) -> Task<Message> {
+    fn make(&mut self, output: IcedOutput, geo: Geo, name: Option<String>) -> Task<Message> {
         if std::mem::replace(&mut self.made, true) {
             return Task::none();
         }
+        let (scale, out) = geo;
         SCALE.store(scale.to_bits(), Ordering::Relaxed);
         self.scale = scale;
+        self.out = out;
         self.made_on = name;
         if self.card == Card::Pet {
             self.pet = Some(petcard::PetState::new(None, &self.conf));
         }
-        let (left, above) = self.card.slot();
-        let top = scu(TOP as u32) as i32 + above.iter().map(|c| (c.height() + scu(GAP)) as i32).sum::<i32>();
-        let anchor = Anchor::TOP | if left { Anchor::LEFT } else { Anchor::RIGHT };
-        let edge = scu(EDGE as u32) as i32;
+        self.px = self.px_of(self.saved(true));
         let w = scu(W);
-        let margin = IcedMargin { top, right: if left { 0 } else { edge }, bottom: 0, left: if left { edge } else { 0 } };
         let h = self.card.height();
+        let id = Id::unique();
+        self.surface = Some(id);
         get_layer_surface(SctkLayerSurfaceSettings {
-            id: Id::unique(),
-            layer: Layer::Bottom,
+            id,
+            layer: if self.edit { Layer::Top } else { Layer::Bottom },
             keyboard_interactivity: KeyboardInteractivity::None,
-            anchor,
+            anchor: anchor_of(self.px.side),
             output,
             namespace: "glasskit-widget".into(),
-            margin,
+            margin: margin_of(self.px),
             size: Some((Some(w), Some(h))),
             exclusive_zone: 0,
             size_limits: Limits::NONE.min_width(1.0).min_height(1.0).max_width(w as f32).max_height(h as f32),
             ..Default::default()
         })
+    }
+
+    /// What widgets.conf says about this card.
+    fn saved(&self, warn: bool) -> layout::Over {
+        store::load(&card_names(), warn).get(self.card.name()).copied().unwrap_or_default()
+    }
+
+    /// Output-px placement: file values (reference px, scaled) over the default place, kept on screen.
+    fn px_of(&self, o: layout::Over) -> Px {
+        let (d, s) = (default_px(self.card), self.scale);
+        layout::clamp(Px { side: o.side.unwrap_or(d.side), x: o.x.map_or(d.x, |v| (v * s).round() as i32), y: o.y.map_or(d.y, |v| (v * s).round() as i32) }, self.dims())
+    }
+
+    fn dims(&self) -> Dims {
+        Dims { w: scu(W) as i32, h: self.card.height() as i32, out_w: self.out.0, out_h: self.out.1 }
+    }
+
+    /// Push the current anchor + margin to the compositor.
+    fn apply_px(&self) -> Task<Message> {
+        let Some(id) = self.surface else { return Task::none() };
+        let m = margin_of(self.px);
+        Task::batch([set_anchor(id, anchor_of(self.px.side)), set_margin(id, m.top, m.right, m.bottom, m.left)])
+    }
+
+    fn set_edit_mode(&mut self, on: bool) -> Task<Message> {
+        if on == self.edit {
+            return Task::none();
+        }
+        self.edit = on;
+        self.drag = None;
+        self.ptr = None;
+        match self.surface {
+            Some(id) => set_layer(id, if on { Layer::Top } else { Layer::Bottom }),
+            None => Task::none(),
+        }
+    }
+
+    /// One drag step from the pointer at `p` (see `layout::drag_step`).
+    fn drag_to(&mut self, p: Point) -> Task<Message> {
+        let Some(Some(p0)) = self.drag else { return Task::none() };
+        let next = layout::drag_step(self.px, p.x - p0.x, p.y - p0.y, self.dims(), scu(layout::GRID as u32).max(1) as i32, scu(EDGE as u32) as i32, scu(TOP as u32) as i32);
+        if next == self.px {
+            return Task::none();
+        }
+        self.px = next;
+        self.last_move = Instant::now();
+        self.apply_px()
+    }
+
+    /// Save this card's place to widgets.conf (atomic, locked).
+    fn save(&mut self) {
+        let (x, y) = layout::to_ref(self.px, self.scale);
+        let place = Place { side: self.px.side, x, y, visible: true };
+        if let Err(e) = store::save_place(self.card.name(), &place) {
+            eprintln!("glasskit-widgets: could not save widgets.conf: {e}");
+        }
+    }
+
+    /// widgets.conf or the reload stamp changed (`--reset`, hand edit): follow it.
+    fn reload(&mut self) -> Task<Message> {
+        let o = self.saved(false);
+        if o.visible == Some(false) {
+            std::process::exit(0);
+        }
+        let px = self.px_of(o);
+        if px == self.px || self.drag.is_some() {
+            return Task::none();
+        }
+        self.px = px;
+        self.apply_px()
     }
 }
 
@@ -268,7 +388,30 @@ impl cosmic::Application for App {
         let mut sampler = Sampler::new();
         std::thread::sleep(Duration::from_millis(200));
         let snap = sampler.sample();
-        let app = App { core, card, sampler, snap, media: mediacard::MediaState::new(), tg: Toggles::default(), focus: State::new(), ticks: 0, made: false, first: None, scale: 1.0, made_on: None, conf: conf::load(), pet: None };
+        let app = App {
+            core,
+            card,
+            sampler,
+            snap,
+            media: mediacard::MediaState::new(),
+            tg: Toggles::default(),
+            focus: State::new(),
+            ticks: 0,
+            made: false,
+            first: None,
+            scale: 1.0,
+            made_on: None,
+            conf: conf::load(),
+            pet: None,
+            edit: store::edit_on(),
+            surface: None,
+            out: (1920, 1080),
+            px: Px { side: Side::Left, x: 0, y: 0 },
+            ptr: None,
+            drag: None,
+            last_move: Instant::now(),
+            reload: store::reload_token(),
+        };
         (app, poll(card))
     }
 
@@ -283,7 +426,14 @@ impl cosmic::Application for App {
             }
             _ => None,
         });
-        let mut subs = vec![cosmic::iced::time::every(Duration::from_secs(1)).map(|_| Message::Tick), events];
+        let mut subs = vec![cosmic::iced::time::every(Duration::from_secs(1)).map(|_| Message::Tick), cosmic::iced::time::every(Duration::from_millis(250)).map(|_| Message::Poll), events];
+        if self.edit {
+            subs.push(cosmic::iced::event::listen_raw(|e, _, _| match e {
+                cosmic::iced::Event::Mouse(mouse::Event::CursorMoved { position }) => Some(Message::Ptr(position)),
+                cosmic::iced::Event::Mouse(mouse::Event::ButtonReleased(mouse::Button::Left)) => Some(Message::PtrUp),
+                _ => None,
+            }));
+        }
         if self.card == Card::Media && self.media.moving() {
             subs.push(cosmic::iced::time::every(Duration::from_millis(250)).map(|_| Message::Frame));
         }
@@ -296,11 +446,15 @@ impl cosmic::Application for App {
     }
 
     fn update(&mut self, msg: Message) -> Task<Message> {
+        // edit mode: a click only drags, the card's own buttons are dead
+        if self.edit && matches!(msg, Message::Flip(_) | Message::MediaCmd(_) | Message::Seek(_) | Message::FocusToggle | Message::FocusSkip | Message::FocusReset | Message::Poke | Message::PetSwitch(_)) {
+            return Task::none();
+        }
         match msg {
             Message::Output(name, o, s, update) => {
                 // Resolution changed on our output: exit so autostart/the user relaunches at the new scale
                 // (ponytail: no live set_size/set_margin resize; all layout is baked into view + surface).
-                if self.made && update && self.made_on.is_some() && name == self.made_on && s.is_some_and(|s| (s - self.scale).abs() > 1e-3) {
+                if self.made && update && self.made_on.is_some() && name == self.made_on && s.is_some_and(|s| (s.0 - self.scale).abs() > 1e-3) {
                     std::process::exit(0);
                 }
                 let want = std::env::var("GLASSKIT_OUTPUT").unwrap_or_else(|_| "eDP-1".into());
@@ -319,7 +473,7 @@ impl cosmic::Application for App {
                 self.ticks += 1;
                 // wanted output never appeared: fall back to first seen / active
                 if self.ticks >= 2 && !self.made {
-                    let (o, s) = self.first.take().map_or((IcedOutput::Active, 1.0), |(o, s)| (IcedOutput::Output(o), s));
+                    let (o, s) = self.first.take().map_or((IcedOutput::Active, (1.0, (1920, 1080))), |(o, s)| (IcedOutput::Output(o), s));
                     return Task::batch([self.make(o, s, None), poll(self.card)]);
                 }
                 if matches!(self.card, Card::System | Card::Storage) {
@@ -399,6 +553,48 @@ impl cosmic::Application for App {
                     p.pet.poke();
                 }
             }
+            Message::Poll => {
+                let on = store::edit_on();
+                let tok = store::reload_token();
+                let mut tasks = vec![self.set_edit_mode(on)];
+                if tok != self.reload {
+                    self.reload = tok;
+                    tasks.push(self.reload());
+                }
+                return Task::batch(tasks);
+            }
+            Message::ToggleEdit => {
+                let on = !store::edit_on();
+                if let Err(e) = store::set_edit(on) {
+                    eprintln!("glasskit-widgets: could not toggle edit mode: {e}");
+                }
+                return self.set_edit_mode(on);
+            }
+            Message::DragStart => self.drag = Some(self.ptr),
+            // ponytail: events within 12 ms of the last move are dropped; their coordinates still
+            // belong to the surface's old position and would apply the same delta twice.
+            Message::Ptr(p) => {
+                self.ptr = Some(p);
+                match self.drag {
+                    Some(None) => self.drag = Some(Some(p)),
+                    Some(Some(_)) if self.last_move.elapsed() >= Duration::from_millis(12) => return self.drag_to(p),
+                    _ => {}
+                }
+            }
+            Message::PtrUp => {
+                if self.drag.is_some() {
+                    let t = self.ptr.map_or_else(Task::none, |p| self.drag_to(p));
+                    self.drag = None;
+                    self.save();
+                    return t;
+                }
+            }
+            Message::Hide => {
+                if let Err(e) = store::set_visible(self.card.name(), false) {
+                    eprintln!("glasskit-widgets: could not save widgets.conf: {e}");
+                }
+                std::process::exit(0);
+            }
             Message::PetSwitch(d) => {
                 if let Some(p) = &self.pet {
                     let i = petcard::cycle(p.idx, d);
@@ -413,10 +609,10 @@ impl cosmic::Application for App {
     }
 
     fn view(&self) -> Element<'_, Message> {
-        self.card_view()
+        self.rooted()
     }
     fn view_window(&self, _: Id) -> Element<'_, Message> {
-        self.card_view()
+        self.rooted()
     }
 
     fn style(&self) -> Option<cosmic::iced::theme::Style> {
@@ -486,7 +682,61 @@ fn gb(b: u64) -> f64 {
     b as f64 / 1e9
 }
 
+/// Dashed accent outline + faint tint drawn over a card in edit mode.
+struct Outline;
+
+impl canvas::Program<Message, Theme, Renderer> for Outline {
+    type State = ();
+    fn draw(&self, _: &(), renderer: &Renderer, _: &Theme, b: Rectangle, _: mouse::Cursor) -> Vec<Geometry> {
+        let mut f = Frame::new(renderer, b.size());
+        let w = sc(2.0).max(1.0);
+        let path = Path::rounded_rectangle(Point::new(w / 2.0, w / 2.0), Size::new(b.width - w, b.height - w), sc(28.0).into());
+        f.fill(&path, Color { a: 0.07, ..ACCENT });
+        let dash = [sc(10.0).max(2.0), sc(7.0).max(2.0)];
+        f.stroke(&path, Stroke { line_dash: LineDash { segments: &dash, offset: 0 }, ..Stroke::default().with_color(ACCENT).with_width(w) });
+        vec![f.into_geometry()]
+    }
+}
+
+/// Material "open_with" (four-way arrow) and "close", 24x24.
+const MOVE_PATH: &str = "M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z";
+const CLOSE_PATH: &str = "M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z";
+
+/// White glyph on an accent disc, `px` (scaled) wide.
+fn disc_icon<'a>(path: &str, px: f32) -> Element<'a, Message> {
+    let svg = format!(r##"<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="#ffffff" d="{path}"/></svg>"##);
+    container(widget::svg(widget::svg::Handle::from_memory(svg.into_bytes())).width(sc(px * 0.6)).height(sc(px * 0.6)))
+        .center(Length::Fixed(sc(px)))
+        .class(cosmic::theme::Container::custom(move |_| cosmic::iced::widget::container::Style {
+            background: Some(cosmic::iced::Background::Color(ACCENT)),
+            border: cosmic::iced::Border { radius: (sc(px) / 2.0).into(), ..Default::default() },
+            ..Default::default()
+        }))
+        .into()
+}
+
 impl App {
+    /// The card, wrapped for rearranging: right-click toggles edit mode; in edit mode an outline,
+    /// a grab layer (swallows every left press, starts the drag), the move glyph and the hide button.
+    fn rooted(&self) -> Element<'_, Message> {
+        let card = self.card_view();
+        let body: Element<Message> = if self.edit {
+            let fill = || widget::Space::new().width(Length::Fill).height(Length::Fill);
+            let grab = widget::mouse_area(fill()).on_press(Message::DragStart).interaction(mouse::Interaction::Grab);
+            // top centre: the left is where headings start, the right is the x button
+            let handle = container(disc_icon(MOVE_PATH, 30.0)).padding(sc(10.0)).width(Length::Fill).height(Length::Fill).align_x(cosmic::iced::alignment::Horizontal::Center);
+            let close = container(button::custom(disc_icon(CLOSE_PATH, 26.0)).padding(0).on_press(Message::Hide).class(cosmic::theme::Button::Text))
+                .padding(sc(10.0))
+                .width(Length::Fill)
+                .height(Length::Fill)
+                .align_x(cosmic::iced::alignment::Horizontal::Right);
+            stack([card, widget::canvas(Outline).width(Length::Fill).height(Length::Fill).into(), grab.into(), handle.into(), close.into()]).into()
+        } else {
+            card
+        };
+        widget::mouse_area(body).on_right_press(Message::ToggleEdit).into()
+    }
+
     fn card_view(&self) -> Element<'_, Message> {
         let n = now();
         let body: Element<Message> = match self.card {
@@ -588,15 +838,102 @@ impl App {
     }
 }
 
+const USAGE: &str = "usage: glasskit-widgets --card clock|calendar|system|media|toggles|storage|focus|pet
+       glasskit-widgets --edit [on|off]   toggle (or set) edit mode: drag the cards, click x to hide one
+       glasskit-widgets --lock            same as --edit off
+       glasskit-widgets --show <card|all> bring hidden cards back
+       glasskit-widgets --reset           back up widgets.conf to widgets.conf.bak, delete it, default layout";
+
+/// The non-card commands. `None` = not one of them (run a card).
+fn cli(args: &[String]) -> Option<i32> {
+    let arg = |i: usize| args.get(i).map(String::as_str);
+    let fail = |e: std::io::Error| {
+        eprintln!("glasskit-widgets: {e}");
+        1
+    };
+    let names = card_names();
+    match arg(1)? {
+        "--edit" | "--lock" => {
+            let on = match (arg(1), arg(2)) {
+                (Some("--lock"), _) | (_, Some("off")) => false,
+                (_, Some("on")) => true,
+                (_, None) => !store::edit_on(),
+                _ => {
+                    eprintln!("{USAGE}");
+                    return Some(2);
+                }
+            };
+            if let Err(e) = store::set_edit(on) {
+                return Some(fail(e));
+            }
+            println!("edit mode {}", if on { "on" } else { "off" });
+            if on {
+                let hidden: Vec<_> = names.iter().filter(|n| store::load(&names, false).get(**n).is_some_and(|o| o.visible == Some(false))).collect();
+                if !hidden.is_empty() {
+                    println!("hidden cards: {}  (bring back with: glasskit-widgets --show <card|all>)", hidden.iter().map(|n| **n).collect::<Vec<_>>().join(", "));
+                }
+            }
+            Some(0)
+        }
+        "--show" => {
+            let want = arg(2).unwrap_or("");
+            let list: Vec<&str> = if want == "all" { names.clone() } else { names.iter().copied().filter(|n| *n == want).collect() };
+            if list.is_empty() {
+                eprintln!("{USAGE}");
+                return Some(2);
+            }
+            let hidden = store::load(&names, false);
+            for c in list {
+                if hidden.get(c).is_some_and(|o| o.visible == Some(false)) {
+                    if let Err(e) = store::set_visible(c, true) {
+                        return Some(fail(e));
+                    }
+                }
+                if !store::running(c) {
+                    if let Err(e) = store::launch(c) {
+                        return Some(fail(e));
+                    }
+                    println!("started {c}");
+                }
+            }
+            Some(0)
+        }
+        "--reset" => {
+            match store::reset() {
+                Ok(true) => println!("widgets.conf backed up to widgets.conf.bak and removed"),
+                Ok(false) => println!("no widgets.conf, already the default layout"),
+                Err(e) => return Some(fail(e)),
+            }
+            store::touch_reload(); // running cards move back
+            for c in names.iter().filter(|c| !store::running(c)) {
+                let _ = store::launch(c); // cards that were hidden come back too
+            }
+            Some(0)
+        }
+        "--card" => None,
+        _ => {
+            eprintln!("{USAGE}");
+            Some(2)
+        }
+    }
+}
+
 fn main() -> cosmic::iced::Result {
     let args: Vec<String> = std::env::args().collect();
+    if let Some(code) = cli(&args) {
+        std::process::exit(code);
+    }
     let name = args.iter().position(|a| a == "--card").and_then(|i| args.get(i + 1));
     let Some(card) = name.and_then(|n| Card::ALL.iter().find(|(k, _)| k == n).map(|(_, c)| *c)) else {
-        eprintln!("usage: glasskit-widgets --card clock|calendar|system|media|toggles|storage|focus|pet");
+        eprintln!("{USAGE}");
         std::process::exit(2);
     };
     if card == Card::Pet && !conf::load().pet_widget {
         eprintln!("glasskit-widgets: pet_widget = false in island.conf, not starting the pet card");
+        return Ok(());
+    }
+    // hidden (x button / visible = false): stay out, unless edit mode is on
+    if !store::edit_on() && store::load(&card_names(), false).get(card.name()).is_some_and(|o| o.visible == Some(false)) {
         return Ok(());
     }
     let settings = Settings::default().no_main_window(true).transparent(true);
@@ -605,7 +942,10 @@ fn main() -> cosmic::iced::Result {
 
 #[cfg(test)]
 mod tests {
-    use super::{Card, GAP, TOP, scale_for};
+    use super::{Card, SCALE, default_px, scale_for};
+    use crate::layout::{self, Dims, Side};
+    use std::sync::atomic::Ordering;
+
     #[test]
     fn scale() {
         assert_eq!(scale_for(1920, 1080), 1.0);
@@ -614,18 +954,30 @@ mod tests {
         assert_eq!(scale_for(640, 360), 0.5);
     }
 
-    /// Every column must end inside the screen (same rounding as `make`).
+    /// One test, because SCALE is process-global. Default places equal the old slot-based margins
+    /// (hard-coded here) and every card ends inside the screen.
     #[test]
     fn columns_fit_the_screen() {
-        for (w, h) in [(1920, 1080), (1366, 768), (2560, 1440), (1280, 720)] {
+        use Card::*;
+        // (card, left column?, margin from its edge, margin from the top)
+        let at_1080: [(Card, bool, i32, i32); 8] = [(Clock, true, 48, 48), (Calendar, true, 48, 256), (System, true, 48, 576), (Pet, true, 48, 832), (Media, false, 48, 48), (Toggles, false, 48, 224), (Storage, false, 48, 444), (Focus, false, 48, 684)];
+        let at_768: [(Card, bool, i32, i32); 8] = [(Clock, true, 34, 34), (Calendar, true, 34, 182), (System, true, 34, 409), (Pet, true, 34, 591), (Media, false, 34, 34), (Toggles, false, 34, 159), (Storage, false, 34, 315), (Focus, false, 34, 485)];
+        for (w, h, want) in [(1920, 1080, Some(at_1080)), (1366, 768, Some(at_768)), (2560, 1440, None), (1280, 720, None)] {
             let s = scale_for(w, h);
+            SCALE.store(s.to_bits(), Ordering::Relaxed);
             let r = |x: u32| (x as f32 * s).round() as i32;
             for (_, c) in Card::ALL {
-                let (_, above) = c.slot();
-                let top = r(TOP as u32) + above.iter().map(|a| r(a.base_h()) + r(GAP)).sum::<i32>();
-                assert!(top + r(c.base_h()) <= h, "{c:?} overflows {w}x{h}");
+                let px = default_px(c);
+                let d = Dims { w: r(super::W), h: c.height() as i32, out_w: w, out_h: h };
+                assert_eq!(layout::clamp(px, d), px, "{c:?} is off the screen at {w}x{h}");
+                assert!(px.y + d.h <= h, "{c:?} overflows {w}x{h}");
+            }
+            for (c, left, x, y) in want.into_iter().flatten() {
+                let px = default_px(c);
+                assert_eq!((px.side == Side::Left, px.x, px.y), (left, x, y), "{c:?} at {w}x{h}");
             }
         }
+        SCALE.store(1.0f32.to_bits(), Ordering::Relaxed);
         assert_eq!(Card::ALL.len(), 8);
     }
 }

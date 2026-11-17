@@ -25,5 +25,13 @@ NoDisplay=true
 EOF
 done
 
+# Layout template (all comments = default layout): never overwrite an existing widgets.conf.
+conf="${GLASSKIT_CONFIG_DIR:-${XDG_CONFIG_HOME:-$HOME/.config}/glasskit}"
+if [ ! -e "$conf/widgets.conf" ]; then
+  mkdir -p "$conf"
+  cp "$here/widgets.conf.example" "$conf/widgets.conf"
+  echo "created $conf/widgets.conf (rearrange the cards with: glasskit-widgets --edit)"
+fi
+
 echo "installed. Cards start at next login (or run: glasskit-widgets --card clock)."
 echo "NOTE: Ember's own widget (Ember.Widget autostart) overlaps these cards; disable it yourself if unwanted."
