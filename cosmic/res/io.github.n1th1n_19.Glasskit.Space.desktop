@@ -2,7 +2,7 @@
 Name=Glasskit Space (16 px)
 Comment=Invisible 16 px gap between panel applets
 Type=Application
-Exec=glasskit-applets space
+Exec=env ICED_BACKEND=tiny-skia glasskit-applets space
 Terminal=false
 Categories=COSMIC;
 Icon=view-more-horizontal-symbolic

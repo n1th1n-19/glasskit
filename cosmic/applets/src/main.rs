@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
 //! Glasskit panel applets: `glasskit-applets <clock|status|space[-s|-l|-xl]>`.
 mod logic;
+mod trim;
 
 use std::marker::PhantomData;
 use std::process::Command;
@@ -866,6 +867,7 @@ fn status_card(s: &Snap, ui: &Ui) -> Element<'static, Message> {
 }
 
 fn main() -> cosmic::iced::Result {
+    trim::start();
     match std::env::args().nth(1).as_deref() {
         Some("clock") => cosmic::applet::run::<Applet<Clock>>(()),
         Some("status") => cosmic::applet::run::<Applet<Status>>(()),

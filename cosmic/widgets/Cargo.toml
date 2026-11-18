@@ -5,6 +5,7 @@ edition = "2024"
 license = "GPL-3.0-or-later"
 
 [dependencies]
+libc = "0.2"
 ember-core = { git = "https://github.com/n1th1n-19/ember.git", tag = "v0.1.4" }
 tokio = { version = "1", features = ["rt"] }
 png = "0.17"
@@ -15,8 +16,11 @@ zune-jpeg = "0.5"
 [dependencies.libcosmic]
 git = "https://github.com/pop-os/libcosmic.git"
 default-features = false
-features = ["tokio", "wayland", "winit", "wgpu"]
+features = ["tokio", "wayland", "winit"]
 
 [profile.release]
 strip = true
-lto = "thin"
+lto = "fat"
+codegen-units = 1
+opt-level = "s"
+panic = "abort"

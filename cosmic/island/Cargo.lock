@@ -1968,6 +1968,7 @@ version = "0.1.0"
 dependencies = [
  "ember-core",
  "futures-util",
+ "libc",
  "libcosmic",
  "png 0.17.16",
  "serde_json",

@@ -2,7 +2,7 @@
 Name=Glasskit Status
 Comment=Volume, network, Bluetooth and battery pill
 Type=Application
-Exec=glasskit-applets status
+Exec=env ICED_BACKEND=tiny-skia glasskit-applets status
 Terminal=false
 Categories=COSMIC;
 Icon=audio-volume-high-symbolic
