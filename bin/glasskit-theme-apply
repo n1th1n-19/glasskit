@@ -24,7 +24,7 @@ kwriteconfig6 --file ksplashrc --group KSplash --key Theme org.glasskit.splash
 kwriteconfig6 --file ksplashrc --group KSplash --key Engine KSplashQML
 ok splash org.glasskit.splash
 
-# wallpapers are optional: set GLASSKIT_WALLPAPER / GLASSKIT_LOCK_WALLPAPER (image paths) to apply them
+# wallpapers are optional: set GLASSKIT_WALLPAPER / GLASSKIT_LOCK_WALLPAPER (image paths) to apply them (or run glasskit-wallpaper)
 if [ -n "${GLASSKIT_WALLPAPER:-}" ]; then plasma-apply-wallpaperimage "$GLASSKIT_WALLPAPER" >/dev/null 2>&1; ok wallpaper "$GLASSKIT_WALLPAPER"; fi
 if [ -n "${GLASSKIT_LOCK_WALLPAPER:-}" ]; then
     kwriteconfig6 --file kscreenlockerrc --group Greeter --key WallpaperPlugin org.kde.image

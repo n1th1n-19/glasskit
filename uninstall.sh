@@ -16,6 +16,7 @@ for t in Bibata-Modern-Ice Bibata-Modern-Classic Bibata-Original-Classic; do
     [ -L "$HOME/.icons/$t" ] && rm -f "$HOME/.icons/$t"
     rm -rf "$HOME/.local/share/icons/${t:?}"
 done
+rm -rf "$HOME/.local/share/wallpapers/glasskit"
 rm -f "$HOME"/.local/bin/glasskit-*
 rm -rf "$HOME/.local/share/glasskit"
 rm -f "$HOME/.local/share/konsole/Glass.profile" "$HOME/.local/share/konsole/GlassDark.colorscheme"

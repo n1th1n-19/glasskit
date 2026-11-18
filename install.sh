@@ -56,6 +56,9 @@ else echo "  WhiteSur-kde not installed: skipping (see README, then run glasskit
 say "Boot splash"
 if python3 -c "import PIL" 2>/dev/null; then python3 -I "$HOME/.local/bin/glasskit-splash-build" --word "$WORD"; fi
 
+say "Wallpapers (downloaded from Wallhaven; change with: glasskit-wallpaper DESKTOP_ID LOCK_ID)"
+"$HOME/.local/bin/glasskit-wallpaper" "${GLASSKIT_WALLPAPER_ID:-lyz3d2}" "${GLASSKIT_LOCK_WALLPAPER_ID:-jeeq3q}" || echo "  wallpaper download failed: skipping"
+
 say "Konsole glass profile"
 mkdir -p "$HOME/.local/share/konsole"; cp konsole/* "$HOME/.local/share/konsole/"
 

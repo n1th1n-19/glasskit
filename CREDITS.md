@@ -8,6 +8,7 @@ glasskit downloads or builds on these projects. None of them is bundled in this 
 |---|---|---|
 | [Material Symbols](https://github.com/google/material-design-icons) (Google) | Icon artwork, downloaded by `glasskit-icons-build` at install time | Apache-2.0 |
 | [Nunito](https://github.com/google/fonts/tree/main/ofl/nunito) (Vernon Adams et al.) | UI font; Plasma kit downloads it at install time, the COSMIC splash bundles a copy in `cosmic/splash/` (licence: `cosmic/splash/OFL-Nunito.txt`) | SIL OFL 1.1 |
+| Wallpapers [lyz3d2](https://wallhaven.cc/w/lyz3d2) (creator not listed on Wallhaven) and [jeeq3q](https://wallhaven.cc/w/jeeq3q) (by [MakDeetsMuch](https://x.com/MakDeetsMuch)) | Default wallpapers, downloaded by `glasskit-wallpaper` at install time | owned by their creators; personal use |
 | [Bibata Cursor](https://github.com/ful1e5/Bibata_Cursor) (ful1e5) | Cursor theme, downloaded by `glasskit-cursor` at install time | GPL-3.0 |
 | [WhiteSur-kde](https://github.com/vinceliuice/WhiteSur-kde) (vinceliuice) | Base Plasma style that `glasskit-glass-style` copies on your machine | GPL-3.0 |
 | [KDE Plasma](https://invent.kde.org/plasma) | The stock lock screen that `glasskit-lockscreen-sync` patches on your machine | GPL-2.0-or-later |

@@ -1,0 +1,26 @@
+#!/bin/sh
+# Download wallpapers from Wallhaven by ID and set them for the desktop and the lock screen.
+# Usage: glasskit-wallpaper [DESKTOP_ID] [LOCK_ID]     (defaults: lyz3d2 = mountains, jeeq3q = pixel-art lake)
+# The images are not part of glasskit: they are fetched from wallhaven.cc on your machine and stay
+# the property of their creators (see each image's page for credits). Saved in ~/.local/share/wallpapers/glasskit.
+set -eu
+DESK=${1:-lyz3d2}
+LOCK=${2:-jeeq3q}
+DIR=$HOME/.local/share/wallpapers/glasskit
+mkdir -p "$DIR"
+
+fetch() {   # $1 = Wallhaven id; prints the local file path
+    id=$1
+    url=$(curl -fsS -A "glasskit-wallpaper/1.0" "https://wallhaven.cc/api/v1/w/$id" \
+        | python3 -I -c "import json,sys; d=json.load(sys.stdin)['data']; assert d['purity']=='sfw'; print(d['path'])") \
+        || { echo "wallpaper $id: not found or not SFW" >&2; return 1; }
+    out=$DIR/$id.${url##*.}
+    [ -s "$out" ] || curl -fsSL -A "glasskit-wallpaper/1.0" -o "$out" "$url"
+    echo "$out"
+}
+
+d=$(fetch "$DESK"); plasma-apply-wallpaperimage "$d" >/dev/null && echo "desktop: $d (https://wallhaven.cc/w/$DESK)"
+l=$(fetch "$LOCK")
+kwriteconfig6 --file kscreenlockerrc --group Greeter --key WallpaperPlugin org.kde.image
+kwriteconfig6 --file kscreenlockerrc --group Greeter --group Wallpaper --group org.kde.image --group General --key Image "file://$l"
+echo "lock screen: $l (https://wallhaven.cc/w/$LOCK)"

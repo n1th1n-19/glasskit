@@ -17,6 +17,7 @@ Frosted-glass widgets, a dynamic top-bar island, filled rounded icons and a grai
 | **Lock screen** (opt-in) | A big rounded clock with a greeting, battery pill and now-playing card. It shrinks away when you start typing your password. |
 | **Konsole "Glass"** | A translucent, blurred terminal profile. |
 | **Touchpad gestures** (opt-in) | Windows-style: 3 fingers up/down = Overview/Show desktop, left/right = switch apps; 4 fingers left/right = switch virtual desktops. Via [kwin-winlike-gestures](https://github.com/LiberaTeMetuMortis/kwin-winlike-gestures). |
+| **Wallpapers** | Mountain sunset on the desktop and a pixel-art lake on the lock screen, downloaded from [Wallhaven](https://wallhaven.cc) at install time (not bundled). Pick others with `glasskit-wallpaper DESKTOP_ID LOCK_ID`. |
 | **Cursor** | [Bibata Modern Ice](https://github.com/ful1e5/Bibata_Cursor): white with rounded tips, applied to KDE and GTK apps. Pick another variant with `glasskit-cursor`. |
 
 Design rules: dark surfaces, one blue accent (`#3b82f6`), Nunito everywhere, rounded cards and no gradients.
@@ -88,6 +89,7 @@ Then add widgets: right-click the desktop or a panel, choose **Add Widgets** and
 | `glasskit-cursor [Bibata-Modern-Classic\|Bibata-Modern-Ice\|...]` | Install and apply a Bibata cursor (default Bibata-Modern-Ice) |
 | `glasskit-island-popups off\|on` | Route notifications to Island, or back to Plasma |
 | `glasskit-lockscreen-sync` | Rebuild the big-clock lock screen (runs at login when enabled) |
+| `glasskit-wallpaper [DESKTOP_ID] [LOCK_ID]` | Download Wallhaven wallpapers by ID and set them for the desktop and lock screen (defaults `lyz3d2`, `jeeq3q`) |
 | `glasskit-gestures` | Fetch, build and install the touchpad gesture plugin (re-run after Plasma updates) |
 | `glasskit-gestures-rebuild` | Optional dnf5 hook that rebuilds [kwin-winlike-gestures](https://github.com/LiberaTeMetuMortis/kwin-winlike-gestures) after KWin updates. See the comments inside |
 
