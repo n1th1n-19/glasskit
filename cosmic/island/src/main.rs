@@ -2,6 +2,7 @@
 //! Glasskit Island: a COSMIC panel applet that shows, in priority order,
 //! notification > volume > charge/low battery > now playing > idle dot.
 mod art;
+mod trim;
 mod conf;
 mod pet;
 mod sprites;
@@ -563,6 +564,7 @@ fn icon_btn(g: Glyph, hit: f32, icon: f32, fill: &str, bg: Option<Color>, msg: M
 }
 
 fn main() -> cosmic::iced::Result {
+    trim::start();
     cosmic::applet::run::<Island>(())
 }
 

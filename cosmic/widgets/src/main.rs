@@ -4,6 +4,7 @@
 //! Cards are rearrangeable: `--edit` (or a right-click on any card) toggles edit mode, where the
 //! cards sit on the Top layer, wear an outline and drag anywhere; positions live in widgets.conf.
 mod calendar;
+mod trim;
 mod layout;
 mod mediacard;
 // The island's pet engine, shared by path (not copied). Only parts of it are used here.
@@ -956,6 +957,7 @@ fn main() -> cosmic::iced::Result {
     if !store::edit_on() && store::load(&card_names(), false).get(card.name()).is_some_and(|o| o.visible == Some(false)) {
         return Ok(());
     }
+    trim::start();
     let settings = Settings::default().no_main_window(true).transparent(true);
     cosmic::app::run::<App>(settings, card)
 }
